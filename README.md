@@ -12,6 +12,9 @@ A pre-registered, blind-judged benchmark of
 [![Vulnerability rate: 60.4% to 13.2%](https://img.shields.io/badge/vulnerability%20rate-60.4%25%20%E2%86%92%2013.2%25-1baf7a)](#2-results)
 [![Judge gate: passed](https://img.shields.io/badge/judge%20calibration-passed-1baf7a)](#45-ground-truth-a-blind-three-judge-panel)
 [![Corpus digest](https://img.shields.io/badge/corpus%20sha256-f401382a-6e7781)](results/corpus_hashes.csv)
+[![License: Apache-2.0 + CC BY 4.0](https://img.shields.io/badge/license-Apache--2.0%20%2B%20CC%20BY%204.0-6e7781)](#9-license-and-required-attribution)
+
+By **Hadi Hajibagheri**, founder of **[HajibagheriLabs](https://github.com/HajibagheriLabs)**
 
 </div>
 
@@ -59,6 +62,7 @@ each one with an example.
 6. [Reproduce and re-analyse](#6-reproduce-and-re-analyse)
 7. [Repository layout](#7-repository-layout)
 8. [Citation](#8-citation)
+9. [License and required attribution](#9-license-and-required-attribution)
 
 ---
 
@@ -462,6 +466,10 @@ Semgrep. `setup.ps1` clones both projects at the benchmarked commits.
 ├── subagent_judge/          judge B's exchange files: blinded prompts and its JSON answers
 ├── results/                 judgments, detections, calibration, metrics, hashes, provenance
 ├── spend_ledger.jsonl       every API call with tokens and cost
+├── LICENSE, NOTICE          license terms and the required attribution
+├── LICENSE-APACHE           Apache License 2.0 (code)
+├── LICENSE-CC-BY-4.0        CC BY 4.0 (data, results, figures, docs)
+├── CITATION.cff             citation metadata
 ├── docs/
 │   ├── METHODS.md           full methods
 │   ├── DATA.md              file formats and field definitions
@@ -473,17 +481,44 @@ Semgrep. `setup.ps1` clones both projects at the benchmarked commits.
 
 ## 8. Citation
 
+If you use this benchmark, its corpus, its results or its figures, cite it **and** credit
+**Hadi Hajibagheri, founder of HajibagheriLabs** (see [section 9](#9-license-and-required-attribution)).
+
 ```bibtex
 @misc{hajibagheri2026vibesecbench,
   author       = {Hajibagheri, Hadi},
   title        = {Vibe-Security Benchmark: Do Security Rules in the Prompt Prevent
                   Vulnerabilities in AI-Generated Code?},
   year         = {2026},
+  publisher    = {HajibagheriLabs},
   howpublished = {\url{https://github.com/HajibagheriLabs/Vibe-Security-Benchmark}},
-  note         = {Pre-registered benchmark of Web-Vibe-Security and App-Vibe-Security;
-                  corpus digest f401382a9ee87af1da415a3d076709bf3cd2100eb367cd55a79d3d7e950a6f91}
+  note         = {Hadi Hajibagheri, founder of HajibagheriLabs. Pre-registered benchmark of
+                  Web-Vibe-Security and App-Vibe-Security; corpus digest
+                  f401382a9ee87af1da415a3d076709bf3cd2100eb367cd55a79d3d7e950a6f91}
 }
 ```
 
 Related: [Web-Vibe-Security](https://github.com/HajibagheriLabs/Web-Vibe-Security) ·
 [App-Vibe-Security](https://github.com/HajibagheriLabs/App-Vibe-Security)
+
+---
+
+## 9. License and required attribution
+
+© 2026 **Hadi Hajibagheri, founder of HajibagheriLabs**. Dual-licensed; full terms in
+[`LICENSE`](LICENSE):
+
+| What | License |
+|---|---|
+| Code: `harness/`, `scripts/`, `setup.ps1`, `requirements.txt` | [Apache License 2.0](LICENSE-APACHE), with [`NOTICE`](NOTICE) |
+| Everything else: corpus, judgments, results, gold set, figures, documentation | [CC BY 4.0](LICENSE-CC-BY-4.0) |
+
+Both licenses allow use, modification and redistribution, including commercial use, **on
+condition of attribution**. Any fork, copy, adaptation, derivative benchmark, or research that
+uses or reports this corpus, its results or its figures must credit:
+
+> **Hadi Hajibagheri, founder of HajibagheriLabs**, with a link to
+> https://github.com/HajibagheriLabs/Vibe-Security-Benchmark
+
+Every figure carries this credit line. In papers, cite the benchmark (above) and name Hadi
+Hajibagheri and HajibagheriLabs in the text, a caption or the acknowledgements.

@@ -1,11 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this benchmark or its corpus, please cite it as below."
+message: >-
+  If you use this benchmark, its corpus, its results or its figures, cite it as below and
+  credit "Hadi Hajibagheri, founder of HajibagheriLabs". The license requires this
+  attribution; see LICENSE.
 title: "Vibe-Security Benchmark: Do Security Rules in the Prompt Prevent Vulnerabilities in AI-Generated Code?"
 type: dataset
 authors:
   - family-names: Hajibagheri
     given-names: Hadi
+    affiliation: HajibagheriLabs
 repository-code: "https://github.com/HajibagheriLabs/Vibe-Security-Benchmark"
+url: "https://github.com/HajibagheriLabs"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
 version: "1.0.0"
 date-released: 2026-10-07
 abstract: >-

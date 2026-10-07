@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 829" width="1000" height="829" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 851" width="1000" height="851" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
 <title id="t">Vulnerability injection rate by vulnerability class</title>
 <desc id="d">Dumbbell chart: baseline vs guardrailed vulnerability rate for 4 web and 5 mobile/desktop vulnerability classes, models pooled, with 95% confidence intervals and change in percentage points.</desc>
-<rect x="0.5" y="0.5" width="999" height="828" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="999" height="850" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
 <text x="40.0" y="50.0" font-size="22" fill="#f0f6fc" font-weight="700">Which vulnerabilities do the rules prevent?</text>
 <text x="40.0" y="77.0" font-size="14" fill="#b1bac4">Vulnerability injection rate per vulnerability class, three models pooled. Lower is better; pills are 95% Wilson intervals.</text>
 <circle cx="47.0" cy="122.0" r="6" fill="#d95926" stroke="#151b23" stroke-width="2.5"/>
@@ -123,4 +123,5 @@
 <text x="790.0" y="779.0" font-size="12" fill="#8b949e" text-anchor="middle">100%</text>
 <line x1="400.0" y1="759.0" x2="790.0" y2="759.0" stroke="#3d444d" stroke-width="1" stroke-linecap="butt"/>
 <text x="40.0" y="807.0" font-size="12" fill="#8b949e">pts = percentage points (absolute risk reduction). n = outputs with a usable implementation, both regimes. Classes follow the two projects’ modules.</text>
+<text x="976.0" y="835.0" font-size="11" fill="#8b949e" text-anchor="end">© 2026 Hadi Hajibagheri, founder of HajibagheriLabs · Vibe-Security Benchmark · CC BY 4.0</text>
 </svg>

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="1000" height="550" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 572" width="1000" height="572" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
 <title id="t">Vibe-Security Benchmark: headline result</title>
 <desc id="d">Without security rules 60.4% of security-task outputs contained the targeted vulnerability; with the VibeSec rules 13.2%, a 78% lower rate.</desc>
-<rect x="0.5" y="0.5" width="999" height="549" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="999" height="571" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
 <text x="40.0" y="54.0" font-size="12.5" fill="#8b949e" font-weight="700" letter-spacing="1.6">VIBE-SECURITY BENCHMARK</text>
 <text x="40.0" y="94.0" font-size="28" fill="#f0f6fc" font-weight="700">Do security rules in the prompt make AI-written code safer?</text>
 <text x="40.0" y="124.0" font-size="15" fill="#b1bac4">How often generated code contained the vulnerability its task invites, out of 100 security-sensitive tasks</text>
@@ -231,4 +231,5 @@
 <text x="40.0" y="484.0" font-size="12.5" fill="#8b949e">Each square = 1 in 100 outputs for a security-sensitive task. Filled = the blind judge panel found the targeted vulnerability.</text>
 <line x1="40.0" y1="502.0" x2="960.0" y2="502.0" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
 <text x="40.0" y="526.0" font-size="12.5" fill="#b1bac4">717 generated artifacts · 3 open-weight models · 60 scenarios (web + mobile/desktop) · blind 3-judge LLM panel, calibrated on a 47-item gold set</text>
+<text x="976.0" y="556.0" font-size="11" fill="#8b949e" text-anchor="end">© 2026 Hadi Hajibagheri, founder of HajibagheriLabs · Vibe-Security Benchmark · CC BY 4.0</text>
 </svg>

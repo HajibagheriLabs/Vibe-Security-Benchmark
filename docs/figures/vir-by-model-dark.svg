@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 787" width="1000" height="787" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 809" width="1000" height="809" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
 <title id="t">Vulnerability injection rate by model and platform</title>
 <desc id="d">Dumbbell chart: baseline vs guardrailed vulnerability injection rate for each of 3 models on web and on mobile/desktop tasks, with 95% confidence intervals, relative reduction and McNemar p-values.</desc>
-<rect x="0.5" y="0.5" width="999" height="786" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="999" height="808" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
 <text x="40.0" y="50.0" font-size="22" fill="#f0f6fc" font-weight="700">Vulnerability injection rate (VIR) by model and platform</text>
 <text x="40.0" y="77.0" font-size="14" fill="#b1bac4">Share of security-task outputs the judge panel found to contain the targeted vulnerability.</text>
 <text x="40.0" y="97.0" font-size="14" fill="#b1bac4">Lower is better. Each dot is about 50 outputs; the shaded pill is its 95% Wilson interval.</text>
@@ -112,4 +112,5 @@
 <line x1="300.0" y1="701.0" x2="760.0" y2="701.0" stroke="#3d444d" stroke-width="1" stroke-linecap="butt"/>
 <text x="40.0" y="749.0" font-size="12" fill="#8b949e">Relative drop = guardrail reduction rate (GRR), 1 − VIR guardrailed / VIR baseline; mean and 95% CI of a 5,000-draw bootstrap that resamples scenarios.</text>
 <text x="40.0" y="767.0" font-size="12" fill="#8b949e">p = exact McNemar test on paired scenario-level outcomes (23–25 scenarios per pair). All six stay below 0.05 after Holm–Bonferroni adjustment.</text>
+<text x="976.0" y="793.0" font-size="11" fill="#8b949e" text-anchor="end">© 2026 Hadi Hajibagheri, founder of HajibagheriLabs · Vibe-Security Benchmark · CC BY 4.0</text>
 </svg>

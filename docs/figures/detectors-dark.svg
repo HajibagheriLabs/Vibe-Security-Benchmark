@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 547" width="1000" height="547" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 569" width="1000" height="569" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
 <title id="t">Static detection: VibeSec rules vs Semgrep registry packs</title>
 <desc id="d">Grouped column chart of precision, recall and F1 for three Semgrep detector arms on web and mobile/desktop outputs, scored against the judge panel.</desc>
-<rect x="0.5" y="0.5" width="999" height="546" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="999" height="568" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
 <text x="40.0" y="50.0" font-size="22" fill="#f0f6fc" font-weight="700">Catching what slips through: project rules vs. registry rules</text>
 <text x="40.0" y="77.0" font-size="14" fill="#b1bac4">Semgrep run on every security-task output and scored against the judge panel. A finding counts</text>
 <text x="40.0" y="97.0" font-size="14" fill="#b1bac4">only if its vulnerability class matches the scenario’s target class.</text>
@@ -73,4 +73,5 @@
 <text x="881.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">F1</text>
 <text x="40.0" y="509.0" font-size="12" fill="#8b949e">Precision = flagged outputs that really were vulnerable. Recall = vulnerable outputs that got flagged. F1 = harmonic mean of the two.</text>
 <text x="40.0" y="527.0" font-size="12" fill="#8b949e">Registry packs ran anonymously (p/nextjs returned no rules without an account). Semgrep 1.179.0; every project rule loaded.</text>
+<text x="976.0" y="553.0" font-size="11" fill="#8b949e" text-anchor="end">© 2026 Hadi Hajibagheri, founder of HajibagheriLabs · Vibe-Security Benchmark · CC BY 4.0</text>
 </svg>

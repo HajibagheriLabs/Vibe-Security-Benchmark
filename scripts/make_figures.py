@@ -23,6 +23,8 @@ RES = ROOT / "results"
 OUT = ROOT / "docs" / "figures"
 
 FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif"
+CREDIT = ("© 2026 Hadi Hajibagheri, founder of HajibagheriLabs · Vibe-Security Benchmark "
+          "· CC BY 4.0")
 
 THEMES = {
     "light": {
@@ -194,6 +196,8 @@ class Svg:
 
     def render(self):
         if getattr(self, "has_card", False):
+            self.h += 22                    # credit line, so a copied figure keeps its attribution
+            self.text(self.w - 24, self.h - 16, CREDIT, 11, "muted", 400, "end")
             self.p.insert(0, f'<rect x="0.5" y="0.5" width="{self.w - 1}" height="{self.h - 1}" rx="14" '
                              f'fill="{self.col("bg")}" stroke="{self.col("border")}" stroke-width="1"/>')
             self.has_card = False

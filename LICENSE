@@ -1,0 +1,76 @@
+Vibe-Security Benchmark: license and required attribution
+
+Copyright (c) 2026 Hadi Hajibagheri, founder of HajibagheriLabs.
+https://github.com/HajibagheriLabs/Vibe-Security-Benchmark
+
+This repository is dual-licensed. Both licenses permit use, copying, modification and
+redistribution, including commercial use, and both REQUIRE ATTRIBUTION as set out below.
+
+
+1. WHICH LICENSE APPLIES TO WHAT
+
+  (a) Software: every file in harness/ and scripts/, and setup.ps1 and requirements.txt, is
+      licensed under the Apache License, Version 2.0. Full text: LICENSE-APACHE.
+
+  (b) Everything else: the generated corpus (web/, app/), the judgments, results and
+      calibration data (results/, subagent_judge/, goldset/, spend_ledger.jsonl), the figures
+      (docs/figures/) and the documentation (README.md, PROTOCOL.md, RUNBOOK.md,
+      OPERATOR_LOG.md, docs/, CITATION.cff) are licensed under the Creative Commons Attribution
+      4.0 International Public License (CC BY 4.0). Full text: LICENSE-CC-BY-4.0.
+
+
+2. REQUIRED ATTRIBUTION
+
+  The creator of this work is Hadi Hajibagheri, founder of HajibagheriLabs. Every attribution
+  of this work must name BOTH the person and the company, in this form:
+
+      Hadi Hajibagheri, founder of HajibagheriLabs
+
+  together with a link to https://github.com/HajibagheriLabs/Vibe-Security-Benchmark.
+
+  This requirement applies to every use the licenses cover, including:
+
+    - forks, copies and redistributions of this repository or of any part of it;
+    - modified versions, adaptations and derivative works, including other benchmarks,
+      datasets, tools or models built from this one;
+    - research that uses, re-analyses, extends or reports this corpus, its judgments, its
+      results or its figures, in any form: papers, theses, preprints, reports, articles,
+      talks, posters and slides;
+    - reproductions of the figures, tables or text, whole or in part.
+
+  In scholarly and published work, cite the benchmark (see CITATION.cff or README.md) AND
+  credit "Hadi Hajibagheri, founder of HajibagheriLabs" in the text, a figure or table
+  caption, or the acknowledgements. For example:
+
+      "This work uses the Vibe-Security Benchmark by Hadi Hajibagheri, founder of
+       HajibagheriLabs (https://github.com/HajibagheriLabs/Vibe-Security-Benchmark),
+       licensed under CC BY 4.0."
+
+  How this requirement attaches to each license:
+
+    - CC BY 4.0, Section 3(a)(1)(A)(i): anyone who shares the licensed material, in original
+      or modified form, must retain the identification of its creator "in any reasonable
+      manner requested by the Licensor". The Licensor requests the form given above.
+    - Apache License 2.0, Sections 4(c) and 4(d): redistributions and derivative works must
+      retain the copyright and attribution notices and include a readable copy of the
+      attribution notices in the NOTICE file, which names Hadi Hajibagheri, founder of
+      HajibagheriLabs.
+
+  Sharing or distributing this work, a fork of it, or an adaptation of it without this
+  attribution does not comply with either license. Credit must not suggest that Hadi
+  Hajibagheri or HajibagheriLabs endorses the user or the use.
+
+
+3. THIRD-PARTY MATERIAL
+
+  The model responses and judge outputs in this repository were produced with third-party
+  models and services. They are licensed here to the extent the Licensor holds rights in
+  them, and the respective providers' terms may also apply. Names of models, companies,
+  products and tools are trademarks of their respective owners and are used only to
+  identify them.
+
+
+4. NO WARRANTY
+
+  The work is provided "as is", without warranty of any kind, as set out in Section 7 of the
+  Apache License 2.0 and Section 5 of CC BY 4.0.

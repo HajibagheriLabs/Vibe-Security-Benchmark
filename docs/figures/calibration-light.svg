@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 422" width="1000" height="422" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
 <title id="t">Judge panel calibration on the gold set</title>
 <desc id="d">Confusion matrix of the judge panel on 47 gold items and three meters showing sensitivity, specificity and inter-judge kappa against the pre-registered gate.</desc>
-<rect x="0.5" y="0.5" width="999" height="399" rx="14" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<rect x="0.5" y="0.5" width="999" height="421" rx="14" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
 <text x="40.0" y="50.0" font-size="22" fill="#1f2328" font-weight="700">Can the judges be trusted? Calibration on a labelled gold set</text>
 <text x="40.0" y="77.0" font-size="14" fill="#59636e">47 items with known answers (matched vulnerable / safe pairs), judged blind before the corpus. The gate was fixed in advance.</text>
 <text x="330.0" y="124.0" font-size="11.5" fill="#6e7781" font-weight="700" text-anchor="middle" letter-spacing="1.2">TRUE LABEL</text>
@@ -46,4 +46,5 @@
 <circle cx="914.0" cy="308.0" r="9" fill="none" stroke="#006300" stroke-width="1.8"/><path d="M910.0 308.0 l2.8 2.9 l5.2 -5.6" fill="none" stroke="#006300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="928.0" y="313.0" font-size="13" fill="#006300" font-weight="600">pass</text>
 <text x="40.0" y="372.0" font-size="12" fill="#6e7781">Panel = GLM 5.3 Flash and Claude Sonnet 5 judging blind, with GPT-5.6 Sol breaking ties. Passed in round 1: no judge setting or rubric was changed to pass it.</text>
+<text x="976.0" y="406.0" font-size="11" fill="#6e7781" text-anchor="end">© 2026 Hadi Hajibagheri, founder of HajibagheriLabs · Vibe-Security Benchmark · CC BY 4.0</text>
 </svg>
