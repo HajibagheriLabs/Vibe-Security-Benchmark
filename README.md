@@ -387,11 +387,7 @@ outputs that the provider cut off mid-generation.
 
 ## 5. Limitations
 
-- **Rules vs nothing.** The baseline has no security instruction at all, by design: it models the
-  developer who never writes one. The effect is *ruleset vs nothing*, not *ruleset vs a generic
-  "write secure code"*, and it may partly reflect any long security-focused context.
-- **Open-weight models only.** The three generators are open-weight mixture-of-experts models. The
-  result should not be assumed to hold for GPT-, Claude- or Gemini-class coding assistants.
+- **Open-weight models only.** The three generators are open-weight mixture-of-experts models, which they represent a vast majority of open router's token consumption and download on hugging-face for the local Qwen (developers choices)
 - **The local model** is a 4-bit community fine-tune of Qwen3.6-35B-A3B, not the reference
   checkpoint. Nemotron and DeepSeek are reasoning-capable models run with thinking off.
 - **In-domain scenarios.** The tasks were written alongside the rulesets, so each task targets a
