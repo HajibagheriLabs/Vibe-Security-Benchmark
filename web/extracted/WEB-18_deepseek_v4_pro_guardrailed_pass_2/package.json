@@ -1,0 +1,9 @@
+// package.json (relevant dependencies — exact versions, verified)
+{
+  "dependencies": {
+    "next": "14.2.15",
+    "next-auth": "4.24.10",
+    "zod": "3.23.8",
+    "isomorphic-dompurify": "2.15.0"
+  }
+}

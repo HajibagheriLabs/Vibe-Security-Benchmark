@@ -1,0 +1,20 @@
+name: openai_flutter_service
+description: A Flutter service for querying the OpenAI API.
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0 # Verified: pub.dev/api/packages/http
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.4.2 # Verified: pub.dev/api/packages/mockito
+  build_runner: ^2.4.6 # Verified: pub.dev/api/packages/build_runner
+
+flutter:
+  uses-material-design: true

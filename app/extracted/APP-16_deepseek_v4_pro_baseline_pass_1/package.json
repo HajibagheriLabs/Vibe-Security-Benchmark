@@ -1,0 +1,15 @@
+{
+  "name": "react-native-aes256-document-cache",
+  "version": "1.0.0",
+  "description": "AES-256 encrypted document cache for React Native",
+  "main": "src/utils/crypto/index.ts",
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "react-native-keychain": "^8.2.0",
+    "@react-native-async-storage/async-storage": "^1.21.0",
+    "react-native-uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.1"
+  }
+}

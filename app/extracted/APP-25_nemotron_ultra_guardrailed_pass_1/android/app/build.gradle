@@ -1,0 +1,26 @@
+android {
+    // ... existing android block ...
+
+    signingConfigs {
+        release {
+            // Keystore path and credentials are injected via environment variables
+            // or a local key.properties file that is NOT committed to version control.
+            // See AGENT_RULES §3: "NEVER place a signing key, keystore, or certificate in the repository."
+            storeFile file(System.getenv("KEYSTORE_PATH") ?: "")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: ""
+            keyAlias System.getenv("KEY_ALIAS") ?: ""
+            keyPassword System.getenv("KEY_PASSWORD") ?: ""
+
+            // Explicitly disable v1 signing, enable v2/v3 (apkSignatureSchemeV2/v3 defaults to true)
+            v1SigningEnabled false
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            // ... other release config (minifyEnabled, proguardFiles, etc.) ...
+        }
+    }
+}

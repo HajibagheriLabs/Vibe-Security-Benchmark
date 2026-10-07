@@ -1,0 +1,14 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "src-tauri/src/commands.rs", "line": 19, "snippet": "pub async fn read_directory(path: String) -> Result<Vec<DirEntryInfo>, String> {", "why": "IPC handler accepts an arbitrary renderer-supplied path with no resolution/confinement to a fixed base directory."},
+    {"file": "src-tauri/src/commands.rs", "line": 30, "snippet": "let entries = fs::read_dir(&path_buf)", "why": "Filesystem path supplied directly by renderer is used to read any directory on disk without canonicalization or base-dir confinement."},
+    {"file": "src/commands.ts", "line": 14, "snippet": "return await invoke<DirEntryInfo[]>('read_directory', { path });", "why": "Frontend passes caller-controlled path straight through to the privileged backend command."}
+  ],
+  "controls_present": ["named fixed IPC channel (read_directory)", "existence/is_dir checks"],
+  "other_classes_observed": [],
+  "declared_packages": ["tauri", "serde", "chrono", "tauri-build", "tauri_plugin_fs", "@tauri-apps/api"],
+  "task_implemented": 2,
+  "refusal": false
+}

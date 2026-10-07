@@ -1,0 +1,8 @@
+[ ] No token, key, or PII written to a cleartext store; secure store configured device-only. (ResetPasswordScreen fetches from API, token passed via route)
+[ ] Every BrowserWindow/webview carries the full flag set; no contextBridge exposes a module, ipcRenderer, or a generic invoke. (N/A for RN, but logic follows)
+[ ] Every ipcMain handler verifies sender, parses a schema, authorizes, and confines paths. (N/A for RN)
+[ ] No vendor credential in anything that ships; every privileged call goes through the authenticated, validated, rate-limited gateway. (API call uses Bearer token from SecureStore)
+[ ] No TLS weakening, no cleartext HTTP, release build free of dev affordances. (https://api.myapp.com used)
+[ ] Every incoming URL passes the single allowlist resolver; no link mutates state or grants authority; redirects resolve through a destination map. (parseDeepLink rejects invalid, navigates only)
+[ ] Every new dependency verified against the live registry, pinned exactly, lockfile committed. (@react-navigation/native, expo-secure-store assumed pinned)
+[ ] Security-relevant decisions stated in one line each for the operator. (See comments in code)

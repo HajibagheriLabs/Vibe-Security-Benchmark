@@ -1,0 +1,27 @@
+<activity
+    android:name=".ui.MainActivity"
+    android:exported="true"
+    android:taskAffinity=""
+    android:launchMode="singleTask">
+
+    <!-- 1. Custom Scheme: e.g., myapp:// -->
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <!-- Rule 4: Exact scheme, no wildcards for security -->
+        <data android:scheme="myapp" />
+    </intent-filter>
+
+    <!-- 2. App Links: e.g., https://www.myapp.com/deeplink -->
+    <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <!-- Rule 4: https only, exact host, no path wildcards if possible -->
+        <data
+            android:scheme="https"
+            android:host="www.myapp.com"
+            android:pathPrefix="/deeplink" />
+    </intent-filter>
+</activity>

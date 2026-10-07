@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-native-keychain": "8.2.0"
+  }
+}

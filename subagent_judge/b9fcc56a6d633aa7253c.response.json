@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "medium",
+  "evidence": [],
+  "controls_present": ["custom non-http scheme used, avoiding autoVerify requirement which only applies to http/https data elements"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 1,
+  "refusal": false
+}

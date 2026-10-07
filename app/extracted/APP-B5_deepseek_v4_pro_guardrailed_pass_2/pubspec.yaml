@@ -1,0 +1,5 @@
+# pubspec.yaml (dependency excerpt)
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: 9.2.2

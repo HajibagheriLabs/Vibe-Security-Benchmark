@@ -1,0 +1,7 @@
+# Stripe Configuration
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxxxxxxxxx
+
+# App Configuration
+NEXT_PUBLIC_APP_URL=http://localhost:3000

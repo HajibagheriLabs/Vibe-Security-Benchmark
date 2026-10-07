@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": [],
+  "other_classes_observed": ["No persistent session (sets isAuthenticated=true without real sensor check on unavailable biometrics, line 42 BiometricAuthContext.tsx)"],
+  "declared_packages": ["react-native-biometrics", "@react-navigation/native", "@react-navigation/stack"],
+  "task_implemented": 1,
+  "refusal": false
+}

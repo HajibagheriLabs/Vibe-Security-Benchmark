@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.example.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+        <!-- Optional: Pin the backend certificate or public key (SPKI) to mitigate MITM.
+             Generate pins via: openssl x509 -in cert.pem -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | base64
+             Update <pin-set> before certificate rotation; include backup pins. -->
+        <!--
+        <pin-set expiration="2026-01-01">
+            <pin algorithm="SHA-256">BASE64_ENCODED_SPKI_HASH_PRIMARY</pin>
+            <pin algorithm="SHA-256">BASE64_ENCODED_SPKI_HASH_BACKUP</pin>
+        </pin-set>
+        -->
+    </domain-config>
+
+    <!-- Debug configuration: Trust user-installed CAs only in debug builds.
+         This block is merged automatically when android:debuggable="true". -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>

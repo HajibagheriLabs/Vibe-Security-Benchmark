@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": ["zero runtime dependencies", "no install/postinstall scripts"],
+  "other_classes_observed": ["require() used in ESM module (session-token.js line 79: const { createHash } = require('node:crypto');) would throw ReferenceError since type is module"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

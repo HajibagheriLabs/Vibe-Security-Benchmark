@@ -1,0 +1,23 @@
+{
+  "name": "duration-formatter",
+  "version": "1.0.0",
+  "description": "React Native utility to format duration in seconds as mm:ss",
+  "main": "durationFormatter.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-jest": "^29.7.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[jt]sx?$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  }
+}

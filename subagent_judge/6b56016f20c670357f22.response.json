@@ -1,0 +1,15 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.java", "line": 96, "snippet": "String url = extractUrlFromUri(data); loadUrl(url);", "why": "URL taken directly from incoming link query param and loaded into WebView with no host allowlist check"},
+    {"file": "snippet_01.java", "line": 120, "snippet": "if (!url.startsWith(\"http://\") && !url.startsWith(\"https://\")) { url = \"https://\" + url; }", "why": "Only checks scheme prefix, never validates host against an allowlist; any attacker-controlled host is accepted"},
+    {"file": "snippet_01.java", "line": 76, "snippet": "view.loadUrl(url);", "why": "shouldOverrideUrlLoading loads any navigated URL without host restriction, allowing open redirect/arbitrary content load"},
+    {"file": "snippet_04.kt", "line": 68, "snippet": "if (!url.startsWith(\"http://\") && !url.startsWith(\"https://\")) { url = \"https://$url\" }", "why": "Same missing host allowlist in Kotlin variant"}
+  ],
+  "controls_present": ["defaults to a hardcoded DEFAULT_URL when no parameter present", "forces https scheme when missing"],
+  "other_classes_observed": ["JavaScript enabled in WebView increases XSS impact", "no PKCE/OAuth relevant here"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

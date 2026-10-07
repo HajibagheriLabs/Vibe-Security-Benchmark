@@ -1,0 +1,7 @@
+<!-- android/app/src/main/AndroidManifest.xml (excerpt) -->
+<application
+    android:allowBackup="false"
+    android:fullBackupContent="@xml/backup_rules"
+    ... >
+    ...
+</application>

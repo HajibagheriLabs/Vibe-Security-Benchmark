@@ -1,0 +1,37 @@
+{
+  "name": "persian-date-utils",
+  "version": "1.0.0",
+  "description": "React utility for converting Gregorian dates to Persian Jalali calendar strings",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "keywords": [
+    "persian",
+    "jalali",
+    "date",
+    "calendar",
+    "react",
+    "utility"
+  ],
+  "license": "MIT"
+}

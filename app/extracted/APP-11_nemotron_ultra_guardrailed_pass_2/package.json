@@ -1,0 +1,14 @@
+package.json
+{
+  "name": "secure-profile-db",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react-native": "0.76.5",
+    "react-native-sqlcipher-storage": "6.0.1",
+    "react-native-keychain": "8.2.0"
+  },
+  "overrides": {
+    "react-native-sqlcipher-storage": "npm:react-native-sqlcipher-storage@6.0.1"
+  }
+}

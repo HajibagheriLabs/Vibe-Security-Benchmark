@@ -1,0 +1,1 @@
+export { QRScanner, type ScannedBarcode, type QRScannerProps } from './QRScanner';

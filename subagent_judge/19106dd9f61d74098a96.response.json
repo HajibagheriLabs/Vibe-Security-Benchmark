@@ -1,0 +1,14 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "package.json", "line": 21, "snippet": "\"next\": \"^14.2.5\",", "why": "Caret range specifier instead of exact pinned version"},
+    {"file": "package.json", "line": 24, "snippet": "\"drizzle-orm\": \"^0.33.0\",", "why": "Caret range specifier instead of exact pinned version"},
+    {"file": "package.json", "line": 26, "snippet": "\"stripe\": \"^16.8.0\",", "why": "Caret range specifier instead of exact pinned version"}
+  ],
+  "controls_present": [],
+  "other_classes_observed": [],
+  "declared_packages": ["next", "react", "react-dom", "drizzle-orm", "postgres", "stripe", "@stripe/stripe-js", "zod", "clsx", "tailwind-merge", "typescript", "@types/node", "@types/react", "@types/react-dom", "tailwindcss", "postcss", "autoprefixer", "drizzle-kit", "eslint", "eslint-config-next", "prettier", "prettier-plugin-tailwindcss"],
+  "task_implemented": 2,
+  "refusal": false
+}

@@ -1,0 +1,13 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "android/app/build.gradle", "line": 5, "snippet": "storePassword \"your-store-password\"", "why": "Signing password hardcoded inline in build file rather than read from env var or gitignored properties file"},
+    {"file": "android/app/build.gradle", "line": 7, "snippet": "keyPassword \"your-key-password\"", "why": "Signing key password hardcoded inline in build file"}
+  ],
+  "controls_present": ["minifyEnabled/shrinkResources for release build"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

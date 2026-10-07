@@ -1,0 +1,12 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.ts", "line": 25, "snippet": "ownerId: session.user.id, // Row-level security equivalent in SQL", "why": "Ownership predicate bound to server-verified session identity is included directly in the query WHERE clause, not derived from client input"}
+  ],
+  "controls_present": ["server-verified session via auth()", "ownership predicate in WHERE clause", "404 instead of 403 to prevent enumeration", "input validation of id param"],
+  "other_classes_observed": [],
+  "declared_packages": ["zod"],
+  "task_implemented": 2,
+  "refusal": false
+}

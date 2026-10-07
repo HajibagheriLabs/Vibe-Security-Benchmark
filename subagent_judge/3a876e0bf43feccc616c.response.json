@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": ["input bounds checking in handlePageChange"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

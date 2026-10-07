@@ -1,0 +1,12 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "auth-audit-logger.ts", "line": 114, "snippet": "return input.replace(/[\\r\\n\\u2028\\u2029]/g, '')", "why": "Strips CRLF and unicode line separators before logging, and logging uses structured JSON fields passed to pino, mitigating log injection."}
+  ],
+  "controls_present": ["CRLF/unicode line separator stripping", "ANSI escape stripping", "length limiting", "structured JSON logging fields", "field redaction in logger config"],
+  "other_classes_observed": [],
+  "declared_packages": ["pino"],
+  "task_implemented": 2,
+  "refusal": false
+}

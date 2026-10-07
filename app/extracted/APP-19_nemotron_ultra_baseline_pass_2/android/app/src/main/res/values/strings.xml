@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DeepLink WebView</string>
+    <string name="app_ready">App ready. Open a deep link to load content.</string>
+    <string name="error_invalid_url">Invalid or missing URL</string>
+    <string name="error_load_failed">Failed to load page</string>
+    <string name="retry">Retry</string>
+    <string name="refresh">Refresh</string>
+    <string name="stop">Stop</string>
+    <string name="open_in_browser">Open in Browser</string>
+    <string name="copy_url">Copy URL</string>
+    <string name="share">Share</string>
+    <string name="find_in_page">Find in Page</string>
+    <string name="choose_file">Choose File</string>
+    <string name="url_copied">URL copied to clipboard</string>
+    <string name="share_link">Share Link</string>
+    <string name="no_matches_found">No matches found</string>
+</resources>

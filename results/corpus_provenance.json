@@ -1,0 +1,16 @@
+{
+  "web": {
+    "repo": "Web-Vibe-Security",
+    "commit": "ae818f151d58dd7ad3cddd5cf8c6a98d46bc39d6",
+    "dirty": false,
+    "agent_rules_sha256": "b3124cb290633e3f0b9e277c61bd4ad631dca0a56d11fbbbac0cbea4314913fb",
+    "semgrep_rules_sha256": "1d67c70585c12d85bb14637773037315f3286adf72dfde8e9e7bfbb634e7bd88"
+  },
+  "app": {
+    "repo": "App-Vibe-Security",
+    "commit": "74b75a94d384eec2547b400343adad11b62dcc4d",
+    "dirty": false,
+    "agent_rules_sha256": "1923a118dfc8c50058a5ad4b4ff9dd0b6384b8dbea901d5355e9531ec67f5356",
+    "semgrep_rules_sha256": "f4e0705ac1aa316e5899adb8286fbda924fb07057031c76ff42034761ab57f6c"
+  }
+}

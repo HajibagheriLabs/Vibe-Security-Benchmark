@@ -1,0 +1,35 @@
+{
+  "name": "gregorian-to-jalali",
+  "version": "1.0.0",
+  "description": "Utility to convert Gregorian dates to Persian Jalali calendar strings",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "keywords": [
+    "jalali",
+    "persian",
+    "calendar",
+    "date",
+    "conversion",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  }
+}

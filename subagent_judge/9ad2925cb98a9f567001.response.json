@@ -1,0 +1,13 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "medium",
+  "evidence": [
+    {"file": ".npmrc", "line": 23, "snippet": "# Use exact versions to ensure reproducible installs", "why": "No ignore-scripts=true is set anywhere in the .npmrc, so npm will run install/postinstall lifecycle scripts from dependencies"},
+    {"file": "scripts/setup.sh", "line": 111, "snippet": "npm ci --prefer-offline --no-audit --no-fund", "why": "Install command does not pass --ignore-scripts, and no ignore-scripts config exists, so arbitrary postinstall scripts from dependencies execute"}
+  ],
+  "controls_present": ["save-exact=true", "strict-peer-dependencies", "registry pinned to official npmjs.org", "lockfile usage via npm ci"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

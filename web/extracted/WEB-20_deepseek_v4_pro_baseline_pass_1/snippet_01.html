@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Notification Template Generator</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --error: #ef4444;
+            --code-bg: #0f172a;
+            --code-text: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card h2 .icon {
+            font-size: 1.3rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            border: 1.5px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: #fafbfc;
+            color: var(--text);
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+            background: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-secondary {
+            background: #eef2ff;
+            color: var(--primary);
+            border: 1.5px solid #c7d2fe;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e7ff;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .template-preview {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+            border: 1px dashed #cbd5e1;
+            min-height: 100px;
+            overflow-x: auto;
+        }
+
+        .template-preview h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .code-output {
+            background: var(--code-bg);
+            color: var(--code-text);
+            border-radius: 8px;
+            padding: 1.2rem;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .code-output .token-tag {
+            color: #f472b6;
+        }
+
+        .code-output .token-attr {
+            color: #93c5fd;
+        }
+
+        .code-output .token-value {
+            color: #86efac;
+        }
+
+        .code-output .token-interpolated {
+            color: #fbbf24;
+            font-weight: 600;
+        }
+
+        .available-vars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .var-badge {
+            background: #eef2ff;
+            color: var(--primary);
+            padding: 0.3rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid #c7d2fe;
+            transition: all 0.15s;
+            user-select: none;
+        }
+
+        .var-badge:hover {
+            background: #e0e7ff;
+            border-color: var(--primary);
+        }
+
+        .var-badge:active {
+            transform: scale(0.95);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #1e293b;
+            color: white;
+            padding: 0.8rem 1.4rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.error {
+            background: var(--error);
+        }
+
+        .toast.success {
+            background: var(--success);
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            display: none;
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 1.5rem 0;
+        }
+
+        .preview-iframe-container {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 0.75rem;
+            background: white;
+        }
+
+        .preview-iframe-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Email Notification Template Generator</h1>
+        <p class="subtitle">Interpolate user profile attributes into your HTML email templates with live preview.</p>
+
+        <div class="grid">
+            <!-- Left Column: Inputs -->
+            <div class="card">
+                <h2><span class="icon">👤</span> User Profile Attributes</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="e.g., John" value="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="e.g., Doe" value="Doe">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="e.g., john@example.com" value="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" placeholder="e.g., Acme Corp" value="Acme Corporation">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="role">Role / Title</label>
+                        <input type="text" id="role" placeholder="e.g., Software Engineer" value="Senior Software Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="e.g., San Francisco, CA" value="San Francisco, CA">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="plan">Subscription Plan</label>
+                    <select id="plan">
+                        <option value="Free">Free</option>
+                        <option value="Pro" selected>Pro</option>
+                        <option value="Enterprise">Enterprise</option>
+                    </select>
+                </div>
+
+                <hr class="section-divider">
+
+                <h2><span class="icon">📝</span> HTML Email Template</h2>
+                <div class="form-group">
+                    <label for="template">Template (use {{variableName}} for interpolation)</label>
+                    <textarea id="template" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { color: #333; font-size: 24px; }
+    p { color: #555; line-height: 1.6; }
+    .highlight { color: #4f46e5; font-weight: bold; }
+    .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Hello, {{firstName}} {{lastName}}! 👋&lt;/h1&gt;
+    &lt;p&gt;Welcome to your &lt;span class="highlight"&gt;{{plan}}&lt;/span&gt; plan.&lt;/p&gt;
+    &lt;p&gt;We're excited to have you at &lt;strong&gt;{{company}}&lt;/strong&gt; as our {{role}}.&lt;/p&gt;
+    &lt;p&gt;Your registered email is: {{email}}&lt;/p&gt;
+    &lt;p&gt;Location: {{location}}&lt;/p&gt;
+    &lt;div class="footer"&gt;
+      &lt;p&gt;This email was sent to {{email}}. If you have any questions, contact support.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Available Variables (click to insert at cursor)</label>
+                    <div class="available-vars" id="availableVars">
+                        <span class="var-badge" data-var="{{firstName}}">{{firstName}}</span>
+                        <span class="var-badge" data-var="{{lastName}}">{{lastName}}</span>
+                        <span class="var-badge" data-var="{{email}}">{{email}}</span>
+                        <span class="var-badge" data-var="{{company}}">{{company}}</span>
+                        <span class="var-badge" data-var="{{role}}">{{role}}</span>
+                        <span class="var-badge" data-var="{{location}}">{{location}}</span>
+                        <span class="var-badge" data-var="{{plan}}">{{plan}}</span>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="generateBtn">⚡ Generate Email</button>
+                    <button class="btn btn-secondary" id="resetBtn">🔄 Reset Defaults</button>
+                    <button class="btn btn-success" id="copyBtn">📋 Copy HTML</button>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+
+            <!-- Right Column: Output -->
+            <div class="card">
+                <h2><span class="icon">👁️</span> Live Preview</h2>
+                <div class="preview-iframe-container">
+                    <iframe id="previewFrame" sandbox="allow-same-origin" title="Email Preview"></iframe>
+                </div>
+
+                <hr class="section-divider">
+
+                <h2><span class="icon">💻</span> Generated HTML Output</h2>
+                <div class="code-output" id="codeOutput">
+                    <!-- Generated code will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        (function() {
+            // --- DOM References ---
+            const firstNameInput = document.getElementById('firstName');
+            const lastNameInput = document.getElementById('lastName');
+            const emailInput = document.getElementById('email');
+            const companyInput = document.getElementById('company');
+            const roleInput = document.getElementById('role');
+            const locationInput = document.getElementById('location');
+            const planSelect = document.getElementById('plan');
+            const templateTextarea = document.getElementById('template');
+            const previewFrame = document.getElementById('previewFrame');
+            const codeOutput = document.getElementById('codeOutput');
+            const generateBtn = document.getElementById('generateBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const copyBtn = document.getElementById('copyBtn');
+            const errorMessage = document.getElementById('errorMessage');
+            const toast = document.getElementById('toast');
+            const availableVarsContainer = document.getElementById('availableVars');
+
+            // --- Default template (stored as a string) ---
+            const DEFAULT_TEMPLATE = `<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+    .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1 { color: #333; font-size: 24px; }
+    p { color: #555; line-height: 1.6; }
+    .highlight { color: #4f46e5; font-weight: bold; }
+    .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hello, {{firstName}} {{lastName}}! 👋</h1>
+    <p>Welcome to your <span class="highlight">{{plan}}</span> plan.</p>
+    <p>We're excited to have you at <strong>{{company}}</strong> as our {{role}}.</p>
+    <p>Your registered email is: {{email}}</p>
+    <p>Location: {{location}}</p>
+    <div class="footer">
+      <p>This email was sent to {{email}}. If you have any questions, contact support.</p>
+    </div>
+  </div>
+</body>
+</html>`;
+
+            // --- Default user profile ---
+            const DEFAULT_PROFILE = {
+                firstName: 'John',
+                lastName: 'Doe',
+                email: 'john.doe@example.com',
+                company: 'Acme Corporation',
+                role: 'Senior Software Engineer',
+                location: 'San Francisco, CA',
+                plan: 'Pro'
+            };
+
+            // --- Current state ---
+            let currentProfile = { ...DEFAULT_PROFILE };
+            let currentTemplate = DEFAULT_TEMPLATE;
+            let generatedHtml = '';
+
+            // --- Helper: Escape HTML for safe display in code output ---
+            function escapeHtml(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            // --- Helper: Syntax highlight for HTML code output ---
+            function highlightHtml(html) {
+                // Escape first
+                let escaped = escapeHtml(html);
+
+                // Highlight tags
+                escaped = escaped.replace(
+                    /(&lt;\/?)([a-zA-Z][a-zA-Z0-9-]*)((?:\s+[^&]*?)?)(\/?&gt;)/g,
+                    function(match, openBracket, tagName, attrs, closeBracket) {
+                        // Highlight attributes
+                        let highlightedAttrs = attrs.replace(
+                            /([a-zA-Z-]+)(=)(&quot;)(.*?)(&quot;)/g,
+                            '<span class="token-attr">$1</span>$2<span class="token-value">$3$4$5</span>'
+                        );
+                        return '<span class="token-tag">' + openBracket + tagName + highlightedAttrs + closeBracket + '</span>';
+                    }
+                );
+
+                // Highlight interpolated values ({{...}}) — but they're already replaced in output
+                // Instead, highlight any remaining {{...}} as warnings
+                escaped = escaped.replace(
+                    /(\{\{.*?\}\})/g,
+                    '<span class="token-interpolated">$1</span>'
+                );
+
+                return escaped;
+            }
+
+            // --- Core: Interpolate template with profile data ---
+            function interpolateTemplate(template, profile) {
+                let result = template;
+
+                // Replace all {{variableName}} patterns with profile values
+                for (const [key, value] of Object.entries(profile)) {
+                    const pattern = new RegExp('\\{\\{\\s*' + key + '\\s*\\}\\}', 'gi');
+                    result = result.replace(pattern, String(value));
+                }
+
+                // Check for any remaining unresolved placeholders
+                const remaining = result.match(/\{\{.*?\}\}/g);
+                if (remaining && remaining.length > 0) {
+                    console.warn('Unresolved placeholders:', remaining);
+                }
+
+                return result;
+            }
+
+            // --- Collect profile from form inputs ---
+            function collectProfileFromForm() {
+                return {
+                    firstName: firstNameInput.value.trim() || '',
+                    lastName: lastNameInput.value.trim() || '',
+                    email: emailInput.value.trim() || '',
+                    company: companyInput.value.trim() || '',
+                    role: roleInput.value.trim() || '',
+                    location: locationInput.value.trim() || '',
+                    plan: planSelect.value
+                };
+            }
+
+            // --- Validate inputs ---
+            function validateInputs(profile) {
+                const errors = [];
+                if (!profile.firstName) errors.push('First name is required.');
+                if (!profile.lastName) errors.push('Last name is required.');
+                if (!profile.email) {
+                    errors.push('Email is required.');
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email)) {
+                    errors.push('Please enter a valid email address.');
+                }
+                if (!profile.company) errors.push('Company is required.');
+                if (!profile.role) errors.push('Role is required.');
+                if (!profile.location) errors.push('Location is required.');
+                return errors;
+            }
+
+            // --- Update preview and code output ---
+            function updateOutputs() {
+                const profile = collectProfileFromForm();
+                currentProfile = profile;
+                currentTemplate = templateTextarea.value;
+
+                const errors = validateInputs(profile);
+                if (errors.length > 0) {
+                    errorMessage.textContent = errors.join(' ');
+                    errorMessage.classList.add('visible');
+                } else {
+                    errorMessage.textContent = '';
+                    errorMessage.classList.remove('visible');
+                }
+
+                // Interpolate
+                generatedHtml = interpolateTemplate(currentTemplate, profile);
+
+                // Update iframe preview
+                const frameDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+                frameDoc.open();
+                frameDoc.write(generatedHtml);
+                frameDoc.close();
+
+                // Update code output with syntax highlighting
+                codeOutput.innerHTML = highlightHtml(generatedHtml);
+            }
+
+            // --- Show toast notification ---
+            function showToast(message, type = 'success') {
+                toast.textContent = message;
+                toast.className = 'toast ' + type;
+                // Force reflow
+                void toast.offsetWidth;
+                toast.classList.add('show');
+                clearTimeout(toast._timeout);
+                toast._timeout = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
+            }
+
+            // --- Copy to clipboard ---
+            function copyToClipboard(text) {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        showToast('✅ HTML copied to clipboard!', 'success');
+                    }).catch(() => {
+                        fallbackCopy(text);
+                    });
+                } else {
+                    fallbackCopy(text);
+                }
+            }
+
+            function fallbackCopy(text) {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('✅ HTML copied to clipboard!', 'success');
+                } catch (e) {
+                    showToast('❌ Failed to copy. Please copy manually.', 'error');
+                }
+                document.body.removeChild(textarea);
+            }
+
+            // --- Reset to defaults ---
+            function resetToDefaults() {
+                firstNameInput.value = DEFAULT_PROFILE.firstName;
+                lastNameInput.value = DEFAULT_PROFILE.lastName;
+                emailInput.value = DEFAULT_PROFILE.email;
+                companyInput.value = DEFAULT_PROFILE.company;
+                roleInput.value = DEFAULT_PROFILE.role;
+                locationInput.value = DEFAULT_PROFILE.location;
+                planSelect.value = DEFAULT_PROFILE.plan;
+                templateTextarea.value = DEFAULT_TEMPLATE;
+                updateOutputs();
+                showToast('🔄 Reset to default values', 'success');
+            }
+
+            // --- Insert variable at cursor position in textarea ---
+            function insertVariableAtCursor(varName) {
+                const textarea = templateTextarea;
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+                const before = text.substring(0, start);
+                const after = text.substring(end);
+                textarea.value = before + varName + after;
+                // Move cursor after inserted text
+                const newCursorPos = start + varName.length;
+                textarea.selectionStart = textarea.selectionEnd = newCursorPos;
+                textarea.focus();
+                updateOutputs();
+            }
+
+            // --- Event Listeners ---
+            // Auto-update on any input change
+            const allInputs = [
+                firstNameInput, lastNameInput, emailInput,
+                companyInput, roleInput, locationInput, planSelect
+            ];
+            allInputs.forEach(input => {
+                input.addEventListener('input', updateOutputs);
+                input.addEventListener('change', updateOutputs);
+            });
+
+            templateTextarea.addEventListener('input', updateOutputs);
+
+            generateBtn.addEventListener('click', () => {
+                updateOutputs();
+                const errors = validateInputs(collectProfileFromForm());
+                if (errors.length === 0) {
+                    showToast('⚡ Email generated successfully!', 'success');
+                } else {
+                    showToast('❌ ' + errors.join(' '), 'error');
+                }
+            });
+
+            resetBtn.addEventListener('click', resetToDefaults);
+
+            copyBtn.addEventListener('click', () => {
+                if (generatedHtml) {
+                    copyToClipboard(generatedHtml);
+                } else {
+                    updateOutputs();
+                    copyToClipboard(generatedHtml);
+                }
+            });
+
+            // Variable badge click to insert
+            availableVarsContainer.addEventListener('click', (e) => {
+                const badge = e.target.closest('.var-badge');
+                if (badge) {
+                    const varName = badge.getAttribute('data-var');
+                    insertVariableAtCursor(varName);
+                }
+            });
+
+            // Keyboard shortcut: Ctrl+Enter to generate
+            templateTextarea.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.key === 'Enter') {
+                    e.preventDefault();
+                    generateBtn.click();
+                }
+            });
+
+            // --- Initialize ---
+            function init() {
+                // Set initial values
+                firstNameInput.value = DEFAULT_PROFILE.firstName;
+                lastNameInput.value = DEFAULT_PROFILE.lastName;
+                emailInput.value = DEFAULT_PROFILE.email;
+                companyInput.value = DEFAULT_PROFILE.company;
+                roleInput.value = DEFAULT_PROFILE.role;
+                locationInput.value = DEFAULT_PROFILE.location;
+                planSelect.value = DEFAULT_PROFILE.plan;
+                templateTextarea.value = DEFAULT_TEMPLATE;
+
+                // Initial render
+                updateOutputs();
+            }
+
+            init();
+        })();
+    </script>
+</body>
+</html>

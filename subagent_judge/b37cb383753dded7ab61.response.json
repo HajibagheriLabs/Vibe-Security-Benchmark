@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "medium",
+  "evidence": [],
+  "controls_present": ["custom scheme + host declared in intent-filter"],
+  "other_classes_observed": ["allowBackup=true could expose app data via backup"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

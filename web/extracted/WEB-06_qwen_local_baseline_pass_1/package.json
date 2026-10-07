@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "algoliasearch": "^4.24.0",
+    "@algolia/autocomplete-js": "^1.17.0",
+    "@algolia/autocomplete-theme-classic": "^1.17.0",
+    "@algolia/autocomplete-plugin-fetch": "^1.17.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0"
+  }
+}

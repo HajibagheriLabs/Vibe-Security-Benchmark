@@ -1,0 +1,47 @@
+// app/api/create-checkout-session/route.ts
+import { NextResponse } from 'next/server';
+import Stripe from 'stripe';
+
+// Initialize Stripe with the server secret key
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  apiVersion: '2023-10-16', // Pin API version for stability
+});
+
+export async function POST(request: Request) {
+  try {
+    const { priceId, quantity = 1 } = await request.json();
+
+    if (!priceId) {
+      return NextResponse.json(
+        { message: 'Price ID is required' },
+        { status: 400 }
+      );
+    }
+
+    // Create Checkout Session
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      line_items: [
+        {
+          price: priceId,
+          quantity: quantity,
+        },
+      ],
+      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment/cancel`,
+      // Optional: Add metadata for tracking
+      metadata: {
+        priceId,
+        quantity: String(quantity),
+      },
+    });
+
+    return NextResponse.json({ sessionId: session.id });
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
+    return NextResponse.json(
+      { message: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+}

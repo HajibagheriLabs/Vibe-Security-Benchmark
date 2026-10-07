@@ -1,0 +1,8 @@
+# .env.example
+# Email service configuration
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USERNAME=
+SMTP_PASSWORD=
+FROM_EMAIL=
+FROM_NAME=

@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "medium",
+  "evidence": [],
+  "controls_present": ["custom scheme (not http/https) intent-filter", "exported activity with launchMode singleTask and taskAffinity reset"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 1,
+  "refusal": false
+}

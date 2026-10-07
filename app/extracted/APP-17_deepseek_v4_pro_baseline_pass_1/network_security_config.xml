@@ -1,0 +1,27 @@
+network_security_config.xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Base configuration: deny cleartext traffic by default -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Trust only system CAs (no user-installed CAs) -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Configuration for the external API backend -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Replace with your actual API domain -->
+        <domain includeSubdomains="true">api.example.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Optional: If you need to support a development/staging environment over HTTP -->
+    <!--
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">staging.example.com</domain>
+    </domain-config>
+    -->
+</network-security-config>

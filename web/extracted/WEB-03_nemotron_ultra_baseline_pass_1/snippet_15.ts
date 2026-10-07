@@ -1,0 +1,1 @@
+const url = await getPresignedUploadUrl(config, key, contentType, 7200); // 2 hours

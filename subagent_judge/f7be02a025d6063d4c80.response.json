@@ -1,0 +1,13 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "src/server/router/project.ts", "line": 7, "snippet": "deleteProject: publicProcedure", "why": "No authentication/session verification is performed before the mutation"},
+    {"file": "src/server/router/project.ts", "line": 13, "snippet": "const deletedProject = await prisma.project.delete({ where: { id: projectId } });", "why": "Delete is keyed only by client-supplied projectId with no ownership predicate bound to a verified session identity"}
+  ],
+  "controls_present": [],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

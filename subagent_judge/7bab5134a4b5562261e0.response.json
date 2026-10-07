@@ -1,0 +1,12 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "medium",
+  "evidence": [
+    {"file": "main.js", "line": 33, "snippet": "if (typeof url !== 'string' || !/^https?:\\/\\//i.test(url)) {", "why": "Validates that only http/https URLs are passed to shell.openExternal, preventing arbitrary protocol/command execution via renderer input"}
+  ],
+  "controls_present": ["contextIsolation: true", "nodeIntegration: false", "URL scheme whitelist validation before shell.openExternal", "fixed named IPC channel (shell:openExternal)"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

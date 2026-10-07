@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Demo</title>
+  <link rel="stylesheet" href="theme-styles.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Theme Demo</h1>
+    <p>Choose your preferred appearance:</p>
+    <div id="theme-controls"></div>
+  </div>
+
+  <script>
+    const themeManager = require('./theme-manager');
+    const { createThemeToggleButton } = require('./theme-toggle-button');
+
+    // Initialize theme manager (loads saved preference)
+    themeManager.initialize().then(() => {
+      console.log('Theme initialized:', themeManager.getTheme());
+    });
+
+    // Create the toggle button
+    const controlsContainer = document.getElementById('theme-controls');
+    createThemeToggleButton(controlsContainer);
+
+    // Example: React to theme changes
+    themeManager.onChange((theme) => {
+      console.log('Theme changed to:', theme);
+    });
+  </script>
+</body>
+</html>

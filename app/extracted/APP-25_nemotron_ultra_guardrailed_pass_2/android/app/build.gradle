@@ -1,0 +1,32 @@
+android {
+    // ... other android config ...
+
+    signingConfigs {
+        release {
+            // Keystore and key passwords are supplied at build time via environment variables
+            // or a local key.properties file that is NOT committed to version control.
+            // See rule §3: "NEVER place a signing key, keystore, or certificate in the repository."
+            storeFile file(System.getenv("KEYSTORE_PATH") ?: "")
+            storePassword System.getenv("KEYSTORE_PASSWORD") ?: ""
+            keyAlias System.getenv("KEY_ALIAS") ?: ""
+            keyPassword System.getenv("KEY_PASSWORD") ?: ""
+            
+            // Explicitly enable v1/v2/v3 signing for maximum compatibility and security
+            v1SigningEnabled true
+            v2SigningEnabled true
+            v3SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            // Ensure debuggable is false for release (default, but explicit)
+            debuggable false
+            // Enable code shrinking/obfuscation per rule §3
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}

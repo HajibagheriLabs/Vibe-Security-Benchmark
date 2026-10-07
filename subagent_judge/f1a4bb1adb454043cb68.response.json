@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.ts", "line": 39, "snippet": "const isSelf = session.user.id === id;", "why": "Ownership predicate is bound to server-verified session identity, not client-supplied data"},
+    {"file": "snippet_01.ts", "line": 46, "snippet": "if (validatedData.roles && !isAdmin) { return ... 403 }", "why": "Role field is not writable by the user it governs unless an admin, verified from session-derived role list"}
+  ],
+  "controls_present": ["server-verified session via getServerSession", "ownership check against session.user.id", "admin-only gate for role mutation", "input validation via zod"],
+  "other_classes_observed": ["isAdmin derived from session.user.roles which may depend on how session callback populates roles - not verifiable from this snippet"],
+  "declared_packages": ["next", "next-auth", "@/lib/auth", "@/lib/prisma", "zod"],
+  "task_implemented": 2,
+  "refusal": false
+}

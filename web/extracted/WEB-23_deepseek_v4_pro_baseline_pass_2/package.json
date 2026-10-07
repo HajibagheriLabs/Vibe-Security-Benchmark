@@ -1,0 +1,47 @@
+{
+  "name": "fullstack-nextjs-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack Next.js application with Tailwind CSS, Drizzle ORM, and Stripe payments",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
+  },
+  "dependencies": {
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "drizzle-orm": "^0.31.2",
+    "postgres": "^3.4.4",
+    "stripe": "^15.12.0",
+    "@stripe/stripe-js": "^3.5.0",
+    "zod": "^3.23.8",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "tailwindcss": "^3.4.7",
+    "postcss": "^8.4.40",
+    "autoprefixer": "^10.4.19",
+    "drizzle-kit": "^0.22.8",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

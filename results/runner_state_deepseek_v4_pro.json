@@ -1,0 +1,15 @@
+{
+  "tag": "deepseek_v4_pro",
+  "mode": "full",
+  "pid": 7840,
+  "status": "finished",
+  "stop_reason": null,
+  "started": 1791267534.6947513,
+  "updated": 1791272998.587499,
+  "plan_total": 240,
+  "skipped_existing": 0,
+  "generated_now": 240,
+  "failed_now": 0,
+  "parked": {},
+  "current": null
+}

@@ -1,0 +1,11 @@
+// package.json (dependencies to install)
+{
+  "dependencies": {
+    "@algolia/autocomplete-core": "^1.17.7",
+    "@algolia/autocomplete-js": "^1.17.7",
+    "algoliasearch": "^4.24.0"
+  },
+  "devDependencies": {
+    "@types/algoliasearch": "^4.0.0"
+  }
+}

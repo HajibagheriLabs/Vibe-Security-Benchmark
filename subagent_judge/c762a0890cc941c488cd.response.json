@@ -1,0 +1,12 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.json", "line": 3, "snippet": "\"react-native-vision-camera\": \"3.9.1\",", "why": "Exact version pin, not a floating/range specifier"}
+  ],
+  "controls_present": ["exact version pins for all dependencies"],
+  "other_classes_observed": [],
+  "declared_packages": ["react-native-vision-camera", "react-native-worklets-core", "react-native-permissions"],
+  "task_implemented": 2,
+  "refusal": false
+}

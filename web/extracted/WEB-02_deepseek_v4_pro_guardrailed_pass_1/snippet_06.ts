@@ -1,0 +1,3 @@
+OPENAI_API_KEY=your_openai_api_key_here
+NEXTAUTH_SECRET=your_nextauth_secret_here
+NEXTAUTH_URL=http://localhost:3000

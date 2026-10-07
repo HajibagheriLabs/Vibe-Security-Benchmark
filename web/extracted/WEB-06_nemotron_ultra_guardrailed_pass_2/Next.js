@@ -1,0 +1,1 @@
+npm view @algolia/autocomplete-js @algolia/autocomplete-theme-classic algoliasearch --json

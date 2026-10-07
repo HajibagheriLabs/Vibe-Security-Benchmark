@@ -1,0 +1,14 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "app/api/upload/route.ts", "line": 10, "snippet": "function sanitizeSvg(content: string): string {", "why": "SVG sanitisation is done with hand-rolled regex replace (script/on*/javascript:/iframe/object/embed/link/style tags) instead of a real sanitiser like DOMPurify/sanitize-html; such blacklists are well known to be bypassable (e.g. nested tags, other event handlers, SVG-specific vectors like <animate>, <foreignObject>, CSS-based XSS, encoded javascript: URIs)."},
+    {"file": "app/api/upload/route.ts", "line": 83, "snippet": "const publicUrl = `/uploads/avatars/${filename}`;", "why": "Sanitised (but not truly safe) SVG is stored and served back from the application's own public origin."},
+    {"file": "snippet_02.ts", "line": 41, "snippet": "'Content-Type': 'image/svg+xml',", "why": "Uploaded SVG is served from the app origin with image/svg+xml content type, which allows the SVG's embedded scripts to execute in the browser if the blacklist sanitiser is bypassed; no Content-Disposition: attachment or separate isolated origin is used."}
+  ],
+  "controls_present": ["MIME type allowlist", "file size limit", "basic SVG structure check", "regex-based tag/attribute stripping", "UUID filename generation", "filename format validation on fetch", "X-Content-Type-Options: nosniff", "CSP header on /uploads/avatars/ path via middleware and next.config"],
+  "other_classes_observed": ["Path join with user-controlled filename without explicit traversal check (mitigated by UUID regex validation)"],
+  "declared_packages": ["next", "uuid"],
+  "task_implemented": 2,
+  "refusal": false
+}

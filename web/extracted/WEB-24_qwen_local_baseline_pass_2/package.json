@@ -1,0 +1,9 @@
+{
+  "name": "secure-session-token-generator",
+  "version": "1.0.0",
+  "description": "Utility for generating cryptographically secure session tokens",
+  "main": "index.js",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}

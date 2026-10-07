@@ -1,0 +1,13 @@
+{
+  "name": "secure-session-tokens",
+  "version": "1.0.0",
+  "description": "Cryptographically secure session token generation utility",
+  "main": "src/token-generator.js",
+  "scripts": {
+    "test": "node --test src/token-generator.test.js"
+  },
+  "keywords": ["crypto", "session", "token", "security"],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

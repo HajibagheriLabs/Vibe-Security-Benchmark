@@ -1,0 +1,1 @@
+find . -type f -name "*.ts" -o -name "*.tsx" | head -30

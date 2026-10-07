@@ -1,0 +1,8 @@
+// package.json (dependencies section)
+{
+  "dependencies": {
+    "@stripe/stripe-js": "2.1.11",
+    "stripe": "14.5.0",
+    "zod": "3.22.4"
+  }
+}

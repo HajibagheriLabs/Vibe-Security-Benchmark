@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": [],
+  "other_classes_observed": ["requireConfirmation false allows bypass on iOS potentially", "no rate limiting beyond OS lockout"],
+  "declared_packages": ["expo", "expo-local-authentication", "react", "react-native", "@react-navigation/native", "@react-navigation/native-stack", "react-native-screens", "react-native-safe-area-context", "@types/react", "typescript"],
+  "task_implemented": 2,
+  "refusal": false
+}

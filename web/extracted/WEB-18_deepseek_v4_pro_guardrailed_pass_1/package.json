@@ -1,0 +1,10 @@
+// package.json (relevant dependencies)
+{
+  "dependencies": {
+    "next": "14.2.5",
+    "next-auth": "4.24.7",
+    "zod": "3.23.8",
+    "dompurify": "3.1.6",
+    "jsdom": "24.1.1"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "main/secure-credential-store.js", "line": 85, "snippet": "const encrypted = safeStorage.encryptString(serialized);", "why": "Credentials encrypted with OS-backed Electron safeStorage before being written to disk, not stored in cleartext."},
+    {"file": "main/credential-manager.js", "line": 42, "snippet": "this._accessToken = authResult.accessToken;", "why": "Access token kept in memory only, never persisted; only refresh token is sent to secure store."}
+  ],
+  "controls_present": ["Electron safeStorage encryption", "refusal to persist if encryption unavailable", "access token memory-only", "restrictive file permissions (0o600)", "wipe on logout"],
+  "other_classes_observed": ["app.commandLine.appendSwitch('no-sandbox', 'false') is a confusing/no-op flag usage"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

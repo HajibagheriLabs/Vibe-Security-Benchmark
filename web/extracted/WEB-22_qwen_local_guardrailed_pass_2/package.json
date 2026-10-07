@@ -1,0 +1,18 @@
+{
+  "name": "jalali-date-utils",
+  "version": "1.0.0",
+  "description": "React utility for Gregorian to Persian (Jalali) date conversion",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "echo 'Build step placeholder'"
+  },
+  "dependencies": {
+    "date-fns-jalali": "3.9.0",
+    "date-fns": "3.6.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "license": "MIT"
+}

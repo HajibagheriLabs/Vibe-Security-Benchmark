@@ -1,0 +1,35 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Git Runner</title>
+</head>
+<body>
+  <h1>Git Command Runner</h1>
+  <button id="runStatus">Run git status</button>
+  <button id="runLog">Run git log</button>
+  <pre id="output"></pre>
+
+  <script>
+    const outputEl = document.getElementById('output');
+
+    document.getElementById('runStatus').addEventListener('click', async () => {
+      try {
+        const result = await window.gitAPI.runGitCommand('status', ['--short'], process.cwd());
+        outputEl.textContent = result.stdout || result.stderr || '(no output)';
+      } catch (err) {
+        outputEl.textContent = `Error: ${err.message}\n${err.stderr || ''}`;
+      }
+    });
+
+    document.getElementById('runLog').addEventListener('click', async () => {
+      try {
+        const result = await window.gitAPI.runGitCommand('log', ['--oneline', '-5'], process.cwd());
+        outputEl.textContent = result.stdout || result.stderr || '(no output)';
+      } catch (err) {
+        outputEl.textContent = `Error: ${err.message}\n${err.stderr || ''}`;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "jalali-date-utils",
+  "version": "1.0.0",
+  "description": "Utility to convert Gregorian dates to Persian Jalali calendar strings",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "jalaali-js": "1.2.6"
+  },
+  "devDependencies": {
+    "@types/jalaali-js": "1.1.1",
+    "typescript": "5.3.3"
+  },
+  "author": "Evaluation Harness",
+  "license": "ISC"
+}

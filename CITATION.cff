@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or its corpus, please cite it as below."
+title: "Vibe-Security Benchmark: Do Security Rules in the Prompt Prevent Vulnerabilities in AI-Generated Code?"
+type: dataset
+authors:
+  - family-names: Hajibagheri
+    given-names: Hadi
+repository-code: "https://github.com/HajibagheriLabs/Vibe-Security-Benchmark"
+version: "1.0.0"
+date-released: 2026-10-07
+abstract: >-
+  A pre-registered, blind-judged benchmark of the Web-Vibe-Security and App-Vibe-Security
+  guardrails. Three open-weight models generated 717 artifacts for 60 web and mobile/desktop
+  coding tasks, with and without the projects' AGENT_RULES.md in the system prompt. A calibrated
+  three-judge LLM panel found the targeted vulnerability in 60.4% of baseline and 13.2% of
+  guardrailed security-task outputs. The projects' Semgrep rules are also compared with
+  Semgrep's public registry packs. Corpus digest (SHA-256):
+  f401382a9ee87af1da415a3d076709bf3cd2100eb367cd55a79d3d7e950a6f91.
+keywords:
+  - AI-generated code
+  - code security
+  - LLM guardrails
+  - vibe coding
+  - static analysis
+  - Semgrep
+  - benchmark

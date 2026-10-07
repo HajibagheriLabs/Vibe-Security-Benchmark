@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "src/server/api/routers/project.ts", "line": 9, "snippet": "const userId = ctx.session.user.id;", "why": "Identity derived from server-verified session, not client input"},
+    {"file": "src/server/api/routers/project.ts", "line": 13, "snippet": "id: projectId, ownerId: userId,", "why": "Ownership predicate bound to session identity is included directly in the delete WHERE clause"}
+  ],
+  "controls_present": ["protectedProcedure authentication", "session-derived userId", "ownership predicate in WHERE clause"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

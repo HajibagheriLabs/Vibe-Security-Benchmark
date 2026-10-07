@@ -1,0 +1,10 @@
+{
+  "name": "qr-scanner-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.6",
+    "react-native-camera": "4.2.1",
+    "react-native-permissions": "3.10.1"
+  }
+}

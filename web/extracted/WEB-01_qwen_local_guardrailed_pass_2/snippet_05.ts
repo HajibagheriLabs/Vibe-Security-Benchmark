@@ -1,0 +1,7 @@
+// .gitignore
+.env
+.env.local
+.env.production.local
+.env.development.local
+*.pem
+*.key

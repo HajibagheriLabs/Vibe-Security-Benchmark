@@ -1,0 +1,13 @@
+{
+  "name": "qr-scanner-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.4",
+    "react-native-vision-camera": "^3.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

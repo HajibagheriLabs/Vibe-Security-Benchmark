@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Base configuration: Allow cleartext traffic for local development/debugging if needed -->
+    <base-config cleartextTrafficPermitted="true" />
+
+    <!-- Domain-specific configuration for the external API backend -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Replace with your actual backend domain -->
+        <domain includeSubdomains="true">api.example.com</domain>
+        
+        <!-- Optional: Add specific trust anchors if using a custom CA for the backend -->
+        <!--
+        <trust-anchors>
+            <certificates src="@raw/my_custom_ca" />
+        </trust-anchors>
+        -->
+    </domain-config>
+</network-security-config>

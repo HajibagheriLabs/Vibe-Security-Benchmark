@@ -1,0 +1,20 @@
+{
+  "name": "secure-session-tokens",
+  "version": "1.0.0",
+  "description": "Cryptographically secure session token generation for Node.js",
+  "main": "dist/session-token.js",
+  "types": "dist/session-token.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test test/session-token.test.js"
+  },
+  "keywords": ["crypto", "session", "token", "security"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

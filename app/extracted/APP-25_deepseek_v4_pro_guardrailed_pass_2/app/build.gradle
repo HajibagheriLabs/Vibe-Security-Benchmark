@@ -1,0 +1,53 @@
+android {
+    signingConfigs {
+        release {
+            // Signing credentials are loaded from environment variables or a local
+            // properties file that is git-ignored. Never hardcode keystore paths,
+            // passwords, or aliases in build.gradle.
+            
+            // Load from local.properties (git-ignored) or environment variables
+            def keystorePropertiesFile = rootProject.file("keystore.properties")
+            def keystoreProperties = new Properties()
+            
+            if (keystorePropertiesFile.exists()) {
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+            }
+            
+            // Path to the keystore file - never commit the actual keystore
+            storeFile keystoreProperties['storeFile'] ? 
+                file(keystoreProperties['storeFile']) : 
+                file(System.getenv('ANDROID_KEYSTORE_PATH') ?: '')
+            
+            // Keystore password
+            storePassword keystoreProperties['storePassword'] ?: 
+                System.getenv('ANDROID_KEYSTORE_PASSWORD')
+            
+            // Key alias
+            keyAlias keystoreProperties['keyAlias'] ?: 
+                System.getenv('ANDROID_KEY_ALIAS')
+            
+            // Key password
+            keyPassword keystoreProperties['keyPassword'] ?: 
+                System.getenv('ANDROID_KEY_PASSWORD')
+            
+            // Enable V2 signing scheme for better security
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Ensure no debuggable flag in release
+            debuggable false
+            
+            // Disable cleartext traffic
+            manifestPlaceholders = [usesCleartextTraffic: "false"]
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": ["server-verified session via supabase.auth.getUser()", "ownership predicate .eq('owner_id', user.id) in query", "input validation with zod"],
+  "other_classes_observed": [],
+  "declared_packages": ["next", "@/lib/supabase/server", "zod"],
+  "task_implemented": 2,
+  "refusal": false
+}

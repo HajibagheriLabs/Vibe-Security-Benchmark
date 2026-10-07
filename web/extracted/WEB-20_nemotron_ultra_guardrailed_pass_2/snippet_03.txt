@@ -1,0 +1,10 @@
+# .gitignore
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage

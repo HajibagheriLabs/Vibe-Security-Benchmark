@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Security decision: cleartext traffic is disabled globally.
+        All API communication must use HTTPS. No exceptions for dev/staging.
+    -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!--
+                Security decision: trust only the system CA store.
+                No user-added CAs are trusted, preventing a rooted device
+                from MITM-ing traffic via a user-installed certificate.
+            -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--
+        Security decision: pin certificates for the production API domain.
+        Replace the placeholder digests with the actual SHA-256 SPKI
+        fingerprints of your backend's leaf or intermediate certificates.
+        Include a backup pin for rotation.
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.example.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+        <pin-set expiration="2026-12-31">
+            <!-- Primary pin: SHA-256 SPKI digest, base64-encoded -->
+            <pin digest="SHA-256">REPLACE_WITH_PRIMARY_SPKI_SHA256_BASE64</pin>
+            <!-- Backup pin: SHA-256 SPKI digest, base64-encoded -->
+            <pin digest="SHA-256">REPLACE_WITH_BACKUP_SPKI_SHA256_BASE64</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

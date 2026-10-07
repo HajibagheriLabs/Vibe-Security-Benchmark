@@ -1,0 +1,24 @@
+# pyproject.toml
+[project]
+name = "email-template-generator"
+version = "1.0.0"
+description = "Secure email template generator with XSS prevention"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test_email_template_generator.py"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+lint.select = ["E", "F", "I", "UP", "B", "C4", "SIM", "T20"]

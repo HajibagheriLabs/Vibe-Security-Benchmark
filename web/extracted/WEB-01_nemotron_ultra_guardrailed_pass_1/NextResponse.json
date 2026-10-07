@@ -1,0 +1,23 @@
+// components/CheckoutButton.tsx
+'use client';
+import { useRouter } from 'next/navigation';
+
+export function CheckoutButton({ priceId }: { priceId: string }) {
+  const router = useRouter();
+  const handleClick = async () => {
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        priceId,
+        successUrl: `${window.location.origin}/success`,
+        cancelUrl: `${window.location.origin}/pricing`,
+      }),
+    });
+    const { sessionId, error } = await res.json();
+    if (error) return alert(error);
+    // Redirect to Stripe Checkout (hosted page)
+    window.location.href = `https://checkout.stripe.com/pay/${sessionId}`;
+  };
+  return <button onClick={handleClick} type="button">Subscribe</button>;
+}

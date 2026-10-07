@@ -1,0 +1,28 @@
+{
+  "name": "html-to-pdf-service",
+  "version": "1.0.0",
+  "description": "Server-side HTML to PDF conversion service",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "puppeteer": "22.15.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.12",
+    "typescript": "5.5.4",
+    "vitest": "2.0.5",
+    "eslint": "8.57.0",
+    "@typescript-eslint/eslint-plugin": "7.18.0",
+    "@typescript-eslint/parser": "7.18.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "npm@10.8.1"
+}

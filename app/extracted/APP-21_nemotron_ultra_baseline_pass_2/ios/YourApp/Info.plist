@@ -1,0 +1,11 @@
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>com.yourapp</string>
+        </array>
+        <key>CFBundleURLName</key>
+        <string>OAuth Redirect</string>
+    </dict>
+</array>

@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.73.6",
+    "react-native-vision-camera": "^3.7.1",
+    "react-native-worklets": "^0.3.2",
+    "react-native-reanimated": "~3.6.2"
+  },
+  "devDependencies": {
+    "@types/react": "~18.2.45",
+    "typescript": "5.3.3"
+  }
+}

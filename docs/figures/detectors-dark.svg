@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 547" width="1000" height="547" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<title id="t">Static detection: VibeSec rules vs Semgrep registry packs</title>
+<desc id="d">Grouped column chart of precision, recall and F1 for three Semgrep detector arms on web and mobile/desktop outputs, scored against the judge panel.</desc>
+<rect x="0.5" y="0.5" width="999" height="546" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<text x="40.0" y="50.0" font-size="22" fill="#f0f6fc" font-weight="700">Catching what slips through: project rules vs. registry rules</text>
+<text x="40.0" y="77.0" font-size="14" fill="#b1bac4">Semgrep run on every security-task output and scored against the judge panel. A finding counts</text>
+<text x="40.0" y="97.0" font-size="14" fill="#b1bac4">only if its vulnerability class matches the scenario’s target class.</text>
+<rect x="40.0" y="135.0" width="14.0" height="14.0" rx="3" fill="#d95926"/>
+<text x="62.0" y="147.0" font-size="13.5" fill="#b1bac4">Semgrep registry packs</text>
+<rect x="246.2" y="135.0" width="14.0" height="14.0" rx="3" fill="#3987e5"/>
+<text x="268.2" y="147.0" font-size="13.5" fill="#b1bac4">VibeSec Semgrep rules</text>
+<rect x="445.3" y="135.0" width="14.0" height="14.0" rx="3" fill="#199e70"/>
+<text x="467.3" y="147.0" font-size="13.5" fill="#b1bac4">VibeSec rules + dependency audit</text>
+<text x="40.0" y="185.0" font-size="14" fill="#f0f6fc" font-weight="700">Web apps  (n = 299)</text>
+<line x1="80.0" y1="447.0" x2="480.0" y2="447.0" stroke="#3d444d" stroke-width="1" stroke-linecap="butt"/>
+<text x="72.0" y="451.0" font-size="11.5" fill="#8b949e" text-anchor="end">0%</text>
+<line x1="80.0" y1="378.4" x2="480.0" y2="378.4" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
+<text x="72.0" y="382.4" font-size="11.5" fill="#8b949e" text-anchor="end">20%</text>
+<line x1="80.0" y1="309.9" x2="480.0" y2="309.9" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
+<text x="72.0" y="313.9" font-size="11.5" fill="#8b949e" text-anchor="end">40%</text>
+<line x1="80.0" y1="241.3" x2="480.0" y2="241.3" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
+<text x="72.0" y="245.3" font-size="11.5" fill="#8b949e" text-anchor="end">60%</text>
+<path d="M110.0 447.0 V365.3 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#d95926"/>
+<text x="123.0" y="354.3" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">25%</text>
+<path d="M142.0 447.0 V265.5 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#3987e5"/>
+<text x="155.0" y="254.5" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">54%</text>
+<path d="M174.0 447.0 V268.5 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#199e70"/>
+<text x="187.0" y="257.5" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">53%</text>
+<text x="155.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">Precision</text>
+<path d="M238.0 447.0 V441.0 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#d95926"/>
+<text x="251.0" y="430.0" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">3%</text>
+<path d="M270.0 447.0 V341.2 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#3987e5"/>
+<text x="283.0" y="330.2" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">32%</text>
+<path d="M302.0 447.0 V341.2 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#199e70"/>
+<text x="315.0" y="330.2" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">32%</text>
+<text x="283.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">Recall</text>
+<path d="M366.0 447.0 V433.1 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#d95926"/>
+<text x="379.0" y="422.1" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">5%</text>
+<path d="M398.0 447.0 V313.0 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#3987e5"/>
+<text x="411.0" y="302.0" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">40%</text>
+<path d="M430.0 447.0 V313.9 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#199e70"/>
+<text x="443.0" y="302.9" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">40%</text>
+<text x="411.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">F1</text>
+<text x="510.0" y="185.0" font-size="14" fill="#f0f6fc" font-weight="700">Mobile &amp; desktop apps  (n = 298)</text>
+<line x1="550.0" y1="447.0" x2="950.0" y2="447.0" stroke="#3d444d" stroke-width="1" stroke-linecap="butt"/>
+<text x="542.0" y="451.0" font-size="11.5" fill="#8b949e" text-anchor="end">0%</text>
+<line x1="550.0" y1="378.4" x2="950.0" y2="378.4" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
+<text x="542.0" y="382.4" font-size="11.5" fill="#8b949e" text-anchor="end">20%</text>
+<line x1="550.0" y1="309.9" x2="950.0" y2="309.9" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
+<text x="542.0" y="313.9" font-size="11.5" fill="#8b949e" text-anchor="end">40%</text>
+<line x1="550.0" y1="241.3" x2="950.0" y2="241.3" stroke="#232a33" stroke-width="1" stroke-linecap="butt"/>
+<text x="542.0" y="245.3" font-size="11.5" fill="#8b949e" text-anchor="end">60%</text>
+<path d="M580.0 447.0 V336.7 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#d95926"/>
+<text x="593.0" y="325.7" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">33%</text>
+<path d="M612.0 447.0 V279.6 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#3987e5"/>
+<text x="625.0" y="268.6" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">50%</text>
+<path d="M644.0 447.0 V251.0 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#199e70"/>
+<text x="657.0" y="240.0" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">58%</text>
+<text x="625.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">Precision</text>
+<path d="M708.0 447.0 V435.8 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#d95926"/>
+<text x="721.0" y="424.8" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">4%</text>
+<path d="M740.0 447.0 V344.8 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#3987e5"/>
+<text x="753.0" y="333.8" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">31%</text>
+<path d="M772.0 447.0 V302.3 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#199e70"/>
+<text x="785.0" y="291.3" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">43%</text>
+<text x="753.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">Recall</text>
+<path d="M836.0 447.0 V424.2 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#d95926"/>
+<text x="849.0" y="413.2" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">8%</text>
+<path d="M868.0 447.0 V319.9 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#3987e5"/>
+<text x="881.0" y="308.9" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">38%</text>
+<path d="M900.0 447.0 V280.4 q0 -4 4 -4 h18 q4 0 4 4 V447.0 Z" fill="#199e70"/>
+<text x="913.0" y="269.4" font-size="11.5" fill="#b1bac4" font-weight="600" text-anchor="middle">50%</text>
+<text x="881.0" y="469.0" font-size="13" fill="#b1bac4" font-weight="600" text-anchor="middle">F1</text>
+<text x="40.0" y="509.0" font-size="12" fill="#8b949e">Precision = flagged outputs that really were vulnerable. Recall = vulnerable outputs that got flagged. F1 = harmonic mean of the two.</text>
+<text x="40.0" y="527.0" font-size="12" fill="#8b949e">Registry packs ran anonymously (p/nextjs returned no rules without an account). Semgrep 1.179.0; every project rule loaded.</text>
+</svg>

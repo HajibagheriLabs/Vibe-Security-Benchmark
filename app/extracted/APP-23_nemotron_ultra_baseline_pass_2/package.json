@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.73.6",
+    "react-native-vision-camera": "^3.7.1",
+    "react-native-vision-camera-frame-processor": "^1.0.0",
+    "vision-camera-code-scanner": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/eslint-config": "^0.73.0",
+    "@react-native/metro-config": "^0.73.0",
+    "@react-native/typescript-config": "^0.73.0",
+    "@types/react": "^18.2.0",
+    "@types/react-test-renderer": "^18.0.0",
+    "typescript": "^5.1.3"
+  }
+}

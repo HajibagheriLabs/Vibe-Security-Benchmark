@@ -1,0 +1,12 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "auth/callback/route.ts", "line": 22, "snippet": "return !parsed.protocol || parsed.protocol === 'http:' || parsed.protocol === 'https:';", "why": "Only checks protocol, not host; protocol-relative URLs like //evil.com parse as http: with host evil.com, so the check passes and allows open redirect to an external host."}
+  ],
+  "controls_present": ["basic URL parse attempt", "protocol check"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

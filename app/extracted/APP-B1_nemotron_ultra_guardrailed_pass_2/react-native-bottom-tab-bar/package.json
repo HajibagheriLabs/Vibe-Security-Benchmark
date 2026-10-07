@@ -1,0 +1,22 @@
+{
+  "name": "react-native-bottom-tab-bar",
+  "version": "1.0.0",
+  "description": "Animated bottom tab bar with sliding indicator",
+  "main": "src/index.tsx",
+  "types": "src/index.tsx",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0",
+    "react-native-reanimated": ">=3.6.0",
+    "react-native-gesture-handler": ">=2.14.0"
+  },
+  "devDependencies": {
+    "@types/react": "~18.2.0",
+    "@types/react-native": "~0.72.0",
+    "typescript": "~5.3.0"
+  }
+}

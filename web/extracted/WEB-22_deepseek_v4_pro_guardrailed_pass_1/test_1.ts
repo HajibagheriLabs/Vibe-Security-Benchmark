@@ -1,0 +1,8 @@
+// .gitignore
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example

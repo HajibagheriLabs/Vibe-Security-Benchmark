@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DeepLink WebView</string>
+    <string name="app_ready">App ready. Open a deep link to load a WebView.</string>
+</resources>

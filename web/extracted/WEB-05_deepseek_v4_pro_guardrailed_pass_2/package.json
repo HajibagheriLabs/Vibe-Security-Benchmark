@@ -1,0 +1,28 @@
+// package.json
+{
+  "name": "analytics-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "drizzle-orm": "0.31.2",
+    "pg": "8.12.0",
+    "next-auth": "4.24.7"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/pg": "8.11.6",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "drizzle-kit": "0.22.8",
+    "typescript": "5.5.3"
+  }
+}

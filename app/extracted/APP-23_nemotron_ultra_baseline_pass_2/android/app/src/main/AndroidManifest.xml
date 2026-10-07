@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yourapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application>
+        <!-- Required for VisionCamera Frame Processors -->
+        <meta-data
+            android:name="vision_camera_enable_frame_processors"
+            android:value="true" />
+    </application>
+</manifest>

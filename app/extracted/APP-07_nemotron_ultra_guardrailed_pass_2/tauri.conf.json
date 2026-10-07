@@ -1,0 +1,29 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": ""
+  },
+  "package": {
+    "productName": "secure-fs-demo",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "fs": {
+        "all": false,
+        "readDir": true,
+        "scope": ["$APPDATA/*", "$HOME/*"]
+      }
+    },
+    "windows": [
+      {
+        "title": "Secure FS Demo",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none';"
+    }
+  }
+}

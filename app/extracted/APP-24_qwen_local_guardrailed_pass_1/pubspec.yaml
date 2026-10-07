@@ -1,0 +1,25 @@
+name: secure_cutter
+description: A secure image cropping utility for Flutter.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Native image cropping: Uses platform-specific libraries for performance and memory safety
+  image_cropper: ^5.0.1
+  # For converting to/from standard dart:io Image objects
+  image: ^4.1.0 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+# Platform specific configurations
+flutter:
+  uses-material-design: true

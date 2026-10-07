@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" width="1000" height="470" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<title id="t">How the benchmark was produced</title>
+<desc id="d">Pipeline diagram: 60 scenarios, generation by 3 models in 2 regimes, code extraction, blind 3-judge panel and Semgrep detection feeding the statistical analysis.</desc>
+<rect x="0.5" y="0.5" width="999" height="469" rx="14" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="40.0" y="50.0" font-size="22" fill="#1f2328" font-weight="700">How the benchmark was produced</text>
+<text x="40.0" y="77.0" font-size="14" fill="#59636e">Pre-registered design; every stage is a script in harness/ and writes its output to results/.</text>
+<rect x="40.0" y="108.0" width="170.0" height="168.0" rx="12" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<circle cx="64.0" cy="134.0" r="12" fill="#1f2328"/>
+<text x="64.0" y="139.0" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+<text x="84.0" y="139.0" font-size="15" fill="#1f2328" font-weight="700">Scenarios</text>
+<text x="56.0" y="174.0" font-size="12.5" fill="#59636e">60 coding tasks</text>
+<text x="56.0" y="196.0" font-size="12.5" fill="#59636e">30 web + 30 app</text>
+<text x="56.0" y="218.0" font-size="12.5" fill="#59636e">50 security, 10 benign</text>
+<text x="56.0" y="240.0" font-size="12.5" fill="#59636e">9 vulnerability types</text>
+<rect x="227.5" y="108.0" width="170.0" height="168.0" rx="12" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<circle cx="251.5" cy="134.0" r="12" fill="#1f2328"/>
+<text x="251.5" y="139.0" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">2</text>
+<text x="271.5" y="139.0" font-size="15" fill="#1f2328" font-weight="700">Generation</text>
+<text x="243.5" y="174.0" font-size="12.5" fill="#59636e">3 open-weight models</text>
+<text x="243.5" y="196.0" font-size="12.5" fill="#59636e">× 2 arms × 2 passes</text>
+<text x="243.5" y="218.0" font-size="12.5" fill="#59636e">seeded, thinking off</text>
+<text x="243.5" y="240.0" font-size="12.5" fill="#59636e">717 of 720 outputs</text>
+<line x1="213.0" y1="192.0" x2="216.5" y2="192.0" stroke="#6e7781" stroke-width="1.6" stroke-linecap="round"/><path d="M224.5 192.0 L216.5 187.5 L216.5 196.5 Z" fill="#6e7781"/>
+<rect x="415.0" y="108.0" width="170.0" height="168.0" rx="12" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<circle cx="439.0" cy="134.0" r="12" fill="#1f2328"/>
+<text x="439.0" y="139.0" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+<text x="459.0" y="139.0" font-size="15" fill="#1f2328" font-weight="700">Extraction</text>
+<text x="431.0" y="174.0" font-size="12.5" fill="#59636e">code files only</text>
+<text x="431.0" y="196.0" font-size="12.5" fill="#59636e">prose, reasoning cut</text>
+<text x="431.0" y="218.0" font-size="12.5" fill="#59636e">2.83 files per output</text>
+<text x="431.0" y="240.0" font-size="12.5" fill="#59636e">SHA-256 corpus digest</text>
+<line x1="400.5" y1="192.0" x2="404.0" y2="192.0" stroke="#6e7781" stroke-width="1.6" stroke-linecap="round"/><path d="M412.0 192.0 L404.0 187.5 L404.0 196.5 Z" fill="#6e7781"/>
+<rect x="602.5" y="108.0" width="170.0" height="168.0" rx="12" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<circle cx="626.5" cy="134.0" r="12" fill="#1f2328"/>
+<text x="626.5" y="139.0" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">4</text>
+<text x="646.5" y="139.0" font-size="15" fill="#1f2328" font-weight="700">Blind judging</text>
+<text x="618.5" y="174.0" font-size="12.5" fill="#59636e">GLM 5.3 Flash</text>
+<text x="618.5" y="196.0" font-size="12.5" fill="#59636e">+ Claude Sonnet 5</text>
+<text x="618.5" y="218.0" font-size="12.5" fill="#59636e">GPT-5.6 Sol tiebreak</text>
+<text x="618.5" y="240.0" font-size="12.5" fill="#59636e">sees the code only</text>
+<line x1="588.0" y1="192.0" x2="591.5" y2="192.0" stroke="#6e7781" stroke-width="1.6" stroke-linecap="round"/><path d="M599.5 192.0 L591.5 187.5 L591.5 196.5 Z" fill="#6e7781"/>
+<rect x="790.0" y="108.0" width="170.0" height="168.0" rx="12" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+<circle cx="814.0" cy="134.0" r="12" fill="#1f2328"/>
+<text x="814.0" y="139.0" font-size="12.5" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+<text x="834.0" y="139.0" font-size="15" fill="#1f2328" font-weight="700">Analysis</text>
+<text x="806.0" y="174.0" font-size="12.5" fill="#59636e">VIR, GRR, odds ratio</text>
+<text x="806.0" y="196.0" font-size="12.5" fill="#59636e">exact McNemar test</text>
+<text x="806.0" y="218.0" font-size="12.5" fill="#59636e">Wilson, bootstrap CIs</text>
+<text x="806.0" y="240.0" font-size="12.5" fill="#59636e">judge-error correction</text>
+<line x1="775.5" y1="192.0" x2="779.0" y2="192.0" stroke="#6e7781" stroke-width="1.6" stroke-linecap="round"/><path d="M787.0 192.0 L779.0 187.5 L779.0 196.5 Z" fill="#6e7781"/>
+<circle cx="245.5" cy="264.0" r="5" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<text x="257.5" y="268.0" font-size="11.5" fill="#59636e">baseline</text>
+<circle cx="319.5" cy="264.0" r="5" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="331.5" y="268.0" font-size="11.5" fill="#59636e">guardrailed</text>
+<rect x="602.5" y="318.0" width="170.0" height="52.0" rx="10" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="687.5" y="340.0" font-size="13" fill="#1f2328" font-weight="700" text-anchor="middle">Gold-set gate</text>
+<text x="687.5" y="358.0" font-size="11.5" fill="#59636e" text-anchor="middle">47 items, passed round 1</text>
+<line x1="687.5" y1="318.0" x2="687.5" y2="287.0" stroke="#2a78d6" stroke-width="1.6" stroke-linecap="round"/><path d="M687.5 279.0 L683.0 287.0 L692.0 287.0 Z" fill="#2a78d6"/>
+<rect x="40.0" y="392.0" width="337.5" height="52.0" rx="10" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="56.0" y="414.0" font-size="13" fill="#1f2328" font-weight="700">Dependency oracle</text>
+<text x="56.0" y="432.0" font-size="11.5" fill="#59636e">live npm / pub.dev lookups decide existence</text>
+<rect x="415.0" y="392.0" width="357.5" height="52.0" rx="10" fill="#ffffff" stroke="#1baf7a" stroke-width="1.5"/>
+<text x="431.0" y="414.0" font-size="13" fill="#1f2328" font-weight="700">Static detection (Semgrep)</text>
+<text x="431.0" y="432.0" font-size="11.5" fill="#59636e">registry packs vs VibeSec rules vs VibeSec + oracle</text>
+<line x1="500.0" y1="279.0" x2="500.0" y2="381.0" stroke="#1baf7a" stroke-width="1.6" stroke-linecap="round"/><path d="M500.0 389.0 L504.5 381.0 L495.5 381.0 Z" fill="#1baf7a"/>
+<line x1="380.5" y1="418.0" x2="404.0" y2="418.0" stroke="#6e7781" stroke-width="1.6" stroke-linecap="round"/><path d="M412.0 418.0 L404.0 413.5 L404.0 422.5 Z" fill="#6e7781"/>
+<path d="M772.5 418 H875.0 V287.0" fill="none" stroke="#1baf7a" stroke-width="1.6"/>
+<line x1="875.0" y1="288.0" x2="875.0" y2="287.0" stroke="#1baf7a" stroke-width="1.6" stroke-linecap="round"/><path d="M875.0 279.0 L870.5 287.0 L879.5 287.0 Z" fill="#1baf7a"/>
+</svg>

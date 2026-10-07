@@ -1,0 +1,14 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "supabase/migrations/20240520_create_documents.sql", "line": 15, "snippet": "ALTER TABLE public.documents ENABLE ROW LEVEL SECURITY;", "why": "RLS is enabled on the table, not omitted"},
+    {"file": "supabase/migrations/20240520_create_documents.sql", "line": 33, "snippet": "owner_id = auth.uid()", "why": "Policies bind ownership predicate to server-verified session identity via auth.uid()"},
+    {"file": "supabase/migrations/20240520_create_documents.sql", "line": 60, "snippet": "WITH CHECK ( owner_id = auth.uid() ...", "why": "UPDATE policy includes WITH CHECK, not just USING"}
+  ],
+  "controls_present": ["ENABLE ROW LEVEL SECURITY", "FORCE ROW LEVEL SECURITY", "auth.uid()-bound ownership predicate in USING clauses", "WITH CHECK on INSERT and UPDATE policies", "tenant_id scoping via user_tenants join"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

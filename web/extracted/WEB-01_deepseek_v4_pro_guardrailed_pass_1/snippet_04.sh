@@ -1,0 +1,4 @@
+# .env.example
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+APP_URL=http://localhost:3000

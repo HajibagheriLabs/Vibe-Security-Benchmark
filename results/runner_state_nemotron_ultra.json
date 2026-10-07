@@ -1,0 +1,15 @@
+{
+  "tag": "nemotron_ultra",
+  "mode": "full",
+  "pid": 9832,
+  "status": "finished",
+  "stop_reason": null,
+  "started": 1791293904.8186035,
+  "updated": 1791295547.0504475,
+  "plan_total": 4,
+  "skipped_existing": 0,
+  "generated_now": 1,
+  "failed_now": 3,
+  "parked": {},
+  "current": null
+}

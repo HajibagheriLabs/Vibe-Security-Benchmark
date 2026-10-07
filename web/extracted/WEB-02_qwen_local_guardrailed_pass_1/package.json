@@ -1,0 +1,8 @@
+// package.json (Snippet)
+{
+  "dependencies": {
+    "dompurify": "3.0.6",
+    "jsdom": "24.0.0",
+    "openai": "4.24.1"
+  }
+}

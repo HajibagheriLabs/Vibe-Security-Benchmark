@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grandchild Window</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; text-align: center; background: #f0f8ff; }
+    .badge { display: inline-block; background: #28a745; color: white; padding: 0.5rem 1rem; border-radius: 4px; margin: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Grandchild Window</h1>
+  <div class="badge">Third-level window (opened from child)</div>
+  <p>This window was opened via <code>window.open()</code> from a child window.</p>
+  <p>Window name: <span id="name-display"></span></p>
+  <button onclick="window.close()">Close Window</button>
+
+  <script>
+    document.getElementById('name-display').textContent = window.name || '(unnamed)';
+  </script>
+</body>
+</html>

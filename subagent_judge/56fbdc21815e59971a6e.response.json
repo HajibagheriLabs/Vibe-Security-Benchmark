@@ -1,0 +1,14 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "medium",
+  "evidence": [
+    {"file": "lib/email/notification-template.ts", "line": 200, "snippet": "return escapeHtml(value);", "why": "All interpolated values including URL placeholders (resetUrl, supportUrl, preferencesUrl) placed inside href=\"{{...}}\" are passed through generic HTML escaping only, not escapeUrl; escapeHtml does not block javascript:/data: protocols, so a value like 'javascript:alert(1)' passes through unescaped in substance and becomes an executable href on click."},
+    {"file": "lib/security/html-escape.ts", "line": 37, "snippet": "export function escapeUrl(input: string): string {", "why": "A protocol-allowlisting escapeUrl function exists in the codebase but is never called from notification-template.ts; the href attribute interpolation uses escapeHtml instead, so the protective control is present but not wired to the surface it protects."},
+    {"file": "lib/email/notification-service.ts", "line": 86, "snippet": "additionalVars: z.record(z.string()).optional(),", "why": "additionalVars accepts arbitrary string values for any allowlisted key (including resetUrl/supportUrl/preferencesUrl) from the API request body, making the href value attacker-controlled."}
+  ],
+  "controls_present": ["allowlist of interpolation keys", "HTML escaping of interpolated values", "zod schema validation", "rate limiting", "session auth check", "dangerous-pattern blocklist for custom templates", "escapeUrl helper (unused at the vulnerable surface)"],
+  "other_classes_observed": ["blocklist-based sanitisation (validateCustomTemplate) instead of allowlist/true sanitiser, which is bypassable"],
+  "declared_packages": ["zod", "next-auth", "@types/node", "typescript"],
+  "task_implemented": 2,
+  "refusal": false
+}

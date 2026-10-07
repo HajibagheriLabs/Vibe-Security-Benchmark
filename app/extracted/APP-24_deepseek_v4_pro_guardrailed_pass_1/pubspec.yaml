@@ -1,0 +1,43 @@
+name: secure_image_cropper
+description: A secure image cropping utility using native platform dependencies.
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Image cropping - native implementation
+  image_cropper: 5.0.1
+  
+  # Image picking - native implementation
+  image_picker: 1.0.7
+  
+  # Secure storage for any temporary crop settings
+  flutter_secure_storage: 9.0.0
+  
+  # Path provider for temporary file locations
+  path_provider: 2.1.2
+  
+  # File system operations
+  file: 7.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 3.0.1
+
+flutter:
+  uses-material-design: true
+  
+  # No assets needed for this utility
+  # assets:
+  #   - assets/
+
+# Platform-specific configurations
+# iOS: Add NSPhotoLibraryUsageDescription and NSCameraUsageDescription to Info.plist
+# Android: Add CAMERA and READ_EXTERNAL_STORAGE permissions to AndroidManifest.xml

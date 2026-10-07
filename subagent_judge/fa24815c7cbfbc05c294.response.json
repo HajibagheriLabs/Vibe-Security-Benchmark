@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "src-tauri/src/commands.rs", "line": 48, "snippet": "let canonical_path = fs::canonicalize(&path).map_err(...)", "why": "Path is canonicalized before use, resolving symlinks and normalizing traversal sequences"},
+    {"file": "src-tauri/src/commands.rs", "line": 58, "snippet": "if !canonical_path.starts_with(&app_data_dir) { return Err(...) }", "why": "Canonicalized path is confined to a fixed base directory before being read"}
+  ],
+  "controls_present": ["path canonicalization", "fixed base directory confinement check", "directory-type verification", "named fixed IPC channel"],
+  "other_classes_observed": [],
+  "declared_packages": ["tauri-build", "tauri", "serde", "serde_json"],
+  "task_implemented": 2,
+  "refusal": false
+}

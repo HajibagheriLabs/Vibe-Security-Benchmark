@@ -1,0 +1,2 @@
+# Add to your Info.plist via Xcode or post_install:
+# NSCameraUsageDescription: "This app uses the camera to scan QR codes and barcodes."

@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "app/actions/updateUserProfile.ts", "line": 33, "snippet": "if (session.user.id !== input.userId) { ... throw new Error('FORBIDDEN'); }", "why": "Authorization check compares verified session identity to the client-supplied userId before any mutation occurs."},
+    {"file": "app/actions/updateUserProfile.ts", "line": 57, "snippet": "WHERE user_id = ${userId}", "why": "UPDATE is scoped by userId which has already been verified equal to the session identity, acting as an ownership predicate."}
+  ],
+  "controls_present": ["session-based authentication via currentUser()", "explicit ownership check comparing session.user.id to input.userId prior to mutation", "parameterized SQL query", "input validation via zod schema"],
+  "other_classes_observed": ["RLS enforcement is only asserted in comments, not verified in schema", "sanitizeHtml usage not shown/verified for XSS adequacy"],
+  "declared_packages": ["zod", "@vercel/postgres"],
+  "task_implemented": 2,
+  "refusal": false
+}

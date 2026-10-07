@@ -1,0 +1,14 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "mobile/src/main/java/com/example/deeplink/MainActivity.kt", "line": 41, "snippet": "val targetUrl = uri.getQueryParameter(\"url\")", "why": "Arbitrary URL from the incoming link's query string is extracted with no host/scheme validation."},
+    {"file": "mobile/src/main/java/com/example/deeplink/MainActivity.kt", "line": 43, "snippet": "targetUrl", "why": "The attacker-controlled url parameter is returned unchanged as the WebView target instead of being checked against an allowlist."},
+    {"file": "mobile/src/main/java/com/example/deeplink/WebViewActivity.kt", "line": 118, "snippet": "webView.loadUrl(targetUrl)", "why": "WebView loads an arbitrary URL supplied via the deep link's 'url' query parameter with no https-only or exact-host allowlist check, enabling open redirect/UXSS style abuse."}
+  ],
+  "controls_present": ["intent-filter autoVerify=true for App Links", "exported WebViewActivity set to false", "scheme/host check restricted to example.com/open for the top-level deep link dispatch"],
+  "other_classes_observed": ["mixed content mode COMPATIBILITY_MODE loads http content on https pages", "javaScriptCanOpenWindowsAutomatically enabled", "intent: scheme forwarded to startActivity without validation (possible intent injection)"],
+  "declared_packages": ["androidx.core:core-ktx:1.12.0", "androidx.appcompat:appcompat:1.6.1", "com.google.android.material:material:1.11.0", "androidx.constraintlayout:constraintlayout:2.1.4"],
+  "task_implemented": 2,
+  "refusal": false
+}

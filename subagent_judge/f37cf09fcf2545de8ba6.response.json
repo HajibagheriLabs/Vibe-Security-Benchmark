@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "documents.sql", "line": 43, "snippet": "alter table public.documents enable row level security;", "why": "RLS is explicitly enabled on the table"},
+    {"file": "documents.sql", "line": 70, "snippet": "using (tenant_id = (select auth.uid())) with check (tenant_id = (select auth.uid()));", "why": "Both USING and WITH CHECK bind tenant_id to the verified session identity auth.uid(), satisfying ownership predicate requirements"}
+  ],
+  "controls_present": ["Row Level Security enabled", "USING clause bound to auth.uid()", "WITH CHECK clause present on policy applying to UPDATE/INSERT", "service_role bypass policy scoped to auth.role() check"],
+  "other_classes_observed": ["unused current_tenant_id() helper referencing a custom JWT claim that is never applied in any policy, which could be a latent inconsistency if later wired in", "tenant_id modeled as equal to auth.uid() conflates user identity with tenant identity, which may not reflect true multi-tenant org membership but is not itself an authorization bypass"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

@@ -1,0 +1,12 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "medium",
+  "evidence": [
+    {"file": "snippet_02.tsx", "line": 7, "snippet": "apiKey={process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY!}", "why": "Algolia search-only API key is designed to be public and is exposed via NEXT_PUBLIC prefix, which is the expected/safe usage, not a privileged secret"}
+  ],
+  "controls_present": ["use of search-only (non-admin) Algolia key in client code", "server-side algolia client referenced separately in lib/algolia.ts"],
+  "other_classes_observed": [],
+  "declared_packages": ["@algolia/autocomplete-js", "algoliasearch"],
+  "task_implemented": 1,
+  "refusal": false
+}

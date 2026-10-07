@@ -1,0 +1,15 @@
+{
+  "tag": "qwen_local",
+  "mode": "full",
+  "pid": 4012,
+  "status": "finished",
+  "stop_reason": null,
+  "started": 1791267534.6877518,
+  "updated": 1791269584.785064,
+  "plan_total": 240,
+  "skipped_existing": 0,
+  "generated_now": 240,
+  "failed_now": 0,
+  "parked": {},
+  "current": null
+}

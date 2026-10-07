@@ -1,0 +1,13 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.ts", "line": 9, "snippet": "if (!returnTo.startsWith('/')) {", "why": "Allows values like '//evil.com' or '/\\evil.com' which start with '/' but are protocol-relative URLs resolving to an external host, bypassing the intended allowlist and enabling open redirect."},
+    {"file": "snippet_01.ts", "line": 12, "snippet": "return NextResponse.redirect(new URL(returnTo, request.url));", "why": "Redirect target taken from user input with only a weak startsWith('/') check, not a true allowlist of internal paths/hosts."}
+  ],
+  "controls_present": ["startsWith('/') prefix check (insufficient)"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

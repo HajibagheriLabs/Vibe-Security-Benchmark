@@ -1,0 +1,32 @@
+android {
+    // ...
+
+    signingConfigs {
+        release {
+            // Rule 1: Device-only accessibility for the key (via storeType jks, stored on disk)
+            // Rule 3: Key is not hardcoded; loaded from external key.properties (git-ignored)
+            // Rule 3: Release builds contain no debuggable flag
+            def keyProperties = new Properties()
+            def keyPropertiesFile = rootProject.file('key.properties')
+            if (keyPropertiesFile.exists()) {
+                keyProperties.load(new FileInputStream(keyPropertiesFile))
+            }
+
+            storeFile file(keyProperties['storeFile'] ?: 'release.keystore')
+            storePassword keyProperties['storePassword']
+            keyAlias keyProperties['keyAlias']
+            keyPassword keyProperties['keyPassword']
+            
+            // Enable V2 signature scheme for better security against tampering
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "html-to-pdf-service",
+  "version": "1.0.0",
+  "description": "Server-side HTML to PDF conversion service",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test src/**/*.test.js"
+  },
+  "dependencies": {
+    "puppeteer": "22.15.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

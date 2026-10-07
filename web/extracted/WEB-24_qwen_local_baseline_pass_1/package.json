@@ -1,0 +1,12 @@
+{
+  "name": "secure-session-token-generator",
+  "version": "1.0.0",
+  "description": "Generates cryptographically secure session tokens",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
+  }
+}

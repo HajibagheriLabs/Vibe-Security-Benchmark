@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-native-encrypted-storage": "^4.0.3",
+    "expo-crypto": "^12.4.1",
+    "buffer": "^6.0.3"
+  }
+}

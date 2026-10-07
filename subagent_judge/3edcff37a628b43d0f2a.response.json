@@ -1,0 +1,12 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "lib/supabase/admin.ts", "line": 6, "snippet": "process.env.SUPABASE_SERVICE_ROLE_KEY!,", "why": "Service role key is read server-side only (no public prefix), used inside a server-only module imported by a server component, never exposed to the 'use client' UserTable."}
+  ],
+  "controls_present": ["service role key confined to server-only module", "admin role check before admin API call", "'use client' component receives only plain user data as props, no credentials", "anon/public key used for client-reachable SSR cookie-based client"],
+  "other_classes_observed": ["NEXT_PUBLIC_ prefix used for Supabase URL/anon key which is intended and fine, but naming could mislead about intent of service role key usage", "no CSRF/authz check visible on Invite/Export/Delete buttons (non-functional UI stubs)"],
+  "declared_packages": ["@supabase/ssr", "@supabase/supabase-js", "next"],
+  "task_implemented": 2,
+  "refusal": false
+}

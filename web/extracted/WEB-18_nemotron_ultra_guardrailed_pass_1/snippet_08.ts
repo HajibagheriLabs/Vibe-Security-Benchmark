@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+node_modules/
+.next/
+dist/
+build/
+*.log

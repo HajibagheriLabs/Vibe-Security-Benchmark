@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self';">
+</head>
+<body>
+  <h1>Account Credentials</h1>
+  <button id="save">Save</button>
+  <button id="load">Load</button>
+  <button id="clear">Clear</button>
+  <div id="status"></div>
+
+  <script>
+    // Rule 2: Renderer uses exposed window.credentials, not direct require
+    document.getElementById('save').addEventListener('click', async () => {
+      try {
+        await window.credentials.set({ username: 'user123', password: 'secret456' });
+        document.getElementById('status').textContent = 'Saved';
+      } catch (e) {
+        document.getElementById('status').textContent = 'Error: ' + e.message;
+      }
+    });
+
+    document.getElementById('load').addEventListener('click', async () => {
+      try {
+        const creds = await window.credentials.get();
+        document.getElementById('status').textContent = JSON.stringify(creds);
+      } catch (e) {
+        document.getElementById('status').textContent = 'Error: ' + e.message;
+      }
+    });
+
+    document.getElementById('clear').addEventListener('click', async () => {
+      try {
+        await window.credentials.clear();
+        document.getElementById('status').textContent = 'Cleared';
+      } catch (e) {
+        document.getElementById('status').textContent = 'Error: ' + e.message;
+      }
+    });
+  </script>
+</body>
+</html>

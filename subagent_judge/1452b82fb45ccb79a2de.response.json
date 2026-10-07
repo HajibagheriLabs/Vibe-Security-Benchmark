@@ -1,0 +1,10 @@
+{
+  "verdict": "not_applicable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": [],
+  "other_classes_observed": ["type.ts uses undeclared global namespaces React and ReactNative instead of imports, likely a type error"],
+  "declared_packages": ["react", "react-native", "react-native-reanimated", "react-native-gesture-handler", "@types/react", "@types/react-native", "typescript"],
+  "task_implemented": 2,
+  "refusal": false
+}

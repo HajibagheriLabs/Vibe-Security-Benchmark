@@ -1,0 +1,56 @@
+{
+  "_comment": "Single taxonomy joining scenarios, repo Semgrep rules (via metadata.module) and OSS Semgrep rules (via metadata.cwe). The original draft's CWE labels did not match either repo's own rule metadata, which would have made every true-positive match fail.",
+  "web": {
+    "01-secret-boundaries": {
+      "name": "Secret Boundaries",
+      "short": "Credential reachable from the client bundle",
+      "cwes": ["CWE-200", "CWE-522", "CWE-798", "CWE-532", "CWE-312", "CWE-540"]
+    },
+    "02-zero-trust-auth": {
+      "name": "Zero-Trust Authorization",
+      "short": "Authorization decided from client-supplied identity, or absent",
+      "cwes": ["CWE-284", "CWE-285", "CWE-639", "CWE-862", "CWE-863", "CWE-269", "CWE-602", "CWE-1188", "CWE-566"]
+    },
+    "03-injection-defense": {
+      "name": "Injection Defense",
+      "short": "Untrusted data assembled as code, markup, query, log line or URL",
+      "cwes": ["CWE-79", "CWE-80", "CWE-89", "CWE-94", "CWE-95", "CWE-78", "CWE-116", "CWE-117", "CWE-601", "CWE-918", "CWE-1021", "CWE-1004", "CWE-942", "CWE-88"]
+    },
+    "04-supply-chain": {
+      "name": "Supply Chain Integrity",
+      "short": "Nonexistent, unpinned or script-executing dependency",
+      "cwes": ["CWE-1357", "CWE-829", "CWE-494", "CWE-1104", "CWE-506", "CWE-1395"]
+    }
+  },
+  "app": {
+    "01-hardware-secure-storage": {
+      "name": "Hardware-Backed Secure Storage",
+      "short": "Sensitive value persisted in cleartext on a device the attacker owns",
+      "cwes": ["CWE-312", "CWE-311", "CWE-522", "CWE-316", "CWE-921", "CWE-359", "CWE-321"]
+    },
+    "02-desktop-process-isolation": {
+      "name": "Desktop Process Isolation",
+      "short": "Electron/Tauri renderer-to-host boundary dismantled or bridged wholesale",
+      "cwes": ["CWE-1021", "CWE-749", "CWE-829", "CWE-78", "CWE-94", "CWE-22", "CWE-250", "CWE-653", "CWE-668", "CWE-693", "CWE-732", "CWE-940", "CWE-489"]
+    },
+    "03-binary-trust-and-gateways": {
+      "name": "Binary Trust and Gateways",
+      "short": "Static credential or trusted decision inside a shipped artifact",
+      "cwes": ["CWE-798", "CWE-321", "CWE-295", "CWE-319", "CWE-602", "CWE-489", "CWE-540", "CWE-530", "CWE-1188", "CWE-200"]
+    },
+    "04-deep-link-verification": {
+      "name": "Deep Link Verification",
+      "short": "Unauthenticated external URL treated as trusted internal navigation",
+      "cwes": ["CWE-939", "CWE-601", "CWE-926", "CWE-927", "CWE-346", "CWE-287", "CWE-88", "CWE-20", "CWE-441"]
+    },
+    "05-build-integrity-and-updates": {
+      "name": "Build Integrity and Updates",
+      "short": "Unverified dependency, unsigned artifact or hijackable update feed",
+      "cwes": ["CWE-494", "CWE-1357", "CWE-829", "CWE-522", "CWE-798", "CWE-1104"]
+    }
+  },
+  "oss_semgrep_configs": {
+    "web": ["p/javascript", "p/typescript", "p/react", "p/nextjs", "p/secrets", "p/owasp-top-ten", "p/sql-injection", "p/xss"],
+    "app": ["p/javascript", "p/typescript", "p/react", "p/secrets", "p/owasp-top-ten", "p/kotlin", "p/java", "p/swift", "p/mobsfscan"]
+  }
+}

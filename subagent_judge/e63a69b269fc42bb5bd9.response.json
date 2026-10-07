@@ -1,0 +1,10 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "medium",
+  "evidence": [],
+  "controls_present": ["exact host match in data element", "custom scheme (not http/https) avoiding App Link ambiguity", "autoVerify set"],
+  "other_classes_observed": ["exported=true with singleTask and empty taskAffinity could be reviewed for task hijacking, but no resolver code shown to confirm"],
+  "declared_packages": [],
+  "task_implemented": 1,
+  "refusal": false
+}

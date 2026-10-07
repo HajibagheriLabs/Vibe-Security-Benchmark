@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app">
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".DeepLinkActivity"
+            android:exported="true"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
+
+            <!-- Custom scheme deep link: myapp://host/path -->
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" android:host="host" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+</manifest>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Window</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; text-align: center; background: #fafafa; }
+    .badge { display: inline-block; background: #007acc; color: white; padding: 0.5rem 1rem; border-radius: 4px; margin: 1rem; }
+    button { padding: 0.75rem 1.5rem; font-size: 1rem; cursor: pointer; margin: 0.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Child Window</h1>
+  <div class="badge" id="window-name">Loading...</div>
+  <p>Window name: <span id="name-display"></span></p>
+  <p>Opener: <span id="opener-display">Checking...</span></p>
+  
+  <button onclick="window.close()">Close Window</button>
+  <button onclick="window.open('grandchild.html', '_blank', 'width=400,height=300')">Open Grandchild</button>
+
+  <script>
+    document.getElementById('name-display').textContent = window.name || '(unnamed)';
+    document.getElementById('opener-display').textContent = window.opener ? 'Has opener' : 'No opener';
+    
+    if (window.name) {
+      document.getElementById('window-name').textContent = `Name: ${window.name}`;
+    }
+  </script>
+</body>
+</html>

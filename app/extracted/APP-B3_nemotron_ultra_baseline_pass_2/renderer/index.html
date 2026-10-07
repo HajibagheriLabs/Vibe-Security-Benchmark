@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron Theme Demo</title>
+  <link rel="stylesheet" href="theme-styles.css">
+  <style>
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      transition: background var(--transition-normal), color var(--transition-normal);
+    }
+    
+    .demo-container {
+      width: 100%;
+      max-width: 600px;
+    }
+    
+    .demo-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .demo-title {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    
+    .demo-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    
+    .card-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .card-text {
+      margin: 0 0 24px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    .code-block {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-x: auto;
+      color: var(--text-primary);
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--accent-light);
+      color: var(--accent-primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <header class="demo-header">
+      <h1 class="demo-title">Theme Manager Demo</h1>
+      <div id="theme-toggle-container"></div>
+    </header>
+    
+    <div class="demo-card">
+      <h2 class="card-title">Current Theme</h2>
+      <p class="card-text">
+        The current theme is <strong id="current-theme-display"></strong>. 
+        Your preference is saved to <code>localStorage</code> and persists between launches.
+      </p>
+      <div class="button-group">
+        <button id="btn-light" class="themed-button">Set Light</button>
+        <button id="btn-dark" class="themed-button">Set Dark</button>
+        <button id="btn-toggle" class="themed-button secondary">Toggle</button>
+        <button id="btn-system" class="themed-button ghost">Use System</button>
+      </div>
+    </div>
+    
+    <div class="demo-card">
+      <h2 class="card-title">Theme Select Dropdown</h2>
+      <p class="card-text">Select a theme preference including "System" to follow OS settings.</p>
+      <div class="form-group">
+        <label class="form-label" for="theme-select">Theme Preference</label>
+        <div id="theme-select-container"></div>
+      </div>
+    </div>
+    
+    <div class="demo-card">
+      <h2 class="card-title">Themed Components</h2>
+      <p class="card-text">Example components using CSS custom properties that adapt to theme changes.</p>
+      <div class="form-group">
+        <label class="form-label" for="demo-input">Text Input</label>
+        <input type="text" id="demo-input" class="themed-input" placeholder="Type something...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Buttons</label>
+        <div class="button-group">
+          <button class="themed-button">Primary</button>
+          <button class="themed-button secondary">Secondary</button>
+          <button class="themed-button ghost">Ghost</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Card</label>
+        <div class="themed-card" style="margin-top: 8px; padding: 16px;">
+          This card uses <code>.themed-card</code> class with theme-aware colors.
+        </div>
+      </div>
+    </div>
+    
+    <div class="demo-card">
+      <h2 class="card-title">Keyboard Shortcut</h2>
+      <p class="card-text">Press <kbd style="background: var(--bg-tertiary); border: 1px solid var(--border-color); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">Ctrl</kbd> + <kbd style="background: var(--bg-tertiary); border: 1px solid var(--border-color); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">Shift</kbd> + <kbd style="background: var(--bg-tertiary); border: 1px solid var(--border-color); padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono);">T</kbd> to toggle theme instantly.</p>
+    </div>
+    
+    <div class="demo-card">
+      <h2 class="card-title">Usage Code</h2>
+      <pre class="code-block"><code>// Import and initialize
+import themeManager from './theme-manager.js';
+import { createThemeToggle } from './theme-toggle.js';
+
+// Theme manager auto-initializes on DOMContentLoaded
+// Access current theme:
+const theme = themeManager.getTheme();
+
+// Listen for changes:
+const unsubscribe = themeManager.subscribe((theme) => {
+  console.log('Theme changed to:', theme);
+});
+
+// Create toggle button:
+const toggleBtn = createThemeToggle();
+document.body.appendChild(toggleBtn);
+
+// Or create a select dropdown:
+const select = createThemeSelect();
+document.body.appendChild(select);</code></pre>
+    </div>
+  </div>
+
+  <script type="module">
+    import themeManager from './theme-manager.js';
+    import { createThemeToggle, createThemeSelect } from './theme-toggle.js';
+    
+    // Wait for theme manager to initialize
+    await themeManager.init();
+    
+    // Update display
+    const themeDisplay = document.getElementById('current-theme-display');
+    const updateDisplay = () => {
+      themeDisplay.textContent = themeManager.getTheme();
+      themeDisplay.className = `badge`;
+    };
+    updateDisplay();
+    themeManager.subscribe(updateDisplay);
+    
+    // Create toggle button
+    const toggleContainer = document.getElementById('theme-toggle-container');
+    const toggleBtn = createThemeToggle();
+    toggleContainer.appendChild(toggleBtn);
+    
+    // Create theme select
+    const selectContainer = document.getElementById('theme-select-container');
+    const select = createThemeSelect();
+    selectContainer.appendChild(select);
+    
+    // Button handlers
+    document.getElementById('btn-light').addEventListener('click', () => {
+      themeManager.setTheme('light');
+    });
+    
+    document.getElementById('btn-dark').addEventListener('click', () => {
+      themeManager.setTheme('dark');
+    });
+    
+    document.getElementById('btn-toggle').addEventListener('click', () => {
+      themeManager.toggleTheme();
+    });
+    
+    document.getElementById('btn-system').addEventListener('click', () => {
+      localStorage.removeItem('app-theme-preference');
+      themeManager.setTheme(themeManager.getSystemTheme());
+    });
+  </script>
+</body>
+</html>

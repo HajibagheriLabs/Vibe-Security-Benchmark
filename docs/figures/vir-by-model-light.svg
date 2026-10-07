@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 787" width="1000" height="787" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<title id="t">Vulnerability injection rate by model and platform</title>
+<desc id="d">Dumbbell chart: baseline vs guardrailed vulnerability injection rate for each of 3 models on web and on mobile/desktop tasks, with 95% confidence intervals, relative reduction and McNemar p-values.</desc>
+<rect x="0.5" y="0.5" width="999" height="786" rx="14" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="40.0" y="50.0" font-size="22" fill="#1f2328" font-weight="700">Vulnerability injection rate (VIR) by model and platform</text>
+<text x="40.0" y="77.0" font-size="14" fill="#59636e">Share of security-task outputs the judge panel found to contain the targeted vulnerability.</text>
+<text x="40.0" y="97.0" font-size="14" fill="#59636e">Lower is better. Each dot is about 50 outputs; the shaded pill is its 95% Wilson interval.</text>
+<circle cx="47.0" cy="142.0" r="6" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<text x="62.0" y="147.0" font-size="13.5" fill="#59636e">Baseline: no security rules</text>
+<circle cx="288.7" cy="142.0" r="6" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="303.7" y="147.0" font-size="13.5" fill="#59636e">Guardrailed: AGENT_RULES.md in the system prompt</text>
+<rect x="672.5" y="137.0" width="22.0" height="10.0" rx="5" fill="#6e7781" fill-opacity="0.25"/>
+<text x="702.5" y="147.0" font-size="13.5" fill="#59636e">95% CI</text>
+<text x="860.0" y="181.0" font-size="12.5" fill="#6e7781" font-weight="700" text-anchor="middle">Relative drop</text>
+<text x="950.0" y="181.0" font-size="12.5" fill="#6e7781" font-weight="700" text-anchor="middle">p-value</text>
+<text x="40.0" y="229.0" font-size="12" fill="#6e7781" font-weight="700" letter-spacing="1.2">WEB APPS</text>
+<text x="40.0" y="271.0" font-size="15" fill="#1f2328" font-weight="600">Qwen3.6 35B-A3B</text>
+<text x="40.0" y="288.0" font-size="12" fill="#6e7781">local, 4-bit (IQ4_XS)</text>
+<rect x="545.5" y="268.0" width="116.9" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="358.7" y="268.0" width="103.4" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="401.2" y1="273.0" x2="609.8" y2="273.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="609.8" cy="273.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="401.2" cy="273.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="609.8" y="259.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">67.3%</text>
+<text x="401.2" y="259.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">22.0%</text>
+<text x="860.0" y="274.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−67%</text>
+<text x="860.0" y="290.0" font-size="11" fill="#6e7781" text-anchor="middle">CI 47–85%</text>
+<text x="950.0" y="278.0" font-size="13.5" fill="#59636e" text-anchor="middle">0.012</text>
+<text x="40.0" y="327.0" font-size="15" fill="#1f2328" font-weight="600">Nemotron 3 Ultra</text>
+<text x="40.0" y="344.0" font-size="12" fill="#6e7781">550B-A55B, OpenRouter</text>
+<rect x="494.5" y="324.0" width="124.3" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="341.8" y="324.0" width="99.5" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="380.0" y1="329.0" x2="558.8" y2="329.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="558.8" cy="329.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="380.0" cy="329.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="558.8" y="315.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">56.2%</text>
+<text x="380.0" y="315.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">17.4%</text>
+<text x="860.0" y="330.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−68%</text>
+<text x="860.0" y="346.0" font-size="11" fill="#6e7781" text-anchor="middle">CI 35–92%</text>
+<text x="950.0" y="334.0" font-size="13.5" fill="#59636e" text-anchor="middle">0.022</text>
+<text x="40.0" y="383.0" font-size="15" fill="#1f2328" font-weight="600">DeepSeek V4 Pro</text>
+<text x="40.0" y="400.0" font-size="12" fill="#6e7781">0813, StreamLake</text>
+<rect x="458.6" y="380.0" width="125.1" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="301.6" y="380.0" width="46.7" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="309.2" y1="385.0" x2="520.4" y2="385.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="520.4" cy="385.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="309.2" cy="385.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="520.4" y="371.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">47.9%</text>
+<text x="309.2" y="371.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">2.0%</text>
+<text x="860.0" y="386.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−96%</text>
+<text x="860.0" y="402.0" font-size="11" fill="#6e7781" text-anchor="middle">CI 87–100%</text>
+<text x="950.0" y="390.0" font-size="13.5" fill="#59636e" text-anchor="middle">&lt; 0.001</text>
+<text x="40.0" y="439.0" font-size="12" fill="#6e7781" font-weight="700" letter-spacing="1.2">MOBILE &amp; DESKTOP APPS</text>
+<text x="40.0" y="481.0" font-size="15" fill="#1f2328" font-weight="600">Qwen3.6 35B-A3B</text>
+<text x="40.0" y="498.0" font-size="12" fill="#6e7781">local, 4-bit (IQ4_XS)</text>
+<rect x="564.9" y="478.0" width="113.0" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="373.0" y="478.0" width="108.9" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="419.6" y1="483.0" x2="628.6" y2="483.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="628.6" cy="483.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="419.6" cy="483.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="628.6" y="469.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">71.4%</text>
+<text x="419.6" y="469.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">26.0%</text>
+<text x="860.0" y="484.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−64%</text>
+<text x="860.0" y="500.0" font-size="11" fill="#6e7781" text-anchor="middle">CI 45–82%</text>
+<text x="950.0" y="488.0" font-size="13.5" fill="#59636e" text-anchor="middle">0.002</text>
+<text x="40.0" y="537.0" font-size="15" fill="#1f2328" font-weight="600">Nemotron 3 Ultra</text>
+<text x="40.0" y="554.0" font-size="12" fill="#6e7781">550B-A55B, OpenRouter</text>
+<rect x="499.0" y="534.0" width="122.9" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="320.4" y="534.0" width="79.7" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="346.9" y1="539.0" x2="562.9" y2="539.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="562.9" cy="539.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="346.9" cy="539.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="562.9" y="525.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">57.1%</text>
+<text x="346.9" y="525.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">10.2%</text>
+<text x="860.0" y="540.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−82%</text>
+<text x="860.0" y="556.0" font-size="11" fill="#6e7781" text-anchor="middle">CI 64–96%</text>
+<text x="950.0" y="544.0" font-size="13.5" fill="#59636e" text-anchor="middle">&lt; 0.001</text>
+<text x="40.0" y="593.0" font-size="15" fill="#1f2328" font-weight="600">DeepSeek V4 Pro</text>
+<text x="40.0" y="610.0" font-size="12" fill="#6e7781">0813, StreamLake</text>
+<rect x="521.5" y="590.0" width="119.5" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="301.6" y="590.0" width="46.7" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="309.2" y1="595.0" x2="585.2" y2="595.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="585.2" cy="595.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="309.2" cy="595.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="585.2" y="581.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">62.0%</text>
+<text x="309.2" y="581.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">2.0%</text>
+<text x="860.0" y="596.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−97%</text>
+<text x="860.0" y="612.0" font-size="11" fill="#6e7781" text-anchor="middle">CI 89–100%</text>
+<text x="950.0" y="600.0" font-size="13.5" fill="#59636e" text-anchor="middle">&lt; 0.001</text>
+<rect x="30.0" y="627.0" width="940.0" height="66.0" rx="10" fill="#f6f8fa"/>
+<text x="40.0" y="665.0" font-size="15" fill="#1f2328" font-weight="700">All pooled</text>
+<text x="40.0" y="682.0" font-size="12" fill="#6e7781">3 models × 2 platforms</text>
+<rect x="551.7" y="662.0" width="51.2" height="10.0" rx="5" fill="#eb6834" fill-opacity="0.22"/>
+<rect x="345.2" y="662.0" width="35.6" height="10.0" rx="5" fill="#2a78d6" fill-opacity="0.22"/>
+<line x1="360.8" y1="667.0" x2="577.9" y2="667.0" stroke="#b6c0ca" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="577.9" cy="667.0" r="7" fill="#eb6834" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="360.8" cy="667.0" r="7" fill="#2a78d6" stroke="#ffffff" stroke-width="2.5"/>
+<text x="577.9" y="653.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">60.4%</text>
+<text x="360.8" y="653.0" font-size="12.5" fill="#59636e" font-weight="600" text-anchor="middle">13.2%</text>
+<text x="860.0" y="672.0" font-size="16" fill="#1f2328" font-weight="700" text-anchor="middle">−78%</text>
+<text x="950.0" y="672.0" font-size="13.5" fill="#6e7781" text-anchor="middle">—</text>
+<line x1="300.0" y1="199.0" x2="300.0" y2="701.0" stroke="#eaeef2" stroke-width="1" stroke-linecap="butt"/>
+<text x="300.0" y="721.0" font-size="12" fill="#6e7781" text-anchor="middle">0%</text>
+<line x1="415.0" y1="199.0" x2="415.0" y2="701.0" stroke="#eaeef2" stroke-width="1" stroke-linecap="butt"/>
+<text x="415.0" y="721.0" font-size="12" fill="#6e7781" text-anchor="middle">25%</text>
+<line x1="530.0" y1="199.0" x2="530.0" y2="701.0" stroke="#eaeef2" stroke-width="1" stroke-linecap="butt"/>
+<text x="530.0" y="721.0" font-size="12" fill="#6e7781" text-anchor="middle">50%</text>
+<line x1="645.0" y1="199.0" x2="645.0" y2="701.0" stroke="#eaeef2" stroke-width="1" stroke-linecap="butt"/>
+<text x="645.0" y="721.0" font-size="12" fill="#6e7781" text-anchor="middle">75%</text>
+<line x1="760.0" y1="199.0" x2="760.0" y2="701.0" stroke="#eaeef2" stroke-width="1" stroke-linecap="butt"/>
+<text x="760.0" y="721.0" font-size="12" fill="#6e7781" text-anchor="middle">100%</text>
+<line x1="300.0" y1="701.0" x2="760.0" y2="701.0" stroke="#c8d1da" stroke-width="1" stroke-linecap="butt"/>
+<text x="40.0" y="749.0" font-size="12" fill="#6e7781">Relative drop = guardrail reduction rate (GRR), 1 − VIR guardrailed / VIR baseline; mean and 95% CI of a 5,000-draw bootstrap that resamples scenarios.</text>
+<text x="40.0" y="767.0" font-size="12" fill="#6e7781">p = exact McNemar test on paired scenario-level outcomes (23–25 scenarios per pair). All six stay below 0.05 after Holm–Bonferroni adjustment.</text>
+</svg>

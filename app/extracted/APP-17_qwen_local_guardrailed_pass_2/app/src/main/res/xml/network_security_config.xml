@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Default: Enforce cleartext traffic protection and ATS-equivalent strict TLS -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- External API Backend Domain -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.example-backend.com</domain>
+        <pin-set expiration="2025-12-31">
+            <!-- Replace with actual SHA-256 pin of the production server certificate -->
+            <pin digest="SHA-256">7HIpqkA6Ha92cmkkw7E6b3o9Qm1YNym8WXE4uVrCq4w=</pin>
+        </pin-set>
+        <!-- Allow fallback to user certificates if pin validation fails (e.g., corporate proxy) -->
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,14 @@
+// package.json (relevant dependencies)
+{
+  "dependencies": {
+    "drizzle-orm": "0.29.3",
+    "pg": "8.11.3",
+    "next": "14.0.4",
+    "next-auth": "4.24.5",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "0.20.14",
+    "@types/pg": "8.10.9"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "markdown-renderer-component",
+  "version": "1.0.0",
+  "main": "src/MarkdownRenderer.tsx",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "marked": "^11.0.0",
+    "dompurify": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/dompurify": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}

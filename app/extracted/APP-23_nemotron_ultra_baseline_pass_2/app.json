@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "This app needs camera access to scan QR codes.",
+          "enableFrameProcessors": true
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.*
+*.pem
+*.key
+*.log
+coverage/
+.nyc_output/
+.DS_Store
+*.tsbuildinfo

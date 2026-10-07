@@ -1,0 +1,19 @@
+{
+  "name": "@app/tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./tokens/index.ts",
+  "exports": {
+    ".": "./tokens/index.ts"
+  },
+  "scripts": {
+    "test": "node --test tokens/*.test.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

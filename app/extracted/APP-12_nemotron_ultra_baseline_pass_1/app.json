@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Biometric Auth Demo",
+    "slug": "biometric-auth-demo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.biometricauthdemo",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app uses Face ID to authenticate access to sensitive screens",
+        "NSFaceIDUsageDescription": "This app uses Touch ID to authenticate access to sensitive screens"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.example.biometricauthdemo",
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-local-authentication"
+    ]
+  }
+}

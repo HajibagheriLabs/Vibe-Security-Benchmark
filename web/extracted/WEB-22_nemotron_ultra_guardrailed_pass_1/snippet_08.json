@@ -1,0 +1,8 @@
+# Persian Date Utilities
+
+A lightweight, zero-dependency React utility for converting Gregorian dates to Persian (Jalali/Shamsi) calendar strings.
+
+## Installation
+
+```bash
+npm install persian-date-utils

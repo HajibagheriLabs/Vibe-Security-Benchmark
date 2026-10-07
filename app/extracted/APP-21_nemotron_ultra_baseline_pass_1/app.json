@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "scheme": "com.yourapp",
+    "ios": {
+      "bundleIdentifier": "com.yourapp",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": ["com.yourapp"],
+            "CFBundleURLName": "OAuth Callback"
+          }
+        ]
+      }
+    },
+    "android": {
+      "package": "com.yourapp",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "com.yourapp",
+            "host": "oauth2redirect"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    }
+  }
+}

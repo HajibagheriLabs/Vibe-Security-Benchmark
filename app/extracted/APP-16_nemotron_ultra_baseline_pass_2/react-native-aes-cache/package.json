@@ -1,0 +1,33 @@
+{
+  "name": "react-native-aes-cache",
+  "version": "1.0.0",
+  "description": "AES-256 encrypted document caching for React Native",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.70.0",
+    "expo": ">=48.0.0",
+    "expo-crypto": ">=12.0.0",
+    "expo-secure-store": ">=12.0.0",
+    "expo-file-system": ">=15.0.0"
+  },
+  "devDependencies": {
+    "@types/react-native": "~0.72.0",
+    "typescript": "~5.1.0",
+    "jest": "~29.5.0",
+    "@testing-library/react-native": "~12.0.0"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "encryption",
+    "aes-256",
+    "cache",
+    "secure-storage"
+  ],
+  "license": "MIT"
+}

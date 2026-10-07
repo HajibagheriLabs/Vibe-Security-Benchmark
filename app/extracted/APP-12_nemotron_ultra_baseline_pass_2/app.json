@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Biometric Auth Flow",
+    "slug": "biometric-auth-flow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.biometricauth",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app uses Face ID to authenticate access to sensitive data",
+        "NSTouchIDUsageDescription": "This app uses Touch ID to authenticate access to sensitive data"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.example.biometricauth",
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-local-authentication",
+      "expo-secure-store"
+    ]
+  }
+}

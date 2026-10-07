@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Theme Demo</title>
+    <style>
+      :root { --bg: #fff; --fg: #000; }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #000; --fg: #fff; }
+      }
+      body { background: var(--bg); color: var(--fg); font-family: system-ui; padding: 2rem; }
+      button { padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>Theme Preference</h1>
+    <p>Current theme: <span id="current">loading…</span></p>
+    <button id="toggle">Toggle Theme</button>
+    <script>
+      async function refresh() {
+        const theme = await window.themeAPI.getTheme();
+        document.getElementById('current').textContent = theme;
+      }
+      document.getElementById('toggle').addEventListener('click', async () => {
+        const current = await window.themeAPI.getTheme();
+        const next = current === 'light' ? 'dark' : 'light';
+        await window.themeAPI.setTheme(next);
+        await refresh();
+      });
+      refresh();
+    </script>
+  </body>
+</html>

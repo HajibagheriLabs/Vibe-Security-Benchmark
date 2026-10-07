@@ -1,0 +1,69 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Security notes for the operator:
+        - android:exported="true" is required for the OS to deliver external deep links,
+          but the activity MUST validate every intent extra and URI through the single
+          allowlist resolver before any navigation or state change.
+        - taskAffinity="" prevents the deep-link activity from being launched into a
+          task that could be hijacked by another app.
+        - launchMode="singleTask" ensures onNewIntent is called for subsequent links
+          while the app is running; the resolver must be invoked from BOTH onCreate
+          and onNewIntent.
+        - No authority, role, or identity is ever derived from the URI. The link may
+          only navigate to an allowlisted route with typed, bounded parameters.
+    -->
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:usesCleartextTraffic="false">
+
+        <activity
+            android:name=".ui.DeepLinkActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+
+            <!--
+                Custom scheme deep link.
+                The scheme is intentionally non-generic to reduce collision risk.
+                Only the exact scheme and host are accepted by the resolver.
+            -->
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="myapp"
+                    android:host="open" />
+            </intent-filter>
+
+            <!--
+                Optional: HTTPS App Links for verified domains.
+                Keep this only if you control the domain and publish the
+                assetlinks.json file. The resolver still applies the same
+                allowlist and typed-parameter rules.
+            -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="links.example.com"
+                    android:pathPrefix="/app" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

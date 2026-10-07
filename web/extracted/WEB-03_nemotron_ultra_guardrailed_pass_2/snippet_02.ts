@@ -1,0 +1,8 @@
+.env.example
+AWS_REGION=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+S3_BUCKET_NAME=
+S3_UPLOAD_PREFIX=uploads/
+MAX_FILE_SIZE_MB=10
+ALLOWED_MIME_TYPES=image/jpeg,image/png,application/pdf

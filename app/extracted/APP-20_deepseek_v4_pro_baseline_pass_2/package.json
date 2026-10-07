@@ -1,0 +1,18 @@
+// package.json
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "protocols": [
+      {
+        "name": "myapp",
+        "schemes": ["myapp"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": ["cleartextTrafficPermitted=\"false\" on base-config and domain-config", "certificate pinning pin-set for domain", "trust-anchors restricted to system/user CAs, no trust-all TrustManager"],
+  "other_classes_observed": ["trust-anchors includes src=\"user\" allowing user-installed CAs to be trusted, weakening pinning", "pin-set expiration date (2025-12-31) is in the past relative to current date, which would require pin rotation"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

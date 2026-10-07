@@ -1,0 +1,16 @@
+{
+  "name": "html-to-pdf-converter",
+  "version": "1.0.0",
+  "description": "Converts HTML strings to formatted PDF documents",
+  "main": "src/html-to-pdf.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/html-to-pdf.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "puppeteer": "23.10.4"
+  }
+}

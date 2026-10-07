@@ -1,0 +1,18 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_empty_else
+    - avoid_init_to_null
+    - avoid_relative_lib_imports
+    - avoid_type_to_string
+    - cancel_subscriptions
+    - close_sinks
+    - collection_methods_unrelated_type
+    - combinators_ordering
+    - directives_ordering
+    - prefer_final_locals
+    - prefer_single_quotes
+    - unawaited_futures
+    - use_key_in_widget_constructors

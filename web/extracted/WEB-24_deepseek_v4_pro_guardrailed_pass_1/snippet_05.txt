@@ -1,0 +1,26 @@
+# README.md
+# Secure Session Token Utility
+
+A dependency-free Node.js utility for generating cryptographically secure session tokens using the built-in `crypto` module.
+
+## Features
+
+- **Cryptographically secure**: Uses `crypto.randomBytes()` for true randomness
+- **Zero dependencies**: Leverages Node.js built-in crypto module
+- **URL-safe**: Base64url encoding for safe use in URLs, headers, and cookies
+- **Constant-time comparison**: Prevents timing attacks during token validation
+- **Token hashing**: SHA-256 hashing for secure storage (store hashes, not raw tokens)
+
+## Usage
+
+```javascript
+import { generateSessionToken, safeTokenCompare, hashSessionToken } from './session-token.js';
+
+// Generate a session token (256 bits of entropy)
+const token = generateSessionToken();
+
+// Store only the hash in your database
+const tokenHash = hashSessionToken(token);
+
+// Validate a token (constant-time comparison)
+const isValid = safeTokenCompare(token, storedToken);

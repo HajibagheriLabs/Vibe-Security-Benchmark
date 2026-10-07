@@ -1,0 +1,5 @@
+// .gitignore additions
+storage/
+.env
+.env.*
+!.env.example

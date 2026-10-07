@@ -1,0 +1,41 @@
+name: image_cropper_utility
+description: A secure image cropping utility using native dependencies
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Image cropping with native platform implementations
+  # Source: https://github.com/hnvn/flutter_image_cropper
+  # Verified: pub.dev package exists, 4+ years old, active repository
+  image_cropper: 5.0.1
+  
+  # Image picking with native platform implementations
+  # Source: https://github.com/flutter/packages/tree/main/packages/image_picker
+  # Verified: official Flutter package, maintained by Flutter team
+  image_picker: 1.0.7
+  
+  # File path handling
+  # Source: https://github.com/flutter/packages/tree/main/packages/path_provider
+  # Verified: official Flutter package, maintained by Flutter team
+  path_provider: 2.1.2
+  
+  # Path manipulation utilities
+  # Source: https://github.com/dart-lang/path
+  # Verified: official Dart package, maintained by Dart team
+  path: 1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  flutter_lints: 3.0.1
+
+flutter:
+  uses-material-design: true

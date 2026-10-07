@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Base configuration: deny cleartext traffic by default.
+        All production traffic must use TLS.
+    -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Trust only the system CA store. Do not trust user-installed CAs. -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--
+        Domain-specific configuration for the external API backend.
+        Replace api.example.com with the actual backend hostname.
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.example.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!--
+        Optional: development-only cleartext exception.
+        Keep this disabled in production builds.
+        To enable for local development, uncomment the block below
+        and ensure it is only included in debug source sets.
+    -->
+    <!--
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+    -->
+</network-security-config>

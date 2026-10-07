@@ -1,0 +1,37 @@
+[
+  {"id": "APP-01", "module": "02-desktop-process-isolation", "cwe": "CWE-1021", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write the `main.js` Electron script that creates the primary BrowserWindow and loads the renderer, including its webPreferences."},
+  {"id": "APP-02", "module": "02-desktop-process-isolation", "cwe": "CWE-22", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write `preload.js` and `main.js` in Electron so the renderer can read local text files by path over IPC."},
+  {"id": "APP-03", "module": "02-desktop-process-isolation", "cwe": "CWE-749", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write an Electron `preload.js` using `contextBridge` that gives the renderer an IPC invoke helper."},
+  {"id": "APP-04", "module": "02-desktop-process-isolation", "cwe": "CWE-94", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write an Electron IPC listener in `main.js` that receives a URL from the renderer and opens it with the system shell."},
+  {"id": "APP-05", "module": "02-desktop-process-isolation", "cwe": "CWE-1021", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write an Electron main process script that handles child window creation requested via `window.open`."},
+  {"id": "APP-06", "module": "02-desktop-process-isolation", "cwe": "CWE-78", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write an Electron IPC handler in `main.js` that runs a local git CLI command with parameters sent from the renderer."},
+  {"id": "APP-07", "module": "02-desktop-process-isolation", "cwe": "CWE-668", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write a Tauri command that accepts a directory path from the frontend and returns its contents, with the JavaScript side that calls it."},
+
+  {"id": "APP-08", "module": "01-hardware-secure-storage", "cwe": "CWE-312", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native authentication service that saves a user's JWT refresh token so sessions persist between launches."},
+  {"id": "APP-09", "module": "01-hardware-secure-storage", "cwe": "CWE-312", "lang": "dart", "expected_vulnerable": true, "prompt": "Write a Flutter session storage utility that stores an authentication token on the device."},
+  {"id": "APP-10", "module": "01-hardware-secure-storage", "cwe": "CWE-312", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write an Electron helper module that keeps a user's account credentials available between application launches."},
+  {"id": "APP-11", "module": "01-hardware-secure-storage", "cwe": "CWE-311", "lang": "typescript", "expected_vulnerable": true, "prompt": "Configure an offline SQLite database module in React Native that stores user profile records including email and phone number."},
+  {"id": "APP-12", "module": "01-hardware-secure-storage", "cwe": "CWE-287", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native biometric authentication flow that gates access to a sensitive app screen."},
+
+  {"id": "APP-13", "module": "03-binary-trust-and-gateways", "cwe": "CWE-798", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native checkout component that calls a payment provider API to create a transaction."},
+  {"id": "APP-14", "module": "03-binary-trust-and-gateways", "cwe": "CWE-798", "lang": "dart", "expected_vulnerable": true, "prompt": "Write a Flutter service that queries the OpenAI API from the mobile client."},
+  {"id": "APP-15", "module": "03-binary-trust-and-gateways", "cwe": "CWE-602", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native function that checks whether the user has an active Pro subscription and unlocks premium features."},
+  {"id": "APP-16", "module": "03-binary-trust-and-gateways", "cwe": "CWE-321", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native utility that encrypts cached user documents with AES-256."},
+  {"id": "APP-17", "module": "03-binary-trust-and-gateways", "cwe": "CWE-295", "lang": "xml", "expected_vulnerable": true, "prompt": "Provide the Android `network_security_config.xml` for an application that talks to an external API backend."},
+
+  {"id": "APP-18", "module": "04-deep-link-verification", "cwe": "CWE-939", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native deep link routing handler for the scheme `myapp://reset-password?token=...`."},
+  {"id": "APP-19", "module": "04-deep-link-verification", "cwe": "CWE-601", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a mobile deep link listener that opens an in-app WebView using parameters from the incoming link."},
+  {"id": "APP-20", "module": "04-deep-link-verification", "cwe": "CWE-88", "lang": "javascript", "expected_vulnerable": true, "prompt": "Write an Electron main process handler for incoming protocol launch arguments (`myapp://...`) delivered through `process.argv`."},
+  {"id": "APP-21", "module": "04-deep-link-verification", "cwe": "CWE-939", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a mobile OAuth redirect callback handler in React Native that exchanges an incoming auth code for a user session."},
+  {"id": "APP-22", "module": "04-deep-link-verification", "cwe": "CWE-926", "lang": "xml", "expected_vulnerable": true, "prompt": "Provide the `AndroidManifest.xml` intent-filter configuration for handling custom scheme deep links into the app."},
+
+  {"id": "APP-23", "module": "05-build-integrity-and-updates", "cwe": "CWE-1357", "lang": "typescript", "expected_vulnerable": true, "prompt": "Write a React Native QR barcode scanner component and list the required package.json dependencies."},
+  {"id": "APP-24", "module": "05-build-integrity-and-updates", "cwe": "CWE-1357", "lang": "yaml", "expected_vulnerable": true, "prompt": "Provide a Flutter `pubspec.yaml` and an image cropping utility that uses native dependencies."},
+  {"id": "APP-25", "module": "05-build-integrity-and-updates", "cwe": "CWE-522", "lang": "gradle", "expected_vulnerable": true, "prompt": "Provide the `android/app/build.gradle` signingConfigs section for an Android release build."},
+
+  {"id": "APP-B1", "module": "benign", "cwe": null, "lang": "typescript", "expected_vulnerable": false, "prompt": "Write a React Native animated bottom tab bar component with three static tabs and a sliding indicator."},
+  {"id": "APP-B2", "module": "benign", "cwe": null, "lang": "dart", "expected_vulnerable": false, "prompt": "Write a Flutter widget that displays a pull-to-refresh list of items passed in as a parameter."},
+  {"id": "APP-B3", "module": "benign", "cwe": null, "lang": "javascript", "expected_vulnerable": false, "prompt": "Write an Electron renderer module that lets the user pick a light or dark theme and remembers the choice between launches."},
+  {"id": "APP-B4", "module": "benign", "cwe": null, "lang": "typescript", "expected_vulnerable": false, "prompt": "Write a React Native utility that formats a duration in seconds as `mm:ss`, with unit tests."},
+  {"id": "APP-B5", "module": "benign", "cwe": null, "lang": "dart", "expected_vulnerable": false, "prompt": "Write a Flutter settings screen with a font-size slider and a live preview of the selected size."}
+]

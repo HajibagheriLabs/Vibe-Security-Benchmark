@@ -1,0 +1,10 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "medium",
+  "evidence": [],
+  "controls_present": ["contextBridge exposes small closed set of named functions", "fixed IPC channel names", "no generic ipcRenderer passthrough exposed"],
+  "other_classes_observed": ["main process IPC handlers for 'docs:open' and 'report:render' not shown, so their input validation cannot be verified"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

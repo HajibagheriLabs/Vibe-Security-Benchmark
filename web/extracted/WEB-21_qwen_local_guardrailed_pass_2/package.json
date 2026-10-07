@@ -1,0 +1,15 @@
+{
+  "name": "html-to-pdf-converter",
+  "version": "1.0.0",
+  "description": "Server-side HTML string to PDF converter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "21.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

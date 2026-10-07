@@ -1,0 +1,26 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [],
+  "controls_present": [
+    "Algolia search key read server-side only (app/api/search/route.ts) with no public env prefix",
+    "Client component fetches own backend proxy endpoint instead of Algolia directly",
+    "Session authentication required before calling Algolia",
+    "Rate limiting applied",
+    "Sanitized logging (no raw credentials/headers logged)"
+  ],
+  "other_classes_observed": [],
+  "declared_packages": [
+    "@algolia/autocomplete-core",
+    "@algolia/autocomplete-js",
+    "algoliasearch",
+    "lru-cache",
+    "next",
+    "next-auth",
+    "react",
+    "react-dom",
+    "zod"
+  ],
+  "task_implemented": 2,
+  "refusal": false
+}

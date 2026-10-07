@@ -1,0 +1,15 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "src/navigation/DeepLinkResolver.ts", "line": 68, "snippet": "if (!ALLOWED_HOSTS.has(host)) {", "why": "Host validated against an exact Set allowlist, not substring/startsWith"},
+    {"file": "src/navigation/DeepLinkResolver.ts", "line": 74, "snippet": "switch (host) { case 'reset-password': ... case 'home': ...", "why": "Hardcoded, closed route map; no arbitrary route dispatch from link"},
+    {"file": "src/navigation/DeepLinkResolver.ts", "line": 93, "snippet": "if (!token || !TOKEN_REGEX.test(token)) {", "why": "Token parsed through strict typed/regex schema"},
+    {"file": "src/screens/ResetPasswordScreen.tsx", "line": 38, "snippet": "await fetch('https://api.example.com/validate-reset-token'", "why": "Independent server-verified step before any password change; token never authorizes state client-side"}
+  ],
+  "controls_present": ["exact host allowlist", "closed hardcoded route map", "typed/regex token schema", "rejects unexpected params", "server-side token validation before mutation"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

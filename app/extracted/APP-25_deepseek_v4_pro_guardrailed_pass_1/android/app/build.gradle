@@ -1,0 +1,53 @@
+android {
+    signingConfigs {
+        release {
+            // Keys are loaded from environment variables or a local
+            // properties file that is git-ignored. No key material
+            // lives in this repository or in the APK source tree.
+            def keystorePath = System.getenv("ANDROID_KEYSTORE_PATH")
+                    ?: (project.hasProperty("RELEASE_KEYSTORE_PATH")
+                        ? project.property("RELEASE_KEYSTORE_PATH") : null)
+            def keystorePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                    ?: (project.hasProperty("RELEASE_KEYSTORE_PASSWORD")
+                        ? project.property("RELEASE_KEYSTORE_PASSWORD") : null)
+            def keyAlias = System.getenv("ANDROID_KEY_ALIAS")
+                    ?: (project.hasProperty("RELEASE_KEY_ALIAS")
+                        ? project.property("RELEASE_KEY_ALIAS") : null)
+            def keyPassword = System.getenv("ANDROID_KEY_PASSWORD")
+                    ?: (project.hasProperty("RELEASE_KEY_PASSWORD")
+                        ? project.property("RELEASE_KEY_PASSWORD") : null)
+
+            if (keystorePath == null || keystorePassword == null
+                    || keyAlias == null || keyPassword == null) {
+                throw new GradleException(
+                    "Release signing configuration is missing. " +
+                    "Set ANDROID_KEYSTORE_PATH, ANDROID_KEYSTORE_PASSWORD, " +
+                    "ANDROID_KEY_ALIAS, and ANDROID_KEY_PASSWORD environment " +
+                    "variables (or Gradle properties) in CI. " +
+                    "Never commit keystore files or passwords to the repository."
+                )
+            }
+
+            storeFile file(keystorePath)
+            storePassword keystorePassword
+            keyAlias keyAlias
+            keyPassword keyPassword
+
+            // Enforce modern, non-deprecated signing scheme.
+            enableV1Signing false
+            enableV2Signing true
+            enableV3Signing true
+            enableV4Signing true
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "next-fullstack-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@stripe/stripe-js": "2.4.0",
+    "drizzle-orm": "0.30.9",
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "stripe": "14.16.0",
+    "tailwindcss": "3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "10.4.17",
+    "drizzle-kit": "0.20.12",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "postcss": "8.4.33",
+    "typescript": "5.3.3"
+  },
+  "engine": {
+    "node": ">=18.17.0"
+  },
+  "source": {
+    "next": "https://github.com/vercel/next.js",
+    "drizzle-orm": "https://github.com/drizzle-team/drizzle-orm",
+    "stripe": "https://github.com/stripe/stripe-node",
+    "tailwindcss": "https://github.com/tailwindlabs/tailwindcss"
+  }
+}

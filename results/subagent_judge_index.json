@@ -1,0 +1,3827 @@
+{
+  "2cf8adf64d75054f41d5": {
+    "phase": "preflight",
+    "item_id": "GW07V",
+    "judge": "claude-sonnet-5"
+  },
+  "c20ba5f88f488c381772": {
+    "phase": "judge_gold",
+    "item_id": "GW01V",
+    "judge": "claude-sonnet-5"
+  },
+  "bdbba0e89134f0dbb564": {
+    "phase": "judge_gold",
+    "item_id": "GW01S",
+    "judge": "claude-sonnet-5"
+  },
+  "67d39f79fd45d5d2fd7f": {
+    "phase": "judge_gold",
+    "item_id": "GW02V",
+    "judge": "claude-sonnet-5"
+  },
+  "7decf760af8bcb2076e0": {
+    "phase": "judge_gold",
+    "item_id": "GW02S",
+    "judge": "claude-sonnet-5"
+  },
+  "6c1d29d115f464051b81": {
+    "phase": "judge_gold",
+    "item_id": "GW03V",
+    "judge": "claude-sonnet-5"
+  },
+  "2683b3e779a8926d38b8": {
+    "phase": "judge_gold",
+    "item_id": "GW03S",
+    "judge": "claude-sonnet-5"
+  },
+  "52ea287e4aadbebf1181": {
+    "phase": "judge_gold",
+    "item_id": "GW04V",
+    "judge": "claude-sonnet-5"
+  },
+  "5c865bcfa566221bb46f": {
+    "phase": "judge_gold",
+    "item_id": "GW04S",
+    "judge": "claude-sonnet-5"
+  },
+  "c0e0dc7104fc1da67aea": {
+    "phase": "judge_gold",
+    "item_id": "GW05V",
+    "judge": "claude-sonnet-5"
+  },
+  "ea5cf732da9321199e4d": {
+    "phase": "judge_gold",
+    "item_id": "GW05S",
+    "judge": "claude-sonnet-5"
+  },
+  "fe4d6028bcbb40f556cf": {
+    "phase": "judge_gold",
+    "item_id": "GW06V",
+    "judge": "claude-sonnet-5"
+  },
+  "1d2ecf5742ed3da194c7": {
+    "phase": "judge_gold",
+    "item_id": "GW06S",
+    "judge": "claude-sonnet-5"
+  },
+  "abffe434b3a51d6832d5": {
+    "phase": "judge_gold",
+    "item_id": "GW07V",
+    "judge": "claude-sonnet-5"
+  },
+  "9517ccafa23093b9fab2": {
+    "phase": "judge_gold",
+    "item_id": "GW07S",
+    "judge": "claude-sonnet-5"
+  },
+  "739fc7e9d9dce19d61cd": {
+    "phase": "judge_gold",
+    "item_id": "GW08V",
+    "judge": "claude-sonnet-5"
+  },
+  "83b3396315e8635bd9a3": {
+    "phase": "judge_gold",
+    "item_id": "GW08S",
+    "judge": "claude-sonnet-5"
+  },
+  "15086716ec78bb926418": {
+    "phase": "judge_gold",
+    "item_id": "GA01V",
+    "judge": "claude-sonnet-5"
+  },
+  "000b623f19c20344a4bc": {
+    "phase": "judge_gold",
+    "item_id": "GA01S",
+    "judge": "claude-sonnet-5"
+  },
+  "025bdca57fa1d2f653b0": {
+    "phase": "judge_gold",
+    "item_id": "GA02V",
+    "judge": "claude-sonnet-5"
+  },
+  "d4e33a8eb48a82cb83f9": {
+    "phase": "judge_gold",
+    "item_id": "GA02S",
+    "judge": "claude-sonnet-5"
+  },
+  "20ec322c39beeac568d8": {
+    "phase": "judge_gold",
+    "item_id": "GA03V",
+    "judge": "claude-sonnet-5"
+  },
+  "da52e59d0af66fee40fa": {
+    "phase": "judge_gold",
+    "item_id": "GA03S",
+    "judge": "claude-sonnet-5"
+  },
+  "5ba08c7092cb37a55a9e": {
+    "phase": "judge_gold",
+    "item_id": "GA04V",
+    "judge": "claude-sonnet-5"
+  },
+  "371ac5f2137e9efe2d6c": {
+    "phase": "judge_gold",
+    "item_id": "GA04S",
+    "judge": "claude-sonnet-5"
+  },
+  "0f3e0de38edaab1a3d28": {
+    "phase": "judge_gold",
+    "item_id": "GA05V",
+    "judge": "claude-sonnet-5"
+  },
+  "36129577e1b24e3fb427": {
+    "phase": "judge_gold",
+    "item_id": "GA05S",
+    "judge": "claude-sonnet-5"
+  },
+  "c34d617292090d47a831": {
+    "phase": "judge_gold",
+    "item_id": "GA06V",
+    "judge": "claude-sonnet-5"
+  },
+  "ef8c7f349f27467256cd": {
+    "phase": "judge_gold",
+    "item_id": "GA06S",
+    "judge": "claude-sonnet-5"
+  },
+  "41e3c64cd8a75d5e97e4": {
+    "phase": "judge_gold",
+    "item_id": "GA07V",
+    "judge": "claude-sonnet-5"
+  },
+  "44eed7c9b9f5759c4178": {
+    "phase": "judge_gold",
+    "item_id": "GA07S",
+    "judge": "claude-sonnet-5"
+  },
+  "7daa32a0212dee94c7e1": {
+    "phase": "judge_gold",
+    "item_id": "GA08V",
+    "judge": "claude-sonnet-5"
+  },
+  "12d368210f726dd57676": {
+    "phase": "judge_gold",
+    "item_id": "GA08S",
+    "judge": "claude-sonnet-5"
+  },
+  "c534c602aa9f16f4963f": {
+    "phase": "judge_gold",
+    "item_id": "GA09V",
+    "judge": "claude-sonnet-5"
+  },
+  "ecd664ca411c3b1f1f37": {
+    "phase": "judge_gold",
+    "item_id": "GA09S",
+    "judge": "claude-sonnet-5"
+  },
+  "144986b0512353f90a6e": {
+    "phase": "judge_gold",
+    "item_id": "GB01",
+    "judge": "claude-sonnet-5"
+  },
+  "56b8aeb6975bb5fe89cb": {
+    "phase": "judge_gold",
+    "item_id": "GB02",
+    "judge": "claude-sonnet-5"
+  },
+  "382a257d686dfe20864a": {
+    "phase": "judge_gold",
+    "item_id": "GB03",
+    "judge": "claude-sonnet-5"
+  },
+  "8a35eba8709ea3f6b274": {
+    "phase": "judge_gold",
+    "item_id": "GB04",
+    "judge": "claude-sonnet-5"
+  },
+  "e51413d7018fcb81d85b": {
+    "phase": "judge_gold",
+    "item_id": "RF-vuln-preload",
+    "judge": "claude-sonnet-5"
+  },
+  "ea1179d03aa6642f4e0a": {
+    "phase": "judge_gold",
+    "item_id": "RF-reme-preload",
+    "judge": "claude-sonnet-5"
+  },
+  "09713422db5094efa015": {
+    "phase": "judge_gold",
+    "item_id": "RF-vuln-electron-main",
+    "judge": "claude-sonnet-5"
+  },
+  "144c4b594b6b7612d964": {
+    "phase": "judge_gold",
+    "item_id": "RF-reme-electron-main",
+    "judge": "claude-sonnet-5"
+  },
+  "c4cf90c2409b2eb9bfa1": {
+    "phase": "judge_gold",
+    "item_id": "RF-vuln-auth",
+    "judge": "claude-sonnet-5"
+  },
+  "d531d3d0b7ceecfcd802": {
+    "phase": "judge_gold",
+    "item_id": "RF-reme-auth",
+    "judge": "claude-sonnet-5"
+  },
+  "3db7092b2271b97c1f7a": {
+    "phase": "judge_gold",
+    "item_id": "RF-vuln-AndroidManifest",
+    "judge": "claude-sonnet-5"
+  },
+  "bdd2f8d9023b0e371a67": {
+    "phase": "judge_gold",
+    "item_id": "RF-reme-AndroidManifest",
+    "judge": "claude-sonnet-5"
+  },
+  "c2ee0bc7fc99d766a04a": {
+    "phase": "judge_gold",
+    "item_id": "RF-vuln-Info",
+    "judge": "claude-sonnet-5"
+  },
+  "1296b1a840a357383ea8": {
+    "phase": "judge",
+    "item_id": "WEB-01_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "503a8ee5924bb24fa597": {
+    "phase": "judge",
+    "item_id": "WEB-01_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "910355dca34ec57aa855": {
+    "phase": "judge",
+    "item_id": "WEB-01_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "98da2bcd765f6442e0ed": {
+    "phase": "judge",
+    "item_id": "WEB-01_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d2a4bbfba5a9bf41acea": {
+    "phase": "judge",
+    "item_id": "WEB-01_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "85396cb324ad3feb4eca": {
+    "phase": "judge",
+    "item_id": "WEB-01_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "00037c56c370e80c506a": {
+    "phase": "judge",
+    "item_id": "WEB-01_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a7f03a2194cebdb350b3": {
+    "phase": "judge",
+    "item_id": "WEB-01_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5ace58b77c876cd91f9d": {
+    "phase": "judge",
+    "item_id": "WEB-01_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8dc38bdb824cd925a28a": {
+    "phase": "judge",
+    "item_id": "WEB-01_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5f14fbc538d57cad98ce": {
+    "phase": "judge",
+    "item_id": "WEB-01_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7856cea0783192613cd5": {
+    "phase": "judge",
+    "item_id": "WEB-01_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "6b698af6bd55df0b5851": {
+    "phase": "judge",
+    "item_id": "WEB-02_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c281135c4c918a581820": {
+    "phase": "judge",
+    "item_id": "WEB-02_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "03165c3eaff57a39ca27": {
+    "phase": "judge",
+    "item_id": "WEB-02_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "baa1d829c4445db37176": {
+    "phase": "judge",
+    "item_id": "WEB-02_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b027b7b378c6baff736d": {
+    "phase": "judge",
+    "item_id": "WEB-02_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ac3b8076cc11f315eeec": {
+    "phase": "judge",
+    "item_id": "WEB-02_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c7d83b2ff2c6e180a639": {
+    "phase": "judge",
+    "item_id": "WEB-02_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e8bd1552ff08cda2203b": {
+    "phase": "judge",
+    "item_id": "WEB-02_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "33fa6b9862b0c019aa4c": {
+    "phase": "judge",
+    "item_id": "WEB-02_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "cb39d886c97cb722a857": {
+    "phase": "judge",
+    "item_id": "WEB-02_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ee7a809418d911080b9d": {
+    "phase": "judge",
+    "item_id": "WEB-02_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "269a1ff05828c118bcc6": {
+    "phase": "judge",
+    "item_id": "WEB-02_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c45503b7df84f792dffb": {
+    "phase": "judge",
+    "item_id": "WEB-03_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7b94e73fafb52dd00e40": {
+    "phase": "judge",
+    "item_id": "WEB-03_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fa2512b88fa9b18d4f37": {
+    "phase": "judge",
+    "item_id": "WEB-03_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "71604aede23e1f361587": {
+    "phase": "judge",
+    "item_id": "WEB-03_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "63a3b88026b35884c46f": {
+    "phase": "judge",
+    "item_id": "WEB-03_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b7f3325c526c6b6de4e7": {
+    "phase": "judge",
+    "item_id": "WEB-03_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "82bfaf8df05229b2f41a": {
+    "phase": "judge",
+    "item_id": "WEB-03_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "dba8eee2274f2b0a07af": {
+    "phase": "judge",
+    "item_id": "WEB-03_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "68be773a525093710516": {
+    "phase": "judge",
+    "item_id": "WEB-03_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7f074586c564ec2ed9c9": {
+    "phase": "judge",
+    "item_id": "WEB-03_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "045c8f7677e7895f8ae6": {
+    "phase": "judge",
+    "item_id": "WEB-03_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7359defdc25bc4b3ecbc": {
+    "phase": "judge",
+    "item_id": "WEB-03_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c0499f47c64ba3ec979a": {
+    "phase": "judge",
+    "item_id": "WEB-04_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "46ac9fc96f9aea979c58": {
+    "phase": "judge",
+    "item_id": "WEB-04_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a81887d502ae5087ec8e": {
+    "phase": "judge",
+    "item_id": "WEB-04_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "69d2011229b72d6261fb": {
+    "phase": "judge",
+    "item_id": "WEB-04_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f54b704693537fef5147": {
+    "phase": "judge",
+    "item_id": "WEB-04_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3edcff37a628b43d0f2a": {
+    "phase": "judge",
+    "item_id": "WEB-04_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "85a01384e2fee445533c": {
+    "phase": "judge",
+    "item_id": "WEB-04_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "028b284de4cce515305b": {
+    "phase": "judge",
+    "item_id": "WEB-04_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a4dc7a5c3a60e1e3cabe": {
+    "phase": "judge",
+    "item_id": "WEB-04_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6b43a5d35a9f8fe098f5": {
+    "phase": "judge",
+    "item_id": "WEB-04_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "baec2a88229d82a9d62e": {
+    "phase": "judge",
+    "item_id": "WEB-04_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8ea5b0b10f2fbf8ea171": {
+    "phase": "judge",
+    "item_id": "WEB-04_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "60f57c7a2cad879814fd": {
+    "phase": "judge",
+    "item_id": "WEB-05_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "90a9736d249d255bdfa4": {
+    "phase": "judge",
+    "item_id": "WEB-05_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e7fed80293620adcd274": {
+    "phase": "judge",
+    "item_id": "WEB-05_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7dae30eca622bbe8eef2": {
+    "phase": "judge",
+    "item_id": "WEB-05_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ec0ec86edf2854bdc273": {
+    "phase": "judge",
+    "item_id": "WEB-05_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7eaa2d36c07ed02121c2": {
+    "phase": "judge",
+    "item_id": "WEB-05_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c48c1531747381552ef7": {
+    "phase": "judge",
+    "item_id": "WEB-05_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b4d55213f43305eb2fe5": {
+    "phase": "judge",
+    "item_id": "WEB-05_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e993cd98253abffe7e84": {
+    "phase": "judge",
+    "item_id": "WEB-05_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c3c570ff0d1c519b6ec3": {
+    "phase": "judge",
+    "item_id": "WEB-05_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7493419efb18f94c7678": {
+    "phase": "judge",
+    "item_id": "WEB-05_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3d4d139c5e8881de43b2": {
+    "phase": "judge",
+    "item_id": "WEB-06_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "90ce2ef117f44dacf992": {
+    "phase": "judge",
+    "item_id": "WEB-06_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e17ab1d426efc3533a2e": {
+    "phase": "judge",
+    "item_id": "WEB-06_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "35891e552fd481a99fea": {
+    "phase": "judge",
+    "item_id": "WEB-06_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "842dc29af77ce1692218": {
+    "phase": "judge",
+    "item_id": "WEB-06_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3113b13dffa53e34b66f": {
+    "phase": "judge",
+    "item_id": "WEB-06_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9897a5fa3915217d83f9": {
+    "phase": "judge",
+    "item_id": "WEB-06_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "59e08592f1a0e68f30ca": {
+    "phase": "judge",
+    "item_id": "WEB-06_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ebed85a67d53debc67b7": {
+    "phase": "judge",
+    "item_id": "WEB-06_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f9290e213cebba55b96c": {
+    "phase": "judge",
+    "item_id": "WEB-06_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d2baaf595dbfe0e9beec": {
+    "phase": "judge",
+    "item_id": "WEB-06_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f9b92a27e092945a51b9": {
+    "phase": "judge",
+    "item_id": "WEB-06_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "93822cb858952928588e": {
+    "phase": "judge",
+    "item_id": "WEB-07_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e8f168d92a983d4ed092": {
+    "phase": "judge",
+    "item_id": "WEB-07_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f4d6c757cd95cc16c88f": {
+    "phase": "judge",
+    "item_id": "WEB-07_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "217850f5fe046e4dda4a": {
+    "phase": "judge",
+    "item_id": "WEB-07_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "1de6006fd4f55cc5015a": {
+    "phase": "judge",
+    "item_id": "WEB-07_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "53be1fb796c2f98f2304": {
+    "phase": "judge",
+    "item_id": "WEB-07_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "46ca2063da826ed42cf1": {
+    "phase": "judge",
+    "item_id": "WEB-07_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b38cec07db1594484e1a": {
+    "phase": "judge",
+    "item_id": "WEB-07_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "340cfb94ffeb371c4603": {
+    "phase": "judge",
+    "item_id": "WEB-07_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0d3997f8464258f7798b": {
+    "phase": "judge",
+    "item_id": "WEB-07_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3f12bb34433799aeb50d": {
+    "phase": "judge",
+    "item_id": "WEB-07_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7634eec4eed179983997": {
+    "phase": "judge",
+    "item_id": "WEB-07_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "39a37920e1f4cea57f7f": {
+    "phase": "judge",
+    "item_id": "WEB-08_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "42f3a44f7bb001277b16": {
+    "phase": "judge",
+    "item_id": "WEB-08_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f47b643a66a7d32d086d": {
+    "phase": "judge",
+    "item_id": "WEB-08_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "dd169e8999b75f9da6df": {
+    "phase": "judge",
+    "item_id": "WEB-08_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a961487ccfc7b04d9879": {
+    "phase": "judge",
+    "item_id": "WEB-08_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9ae88397b2fa1b2aee2e": {
+    "phase": "judge",
+    "item_id": "WEB-08_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "0f7616aa1843bc1ebc3d": {
+    "phase": "judge",
+    "item_id": "WEB-08_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d2599b57f77dde0e1f47": {
+    "phase": "judge",
+    "item_id": "WEB-08_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "162f84a0d23931c15dc4": {
+    "phase": "judge",
+    "item_id": "WEB-08_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "da8265a4c28b5e0f203e": {
+    "phase": "judge",
+    "item_id": "WEB-08_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d3191dd2c99ba190bf49": {
+    "phase": "judge",
+    "item_id": "WEB-08_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1aa3d88dee9115a086c0": {
+    "phase": "judge",
+    "item_id": "WEB-08_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d4a05e1a6b2db1fcd3a4": {
+    "phase": "judge",
+    "item_id": "WEB-09_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6741e0fa638ff05e281d": {
+    "phase": "judge",
+    "item_id": "WEB-09_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5356c20c876e3e060cde": {
+    "phase": "judge",
+    "item_id": "WEB-09_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fc7824015b66a7a4484c": {
+    "phase": "judge",
+    "item_id": "WEB-09_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e726223e6173f8f235da": {
+    "phase": "judge",
+    "item_id": "WEB-09_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f37cf09fcf2545de8ba6": {
+    "phase": "judge",
+    "item_id": "WEB-09_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "8c5dcc48d6cd7ed9ea22": {
+    "phase": "judge",
+    "item_id": "WEB-09_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f8fe33ae7aca0b2f603c": {
+    "phase": "judge",
+    "item_id": "WEB-09_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "28e083bcba540ca89250": {
+    "phase": "judge",
+    "item_id": "WEB-09_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bea9dd05b32addfb68e1": {
+    "phase": "judge",
+    "item_id": "WEB-09_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "37fc702896bb21aaa2bf": {
+    "phase": "judge",
+    "item_id": "WEB-09_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "798b5e1923858a8999d2": {
+    "phase": "judge",
+    "item_id": "WEB-09_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "29b03b8bf7fc16fe2bbc": {
+    "phase": "judge",
+    "item_id": "WEB-10_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8834745d9dc5d8ba4567": {
+    "phase": "judge",
+    "item_id": "WEB-10_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a3020293419a63b5fc08": {
+    "phase": "judge",
+    "item_id": "WEB-10_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "78a621122034c9a9ed68": {
+    "phase": "judge",
+    "item_id": "WEB-10_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f1a4bb1adb454043cb68": {
+    "phase": "judge",
+    "item_id": "WEB-10_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1a4bedfea560580c603f": {
+    "phase": "judge",
+    "item_id": "WEB-10_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b4b306e54b1baaf30e6f": {
+    "phase": "judge",
+    "item_id": "WEB-10_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5e96ea9f8fc20c147a24": {
+    "phase": "judge",
+    "item_id": "WEB-10_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "43c3a8d2584d60662d4a": {
+    "phase": "judge",
+    "item_id": "WEB-10_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ba1b7f1cb2f85fe347ab": {
+    "phase": "judge",
+    "item_id": "WEB-10_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "53c4edd2851877815270": {
+    "phase": "judge",
+    "item_id": "WEB-10_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "82383c6ff3812d57ca98": {
+    "phase": "judge",
+    "item_id": "WEB-10_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "800ac82f04675fd50eb0": {
+    "phase": "judge",
+    "item_id": "WEB-11_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "92057a1aeb2df5a7f499": {
+    "phase": "judge",
+    "item_id": "WEB-11_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7e247be9fe092607f678": {
+    "phase": "judge",
+    "item_id": "WEB-11_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9840dc01180a0457e548": {
+    "phase": "judge",
+    "item_id": "WEB-11_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ddf36e6717da2ecb76fc": {
+    "phase": "judge",
+    "item_id": "WEB-11_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "538cda5754917cc1c45a": {
+    "phase": "judge",
+    "item_id": "WEB-11_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "88be835a219bb5b71f56": {
+    "phase": "judge",
+    "item_id": "WEB-11_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3440c945f4a01c872cc5": {
+    "phase": "judge",
+    "item_id": "WEB-11_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f7be02a025d6063d4c80": {
+    "phase": "judge",
+    "item_id": "WEB-11_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1122a018f314e2300765": {
+    "phase": "judge",
+    "item_id": "WEB-11_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a8f3d9792931681682a9": {
+    "phase": "judge",
+    "item_id": "WEB-11_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "56fedefaf798f355e8ec": {
+    "phase": "judge",
+    "item_id": "WEB-11_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "6b6ba94d0f10574fe5d1": {
+    "phase": "judge",
+    "item_id": "WEB-12_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b2c6ae243379432efa4e": {
+    "phase": "judge",
+    "item_id": "WEB-12_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "770005ae955f68ad0668": {
+    "phase": "judge",
+    "item_id": "WEB-12_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f8859ab8a1415220179b": {
+    "phase": "judge",
+    "item_id": "WEB-12_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "94712e5249cebfcf4725": {
+    "phase": "judge",
+    "item_id": "WEB-12_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fcd9ed0f842e58e3ed17": {
+    "phase": "judge",
+    "item_id": "WEB-12_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e2e469708a80b6618ebd": {
+    "phase": "judge",
+    "item_id": "WEB-12_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "07b104832a6ee31cc9b3": {
+    "phase": "judge",
+    "item_id": "WEB-12_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d81c320243cb12789e80": {
+    "phase": "judge",
+    "item_id": "WEB-12_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b6355a98c4e21c8e62d8": {
+    "phase": "judge",
+    "item_id": "WEB-12_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "58a12645a4e7463561ff": {
+    "phase": "judge",
+    "item_id": "WEB-12_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "54659bf191339ae3668e": {
+    "phase": "judge",
+    "item_id": "WEB-12_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e7505581d15f84d73b4e": {
+    "phase": "judge",
+    "item_id": "WEB-13_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f250d64e6613f54a68b3": {
+    "phase": "judge",
+    "item_id": "WEB-13_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "70a7a0a1e2c9db4a5f37": {
+    "phase": "judge",
+    "item_id": "WEB-13_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3d476ca3ac65e178d6f6": {
+    "phase": "judge",
+    "item_id": "WEB-13_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "dd8447f4ff1005d89790": {
+    "phase": "judge",
+    "item_id": "WEB-13_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b6c5280a3f435ab61f1d": {
+    "phase": "judge",
+    "item_id": "WEB-13_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e5f8a339e387d6fa807a": {
+    "phase": "judge",
+    "item_id": "WEB-13_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bb35c4dbd736a9892c65": {
+    "phase": "judge",
+    "item_id": "WEB-13_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "28f63103dfa01ae73267": {
+    "phase": "judge",
+    "item_id": "WEB-13_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ad1857c82e740798c53e": {
+    "phase": "judge",
+    "item_id": "WEB-13_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "35220976899cb0c7d31c": {
+    "phase": "judge",
+    "item_id": "WEB-13_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "164df1bb93f25a4221f0": {
+    "phase": "judge",
+    "item_id": "WEB-13_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "8fdf42a311e959a13acd": {
+    "phase": "judge",
+    "item_id": "WEB-14_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6fda5b0ffbf3b70cd663": {
+    "phase": "judge",
+    "item_id": "WEB-14_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "63cf9e24ef45ddd11109": {
+    "phase": "judge",
+    "item_id": "WEB-14_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "dc4aa11d01833cade007": {
+    "phase": "judge",
+    "item_id": "WEB-14_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c005a49ada388e5b27fe": {
+    "phase": "judge",
+    "item_id": "WEB-14_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "53260f90402cf6b77dfc": {
+    "phase": "judge",
+    "item_id": "WEB-14_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4e3754e80bbc418d38d9": {
+    "phase": "judge",
+    "item_id": "WEB-14_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d5e3709a90505f06a4d8": {
+    "phase": "judge",
+    "item_id": "WEB-14_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b5d588b715fb9ef9d14d": {
+    "phase": "judge",
+    "item_id": "WEB-14_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3c232183e30036af1651": {
+    "phase": "judge",
+    "item_id": "WEB-14_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3bdf6d7885bb6b0a4536": {
+    "phase": "judge",
+    "item_id": "WEB-14_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6f06297205b6d588f96f": {
+    "phase": "judge",
+    "item_id": "WEB-14_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "442f63faba358566369d": {
+    "phase": "judge",
+    "item_id": "WEB-15_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e134f0752ea0c5dd9cbe": {
+    "phase": "judge",
+    "item_id": "WEB-15_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "563d6c20a1a7ef789cbf": {
+    "phase": "judge",
+    "item_id": "WEB-15_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0740fea7c8c75c3d6323": {
+    "phase": "judge",
+    "item_id": "WEB-15_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "86cb884cbbc88fbc34bd": {
+    "phase": "judge",
+    "item_id": "WEB-15_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "691f87a87fe83fdc1d68": {
+    "phase": "judge",
+    "item_id": "WEB-15_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5a41cdfa845e0e9d430f": {
+    "phase": "judge",
+    "item_id": "WEB-15_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "92f8d75c966e68d739f2": {
+    "phase": "judge",
+    "item_id": "WEB-15_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f23130aceaa06218966f": {
+    "phase": "judge",
+    "item_id": "WEB-15_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ad9911b84b9e061e28bf": {
+    "phase": "judge",
+    "item_id": "WEB-15_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fb4f607aef52fc5dca92": {
+    "phase": "judge",
+    "item_id": "WEB-15_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1c4f679f02af79248f71": {
+    "phase": "judge",
+    "item_id": "WEB-15_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5250d9003cc34aba2b95": {
+    "phase": "judge",
+    "item_id": "WEB-16_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "eb0717fb87f09e8f32d5": {
+    "phase": "judge",
+    "item_id": "WEB-16_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c5818e76b7a041bedd9d": {
+    "phase": "judge",
+    "item_id": "WEB-16_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "cf5d0079e687ca128f06": {
+    "phase": "judge",
+    "item_id": "WEB-16_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "38c037d644fab312c24b": {
+    "phase": "judge",
+    "item_id": "WEB-16_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "39066ed6b9c268646250": {
+    "phase": "judge",
+    "item_id": "WEB-16_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "67eac891e9b7a5141150": {
+    "phase": "judge",
+    "item_id": "WEB-16_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "af6d4e85e1a3b915daf3": {
+    "phase": "judge",
+    "item_id": "WEB-16_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "37c151631d990d9b434f": {
+    "phase": "judge",
+    "item_id": "WEB-16_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6f7ea10e761e7fe81f5e": {
+    "phase": "judge",
+    "item_id": "WEB-16_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b25f03b225a46aba94ff": {
+    "phase": "judge",
+    "item_id": "WEB-16_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6a2417cc9feeffbc22f9": {
+    "phase": "judge",
+    "item_id": "WEB-16_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "05aee1c1ef507ac69b98": {
+    "phase": "judge",
+    "item_id": "WEB-17_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c7279292734d337d560c": {
+    "phase": "judge",
+    "item_id": "WEB-17_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d1c7a029696eb02887a0": {
+    "phase": "judge",
+    "item_id": "WEB-17_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "26c8ab774245bc2a21c6": {
+    "phase": "judge",
+    "item_id": "WEB-17_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f5a678436d8539e493a1": {
+    "phase": "judge",
+    "item_id": "WEB-17_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ff09f41aaf74003e539e": {
+    "phase": "judge",
+    "item_id": "WEB-17_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "daaeb4ef9417cef6b5fa": {
+    "phase": "judge",
+    "item_id": "WEB-17_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d9392443f27935afa264": {
+    "phase": "judge",
+    "item_id": "WEB-17_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "33140ebbad484bfebd77": {
+    "phase": "judge",
+    "item_id": "WEB-17_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "20ebc385f6c5ccfdc491": {
+    "phase": "judge",
+    "item_id": "WEB-17_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fbc92b9b322120f64882": {
+    "phase": "judge",
+    "item_id": "WEB-17_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3c596f140a917cb7329c": {
+    "phase": "judge",
+    "item_id": "WEB-17_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fa0cb22f7ed12b11d954": {
+    "phase": "judge",
+    "item_id": "WEB-18_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "428a970fbea04159919f": {
+    "phase": "judge",
+    "item_id": "WEB-18_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c070aadaffba50aba99d": {
+    "phase": "judge",
+    "item_id": "WEB-18_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3a2846ba097338d53b07": {
+    "phase": "judge",
+    "item_id": "WEB-18_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f4162337b5c96d428b66": {
+    "phase": "judge",
+    "item_id": "WEB-18_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c532f41acf431a4f6dd0": {
+    "phase": "judge",
+    "item_id": "WEB-18_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "6116fda6285ec30acea2": {
+    "phase": "judge",
+    "item_id": "WEB-18_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "dfe4a0e4687b0ba7955b": {
+    "phase": "judge",
+    "item_id": "WEB-18_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c501e946893a94b8af22": {
+    "phase": "judge",
+    "item_id": "WEB-18_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "58e43b9347b8155886b8": {
+    "phase": "judge",
+    "item_id": "WEB-18_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9224dd984fd010848109": {
+    "phase": "judge",
+    "item_id": "WEB-18_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "420f48c9fcc20cae5c4b": {
+    "phase": "judge",
+    "item_id": "WEB-18_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9e3d44a9efb0a029d9e0": {
+    "phase": "judge",
+    "item_id": "WEB-19_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "91d44456c922d75056a4": {
+    "phase": "judge",
+    "item_id": "WEB-19_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "49597fa56e6ccbd52b56": {
+    "phase": "judge",
+    "item_id": "WEB-19_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d26a58d4a06ad213f7e5": {
+    "phase": "judge",
+    "item_id": "WEB-19_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b070f5f04ecffdff745a": {
+    "phase": "judge",
+    "item_id": "WEB-19_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c50b1874d681ea79fc9c": {
+    "phase": "judge",
+    "item_id": "WEB-19_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7f9cd0243e2431b26b07": {
+    "phase": "judge",
+    "item_id": "WEB-19_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "74b233716dd2e94dccf0": {
+    "phase": "judge",
+    "item_id": "WEB-19_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7e3b89536b600f249766": {
+    "phase": "judge",
+    "item_id": "WEB-19_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8d480536f746b9b3e6c4": {
+    "phase": "judge",
+    "item_id": "WEB-19_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a3ffdb1f008f0c5cc239": {
+    "phase": "judge",
+    "item_id": "WEB-19_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "89dfa8c0bda2e54f7404": {
+    "phase": "judge",
+    "item_id": "WEB-19_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7f3adbefc48b65375def": {
+    "phase": "judge",
+    "item_id": "WEB-20_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0e00152927517a9b0938": {
+    "phase": "judge",
+    "item_id": "WEB-20_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "436c81a94494a70158ec": {
+    "phase": "judge",
+    "item_id": "WEB-20_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "33fea23f4f24afd67af1": {
+    "phase": "judge",
+    "item_id": "WEB-20_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d94ffa1809ed7760d66c": {
+    "phase": "judge",
+    "item_id": "WEB-20_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2d8fddbe719afc116181": {
+    "phase": "judge",
+    "item_id": "WEB-20_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "56fbdc21815e59971a6e": {
+    "phase": "judge",
+    "item_id": "WEB-20_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "cb792e64af2ae26b3ea9": {
+    "phase": "judge",
+    "item_id": "WEB-20_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "011973fae736dd784cef": {
+    "phase": "judge",
+    "item_id": "WEB-20_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e28dd9c2e7d217fad674": {
+    "phase": "judge",
+    "item_id": "WEB-20_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "78f554b78e0dfc34af13": {
+    "phase": "judge",
+    "item_id": "WEB-20_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e3971bec86d87c1ec2a0": {
+    "phase": "judge",
+    "item_id": "WEB-20_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "bbadf48a0ccb52276224": {
+    "phase": "judge",
+    "item_id": "WEB-21_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "226cc61ced768b644ea9": {
+    "phase": "judge",
+    "item_id": "WEB-21_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e202333f8a8f7466aebf": {
+    "phase": "judge",
+    "item_id": "WEB-21_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "87beafa9b9924cdfd4b7": {
+    "phase": "judge",
+    "item_id": "WEB-21_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e62aa4d7761abc10bd5a": {
+    "phase": "judge",
+    "item_id": "WEB-21_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4db0cf6da1ad640c67e7": {
+    "phase": "judge",
+    "item_id": "WEB-21_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fb9efd5feff9aea4f83c": {
+    "phase": "judge",
+    "item_id": "WEB-21_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9ed10e942730657cbab2": {
+    "phase": "judge",
+    "item_id": "WEB-21_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "60efd2c957bec5f42ecd": {
+    "phase": "judge",
+    "item_id": "WEB-21_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "62be4eb65ea6d6fb2127": {
+    "phase": "judge",
+    "item_id": "WEB-21_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ae8f4f193be11ba6e6e6": {
+    "phase": "judge",
+    "item_id": "WEB-21_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "94f12ecbace326a26368": {
+    "phase": "judge",
+    "item_id": "WEB-21_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b1fc1a8b64d7c39cfd46": {
+    "phase": "judge",
+    "item_id": "WEB-22_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "06d36a7e2c396fdd6450": {
+    "phase": "judge",
+    "item_id": "WEB-22_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fb38cbda329fa5f89cec": {
+    "phase": "judge",
+    "item_id": "WEB-22_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "13599ea8f35c08e835e4": {
+    "phase": "judge",
+    "item_id": "WEB-22_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "cbf52438b73f0569bceb": {
+    "phase": "judge",
+    "item_id": "WEB-22_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5248d8c828cb1dc13f49": {
+    "phase": "judge",
+    "item_id": "WEB-22_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fb76204c3c33a3ee37f2": {
+    "phase": "judge",
+    "item_id": "WEB-22_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4323dc2a71a6f9619133": {
+    "phase": "judge",
+    "item_id": "WEB-22_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f18f0292429d99a843f0": {
+    "phase": "judge",
+    "item_id": "WEB-22_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3fbd894739c305e25b91": {
+    "phase": "judge",
+    "item_id": "WEB-22_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "05e46ea53545b374bee9": {
+    "phase": "judge",
+    "item_id": "WEB-22_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "db94735d1d1fdba28214": {
+    "phase": "judge",
+    "item_id": "WEB-22_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "19106dd9f61d74098a96": {
+    "phase": "judge",
+    "item_id": "WEB-23_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "04bf073e9c3a2e15f956": {
+    "phase": "judge",
+    "item_id": "WEB-23_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f4f16c142915ab9380fc": {
+    "phase": "judge",
+    "item_id": "WEB-23_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6b52ed290bdf207b9dfa": {
+    "phase": "judge",
+    "item_id": "WEB-23_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b6acd77f4ac519054143": {
+    "phase": "judge",
+    "item_id": "WEB-23_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3628251251a2332a57ab": {
+    "phase": "judge",
+    "item_id": "WEB-23_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b0aeb5a4af3e0bf3b06e": {
+    "phase": "judge",
+    "item_id": "WEB-23_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8d7a60ad50a4e194509f": {
+    "phase": "judge",
+    "item_id": "WEB-23_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "71bf1323279d6f206226": {
+    "phase": "judge",
+    "item_id": "WEB-23_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "295d008f1d0f8706f017": {
+    "phase": "judge",
+    "item_id": "WEB-23_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4aa48d9b873506152233": {
+    "phase": "judge",
+    "item_id": "WEB-23_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "859a0138166f114cffae": {
+    "phase": "judge",
+    "item_id": "WEB-23_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b6af9e10cf450fdbe984": {
+    "phase": "judge",
+    "item_id": "WEB-24_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f556f0b901319175e487": {
+    "phase": "judge",
+    "item_id": "WEB-24_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ec412bb767d2f1fa86ee": {
+    "phase": "judge",
+    "item_id": "WEB-24_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c8ccc8311031a3d62eac": {
+    "phase": "judge",
+    "item_id": "WEB-24_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ba9f15103f738c5f26aa": {
+    "phase": "judge",
+    "item_id": "WEB-24_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4f9a2d7909dde9421da9": {
+    "phase": "judge",
+    "item_id": "WEB-24_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "84a00994c965f6c814db": {
+    "phase": "judge",
+    "item_id": "WEB-24_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "35dbdb203799eccf11b7": {
+    "phase": "judge",
+    "item_id": "WEB-24_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "6143fada05605c6cad2b": {
+    "phase": "judge",
+    "item_id": "WEB-24_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "eeba852df082d8df0f79": {
+    "phase": "judge",
+    "item_id": "WEB-24_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fc73edd81fe5a26ad636": {
+    "phase": "judge",
+    "item_id": "WEB-24_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f4bcb7534ba53409d4fc": {
+    "phase": "judge",
+    "item_id": "WEB-24_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "bbc3c80f29219bffdc35": {
+    "phase": "judge",
+    "item_id": "WEB-25_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "dc4dea56baa506f0559a": {
+    "phase": "judge",
+    "item_id": "WEB-25_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e6830df2b0495f0192aa": {
+    "phase": "judge",
+    "item_id": "WEB-25_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8e748aca6eda80e961c7": {
+    "phase": "judge",
+    "item_id": "WEB-25_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9ad2925cb98a9f567001": {
+    "phase": "judge",
+    "item_id": "WEB-25_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5ea713faa37607d6af00": {
+    "phase": "judge",
+    "item_id": "WEB-25_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "03c8cfa69765cb281fa4": {
+    "phase": "judge",
+    "item_id": "WEB-25_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2f7b004096c857d2d88a": {
+    "phase": "judge",
+    "item_id": "WEB-25_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d9f158bd6ae698ba1d1b": {
+    "phase": "judge",
+    "item_id": "WEB-25_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8d0418d9a0534ccb0c8b": {
+    "phase": "judge",
+    "item_id": "WEB-25_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d4ce17ab7e044ae6110c": {
+    "phase": "judge",
+    "item_id": "WEB-25_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "093656d66525fd214bf8": {
+    "phase": "judge",
+    "item_id": "WEB-25_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "076503cb87d6423311a9": {
+    "phase": "judge",
+    "item_id": "WEB-B1_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bcd65b84f7bb16c74840": {
+    "phase": "judge",
+    "item_id": "WEB-B1_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "baee924c45f2e2c70402": {
+    "phase": "judge",
+    "item_id": "WEB-B1_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3a876e0bf43feccc616c": {
+    "phase": "judge",
+    "item_id": "WEB-B1_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "86dd04ecfe40a454a2d4": {
+    "phase": "judge",
+    "item_id": "WEB-B1_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4864d0f84ac4d8eefbc0": {
+    "phase": "judge",
+    "item_id": "WEB-B1_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fa166c5ec94dcf9ed469": {
+    "phase": "judge",
+    "item_id": "WEB-B1_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "117db1d6a5f1972165fe": {
+    "phase": "judge",
+    "item_id": "WEB-B1_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e0b2e881f3f09ff11d89": {
+    "phase": "judge",
+    "item_id": "WEB-B1_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "23d3a995150416fa6196": {
+    "phase": "judge",
+    "item_id": "WEB-B1_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "079fa0fc51041b1ca138": {
+    "phase": "judge",
+    "item_id": "WEB-B1_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ff675eb1c95bd197b77e": {
+    "phase": "judge",
+    "item_id": "WEB-B1_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "105747a059a86e818402": {
+    "phase": "judge",
+    "item_id": "WEB-B2_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8520e6a53c8bdb13ef8a": {
+    "phase": "judge",
+    "item_id": "WEB-B2_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d90580b9f3b30e6ee017": {
+    "phase": "judge",
+    "item_id": "WEB-B2_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "221a4c16026ae8a12da2": {
+    "phase": "judge",
+    "item_id": "WEB-B2_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "76874cae5830c9ce79b3": {
+    "phase": "judge",
+    "item_id": "WEB-B2_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6f5f1388098dd6211911": {
+    "phase": "judge",
+    "item_id": "WEB-B2_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "28f243f0c0c27878c6a5": {
+    "phase": "judge",
+    "item_id": "WEB-B2_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f6b0796daec6513d2424": {
+    "phase": "judge",
+    "item_id": "WEB-B2_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "440b5e7f507cbc64d3ff": {
+    "phase": "judge",
+    "item_id": "WEB-B2_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fac501731ab30ce0182e": {
+    "phase": "judge",
+    "item_id": "WEB-B2_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "425331a3c68b856a6e91": {
+    "phase": "judge",
+    "item_id": "WEB-B2_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1674f87ec664174c5a57": {
+    "phase": "judge",
+    "item_id": "WEB-B2_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "74d25323542adc1a3f61": {
+    "phase": "judge",
+    "item_id": "WEB-B3_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d4a8cf6156f3f9e92cbb": {
+    "phase": "judge",
+    "item_id": "WEB-B3_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f56e6961e7716b690b02": {
+    "phase": "judge",
+    "item_id": "WEB-B3_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a3311252da63a9c3e657": {
+    "phase": "judge",
+    "item_id": "WEB-B3_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ce5f3899b194df2e4fdb": {
+    "phase": "judge",
+    "item_id": "WEB-B3_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1c6d51e1692290d4c225": {
+    "phase": "judge",
+    "item_id": "WEB-B3_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "45e499d47b4a2869357c": {
+    "phase": "judge",
+    "item_id": "WEB-B3_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "89815af0162438e8ae31": {
+    "phase": "judge",
+    "item_id": "WEB-B3_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7cb1c7f239d7f7ce7fe3": {
+    "phase": "judge",
+    "item_id": "WEB-B3_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8caa81887ad3713ab88a": {
+    "phase": "judge",
+    "item_id": "WEB-B3_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3c2dc775ed45530afa8b": {
+    "phase": "judge",
+    "item_id": "WEB-B3_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7cbe09d9473610529959": {
+    "phase": "judge",
+    "item_id": "WEB-B3_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d65ffe3b3cbe2444e81d": {
+    "phase": "judge",
+    "item_id": "WEB-B4_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b52a3f2147aca401b3b6": {
+    "phase": "judge",
+    "item_id": "WEB-B4_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "2b2c9c5849471c10a587": {
+    "phase": "judge",
+    "item_id": "WEB-B4_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "741ce5a016905c82ed22": {
+    "phase": "judge",
+    "item_id": "WEB-B4_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "1dbfd01c9d752a77003e": {
+    "phase": "judge",
+    "item_id": "WEB-B4_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fd530cbb7da7288c1d86": {
+    "phase": "judge",
+    "item_id": "WEB-B4_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ede4644428994cf83fd0": {
+    "phase": "judge",
+    "item_id": "WEB-B4_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d5083b0bc9698b616092": {
+    "phase": "judge",
+    "item_id": "WEB-B4_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "225c1eb23f9a388cf18e": {
+    "phase": "judge",
+    "item_id": "WEB-B4_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2d4736d500cd7459a632": {
+    "phase": "judge",
+    "item_id": "WEB-B4_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "cebbd74d048bf7db1dbf": {
+    "phase": "judge",
+    "item_id": "WEB-B4_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b6c94a9d01ddbf2da4f9": {
+    "phase": "judge",
+    "item_id": "WEB-B4_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e62796dd692ea666ed07": {
+    "phase": "judge",
+    "item_id": "WEB-B5_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c2acaf46bc98ae03e23e": {
+    "phase": "judge",
+    "item_id": "WEB-B5_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f2df817f0abce2e8ce42": {
+    "phase": "judge",
+    "item_id": "WEB-B5_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8ec8188535d88f8af55e": {
+    "phase": "judge",
+    "item_id": "WEB-B5_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "bbb080ec43345f91a492": {
+    "phase": "judge",
+    "item_id": "WEB-B5_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "43fe967a1fd3ac8913de": {
+    "phase": "judge",
+    "item_id": "WEB-B5_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e56748d1b4495a4ee173": {
+    "phase": "judge",
+    "item_id": "WEB-B5_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f0b04e9d259960bc5f4d": {
+    "phase": "judge",
+    "item_id": "WEB-B5_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f225294813dacaee9f32": {
+    "phase": "judge",
+    "item_id": "WEB-B5_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fc25b2f9bfe0bad5d26b": {
+    "phase": "judge",
+    "item_id": "WEB-B5_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "605e1a766c7d9a092787": {
+    "phase": "judge",
+    "item_id": "WEB-B5_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "76c37509ff17831964ca": {
+    "phase": "judge",
+    "item_id": "WEB-B5_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c4967b9e6f3f6bcb4560": {
+    "phase": "judge",
+    "item_id": "APP-01_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e36b1a6baed28c3c8a97": {
+    "phase": "judge",
+    "item_id": "APP-01_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3d4b383f1e6a4f51c11e": {
+    "phase": "judge",
+    "item_id": "APP-01_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5116f135d4ee49612a3b": {
+    "phase": "judge",
+    "item_id": "APP-01_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "96d246f32408207f9624": {
+    "phase": "judge",
+    "item_id": "APP-01_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "908324aefd4ae36fc64c": {
+    "phase": "judge",
+    "item_id": "APP-01_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "1ff0ddd4e65b19940fd4": {
+    "phase": "judge",
+    "item_id": "APP-01_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "40410cd63bd17514a37a": {
+    "phase": "judge",
+    "item_id": "APP-01_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7802366246b273f97181": {
+    "phase": "judge",
+    "item_id": "APP-01_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "60d8fb78fa483b26f7f7": {
+    "phase": "judge",
+    "item_id": "APP-01_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5430faecc85a91d8500c": {
+    "phase": "judge",
+    "item_id": "APP-01_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "635e8a3e502fbcc3a0bb": {
+    "phase": "judge",
+    "item_id": "APP-01_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b33167080e1e76936025": {
+    "phase": "judge",
+    "item_id": "APP-02_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a48115dca61f0995f120": {
+    "phase": "judge",
+    "item_id": "APP-02_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7dd786028e3f11b01489": {
+    "phase": "judge",
+    "item_id": "APP-02_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "720b08784f2a1021f03b": {
+    "phase": "judge",
+    "item_id": "APP-02_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7c543ebcf0565129195a": {
+    "phase": "judge",
+    "item_id": "APP-02_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1a1f389cce74c57f50d5": {
+    "phase": "judge",
+    "item_id": "APP-02_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d5521845b1a669ccbf63": {
+    "phase": "judge",
+    "item_id": "APP-02_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6e0c1976da522794854c": {
+    "phase": "judge",
+    "item_id": "APP-02_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "78a7b48491fcd694e469": {
+    "phase": "judge",
+    "item_id": "APP-02_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "072de4ed0e78f14f7047": {
+    "phase": "judge",
+    "item_id": "APP-02_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "01bcd7f0194f78e71480": {
+    "phase": "judge",
+    "item_id": "APP-02_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4b54d33dddbf2a2b1c89": {
+    "phase": "judge",
+    "item_id": "APP-03_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "24ad2b4d7e2819abf99b": {
+    "phase": "judge",
+    "item_id": "APP-03_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "271611c6c744fd2b29dc": {
+    "phase": "judge",
+    "item_id": "APP-03_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "48c52e408b1945bd87f1": {
+    "phase": "judge",
+    "item_id": "APP-03_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "25ac15208f5702c33a5b": {
+    "phase": "judge",
+    "item_id": "APP-03_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "195674a0a80695d763b4": {
+    "phase": "judge",
+    "item_id": "APP-03_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d0999ea69cd4052f1029": {
+    "phase": "judge",
+    "item_id": "APP-03_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8a389e3e7dd15fecb321": {
+    "phase": "judge",
+    "item_id": "APP-03_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "89aef35309992bcb0da5": {
+    "phase": "judge",
+    "item_id": "APP-03_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2eb9968e6e392f34e4a1": {
+    "phase": "judge",
+    "item_id": "APP-03_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "283b61c8088c91ac4853": {
+    "phase": "judge",
+    "item_id": "APP-03_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "af321c35b36c804e2b96": {
+    "phase": "judge",
+    "item_id": "APP-03_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "cb2b2b86c106eeea292e": {
+    "phase": "judge",
+    "item_id": "APP-04_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0b716fed123297e23cb5": {
+    "phase": "judge",
+    "item_id": "APP-04_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b9a55d45a0217efc9224": {
+    "phase": "judge",
+    "item_id": "APP-04_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7ed3039e4f16d183039f": {
+    "phase": "judge",
+    "item_id": "APP-04_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7bab5134a4b5562261e0": {
+    "phase": "judge",
+    "item_id": "APP-04_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ff4fbfeb02222addc2e3": {
+    "phase": "judge",
+    "item_id": "APP-04_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "1823de5d20fd37b8676c": {
+    "phase": "judge",
+    "item_id": "APP-04_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0ce05fa0c183b6c32b84": {
+    "phase": "judge",
+    "item_id": "APP-04_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c56ea989aaafa865118b": {
+    "phase": "judge",
+    "item_id": "APP-04_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bb36d8695ad931c714ac": {
+    "phase": "judge",
+    "item_id": "APP-04_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7559b4f2cfab6e0d497c": {
+    "phase": "judge",
+    "item_id": "APP-04_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e47b462d15a5cdaa127b": {
+    "phase": "judge",
+    "item_id": "APP-04_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "6fb087162097027928f4": {
+    "phase": "judge",
+    "item_id": "APP-05_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a5d4edbe04be23ddce1a": {
+    "phase": "judge",
+    "item_id": "APP-05_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ddc138f0c12d781ade13": {
+    "phase": "judge",
+    "item_id": "APP-05_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0616752f2a6d5d0ac4e6": {
+    "phase": "judge",
+    "item_id": "APP-05_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c132e9f13b2658690875": {
+    "phase": "judge",
+    "item_id": "APP-05_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0872e7995fbe029f87da": {
+    "phase": "judge",
+    "item_id": "APP-05_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b7df8f9cff68a1b18c7c": {
+    "phase": "judge",
+    "item_id": "APP-05_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0e97885f8132195aa739": {
+    "phase": "judge",
+    "item_id": "APP-05_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4216f1221760e11ac5bf": {
+    "phase": "judge",
+    "item_id": "APP-05_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d5741afc282ececbaa94": {
+    "phase": "judge",
+    "item_id": "APP-05_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4f37a9c9743441d736bf": {
+    "phase": "judge",
+    "item_id": "APP-05_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "095fbd26ad6f3be116e8": {
+    "phase": "judge",
+    "item_id": "APP-05_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3c6229f9ddee2b4de895": {
+    "phase": "judge",
+    "item_id": "APP-06_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c94455740b504ada3166": {
+    "phase": "judge",
+    "item_id": "APP-06_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e7fb0e38191a168414ea": {
+    "phase": "judge",
+    "item_id": "APP-06_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9ebc738fbcea9f1a8923": {
+    "phase": "judge",
+    "item_id": "APP-06_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ee8b017dc40eeeca03c5": {
+    "phase": "judge",
+    "item_id": "APP-06_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "844b09043bffa1d1d84b": {
+    "phase": "judge",
+    "item_id": "APP-06_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9479bbeeb0ef62e669f8": {
+    "phase": "judge",
+    "item_id": "APP-06_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "61c794aee844cda147df": {
+    "phase": "judge",
+    "item_id": "APP-06_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "0db2f0409852ce4cb8bc": {
+    "phase": "judge",
+    "item_id": "APP-06_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "966ebd436be6140651c4": {
+    "phase": "judge",
+    "item_id": "APP-06_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4c91b7a17fa1d40f89d2": {
+    "phase": "judge",
+    "item_id": "APP-06_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8bd481778fca3cb2279f": {
+    "phase": "judge",
+    "item_id": "APP-06_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "39e7627fd26d691243a3": {
+    "phase": "judge",
+    "item_id": "APP-07_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0dbf8ce1ca67b3123703": {
+    "phase": "judge",
+    "item_id": "APP-07_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7ff4ea16c1850f2e8312": {
+    "phase": "judge",
+    "item_id": "APP-07_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fa24815c7cbfbc05c294": {
+    "phase": "judge",
+    "item_id": "APP-07_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e927d92ff4759349a424": {
+    "phase": "judge",
+    "item_id": "APP-07_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0215dfd17e1e67bf27cb": {
+    "phase": "judge",
+    "item_id": "APP-07_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f665603532e808bf1225": {
+    "phase": "judge",
+    "item_id": "APP-07_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "34b82ed66714d9755cd6": {
+    "phase": "judge",
+    "item_id": "APP-07_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "082fd381439cd6dde21a": {
+    "phase": "judge",
+    "item_id": "APP-07_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1486c755544d7869340f": {
+    "phase": "judge",
+    "item_id": "APP-07_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e407f94bf9541ae541da": {
+    "phase": "judge",
+    "item_id": "APP-07_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "44eb407e0be0afad9682": {
+    "phase": "judge",
+    "item_id": "APP-07_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7a22e7b811b04bde43e3": {
+    "phase": "judge",
+    "item_id": "APP-08_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "15490f27e00e05c4dcd7": {
+    "phase": "judge",
+    "item_id": "APP-08_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9d454b457ea608ac2bc3": {
+    "phase": "judge",
+    "item_id": "APP-08_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1777aac047f427676485": {
+    "phase": "judge",
+    "item_id": "APP-08_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "cf1531edf9882529708e": {
+    "phase": "judge",
+    "item_id": "APP-08_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f84792447bcbb4b84537": {
+    "phase": "judge",
+    "item_id": "APP-08_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "035f917a018a1447a2d8": {
+    "phase": "judge",
+    "item_id": "APP-08_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c0ed4bef04c4f5851cce": {
+    "phase": "judge",
+    "item_id": "APP-08_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "cd4d17d7ef1f3cc094e1": {
+    "phase": "judge",
+    "item_id": "APP-08_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ba89f0e368ad8f816d1f": {
+    "phase": "judge",
+    "item_id": "APP-08_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a0403faaaeae4910ce2a": {
+    "phase": "judge",
+    "item_id": "APP-08_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2b9abe8ef86aca1f61aa": {
+    "phase": "judge",
+    "item_id": "APP-08_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e238f272fdfa24d2e7be": {
+    "phase": "judge",
+    "item_id": "APP-09_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8b4c387cbf7c7ada21b0": {
+    "phase": "judge",
+    "item_id": "APP-09_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c46ad8fa98a2872ddc23": {
+    "phase": "judge",
+    "item_id": "APP-09_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5f81a38ff6ea654f2d9f": {
+    "phase": "judge",
+    "item_id": "APP-09_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4e47534e8e21fb114245": {
+    "phase": "judge",
+    "item_id": "APP-09_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fc6505a5d82708904a30": {
+    "phase": "judge",
+    "item_id": "APP-09_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "929aad5dbef37a3f36ba": {
+    "phase": "judge",
+    "item_id": "APP-09_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9d9ddd5a23e1d411f5f8": {
+    "phase": "judge",
+    "item_id": "APP-09_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b69b72aa400156712e06": {
+    "phase": "judge",
+    "item_id": "APP-09_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "22c13853a13b2964575b": {
+    "phase": "judge",
+    "item_id": "APP-09_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "df649d37ac692851b83a": {
+    "phase": "judge",
+    "item_id": "APP-09_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2e1db7066fe68f3c0947": {
+    "phase": "judge",
+    "item_id": "APP-09_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b108ef7b4da301d769e8": {
+    "phase": "judge",
+    "item_id": "APP-10_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7e780b87df8f004baf4d": {
+    "phase": "judge",
+    "item_id": "APP-10_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "120c5e7dafee4271b93b": {
+    "phase": "judge",
+    "item_id": "APP-10_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9474599dde0b521eb6ef": {
+    "phase": "judge",
+    "item_id": "APP-10_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7aaafd499c34963ffdd3": {
+    "phase": "judge",
+    "item_id": "APP-10_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4b1b5bf0c9d5851fd216": {
+    "phase": "judge",
+    "item_id": "APP-10_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "864ecb7cd52415af50a3": {
+    "phase": "judge",
+    "item_id": "APP-10_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "90574411d3884a04cf66": {
+    "phase": "judge",
+    "item_id": "APP-10_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f2962180326334a5dd1f": {
+    "phase": "judge",
+    "item_id": "APP-10_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f3ff9c83e950912a18f9": {
+    "phase": "judge",
+    "item_id": "APP-10_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "360dd1c00ef3fb23b6f1": {
+    "phase": "judge",
+    "item_id": "APP-10_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "08d115629a499dafd07d": {
+    "phase": "judge",
+    "item_id": "APP-10_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "564ca9686f42dd56843a": {
+    "phase": "judge",
+    "item_id": "APP-11_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "263b7ee40dfaa944da3a": {
+    "phase": "judge",
+    "item_id": "APP-11_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4ff94d898178d647f777": {
+    "phase": "judge",
+    "item_id": "APP-11_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b1b2f8e759092c866f37": {
+    "phase": "judge",
+    "item_id": "APP-11_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "44cbba38002f81226e34": {
+    "phase": "judge",
+    "item_id": "APP-11_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3bb0bb097558f522916e": {
+    "phase": "judge",
+    "item_id": "APP-11_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9a1dea9e5b65e38bc310": {
+    "phase": "judge",
+    "item_id": "APP-11_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9c305848d17fcf6dec03": {
+    "phase": "judge",
+    "item_id": "APP-11_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "8be855da10cef7ad5460": {
+    "phase": "judge",
+    "item_id": "APP-11_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "83c90c984fa0dec46966": {
+    "phase": "judge",
+    "item_id": "APP-11_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "9a566ae48a7a8d95efd1": {
+    "phase": "judge",
+    "item_id": "APP-11_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b13d6bfc23ddbc509688": {
+    "phase": "judge",
+    "item_id": "APP-11_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7f0fc2c19be60e7da6a3": {
+    "phase": "judge",
+    "item_id": "APP-12_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "61abba4ec01e95b2105b": {
+    "phase": "judge",
+    "item_id": "APP-12_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "12ae5330b52460a67bda": {
+    "phase": "judge",
+    "item_id": "APP-12_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e6283a34956aeec19d3f": {
+    "phase": "judge",
+    "item_id": "APP-12_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "52cd4042b7052a59aa75": {
+    "phase": "judge",
+    "item_id": "APP-12_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0eea1d50f29dfdc5a8d1": {
+    "phase": "judge",
+    "item_id": "APP-12_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fa665e21ccec8fff5c6b": {
+    "phase": "judge",
+    "item_id": "APP-12_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bed86a6f9744b4b6b913": {
+    "phase": "judge",
+    "item_id": "APP-12_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "76827e63ef7682da025c": {
+    "phase": "judge",
+    "item_id": "APP-12_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "cf4bd4a10ea0c9f851d8": {
+    "phase": "judge",
+    "item_id": "APP-12_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7372ffb03ede7cc952d8": {
+    "phase": "judge",
+    "item_id": "APP-12_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "48aafd7c2c51eea00732": {
+    "phase": "judge",
+    "item_id": "APP-12_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "85594ea31a861c4a97ba": {
+    "phase": "judge",
+    "item_id": "APP-13_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "cb9500cad4b4b3552a6b": {
+    "phase": "judge",
+    "item_id": "APP-13_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a69d79b01ab551172298": {
+    "phase": "judge",
+    "item_id": "APP-13_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bb0206baf7b363f26b70": {
+    "phase": "judge",
+    "item_id": "APP-13_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b808aadd124b9fed4230": {
+    "phase": "judge",
+    "item_id": "APP-13_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "dca365228877e945ad72": {
+    "phase": "judge",
+    "item_id": "APP-13_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "979498a66a241ec436ec": {
+    "phase": "judge",
+    "item_id": "APP-13_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d09b19a0da7929641dde": {
+    "phase": "judge",
+    "item_id": "APP-13_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "66d9ab0c538ec5dd1110": {
+    "phase": "judge",
+    "item_id": "APP-13_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f3e42d931d5ebfa27ef0": {
+    "phase": "judge",
+    "item_id": "APP-13_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e7ca9582cdd0dd98a797": {
+    "phase": "judge",
+    "item_id": "APP-13_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8b3f00ea1fa04a5b20be": {
+    "phase": "judge",
+    "item_id": "APP-13_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ae4c61e45efff545b39c": {
+    "phase": "judge",
+    "item_id": "APP-14_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9d3073bad9efaaed9fe6": {
+    "phase": "judge",
+    "item_id": "APP-14_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e5405235e3f53e201c93": {
+    "phase": "judge",
+    "item_id": "APP-14_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9157aadb49eee9f76e74": {
+    "phase": "judge",
+    "item_id": "APP-14_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3983f778cc518abc4109": {
+    "phase": "judge",
+    "item_id": "APP-14_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2f161b459bb2b04556e4": {
+    "phase": "judge",
+    "item_id": "APP-14_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "33869505bd6a0405de77": {
+    "phase": "judge",
+    "item_id": "APP-14_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "47b98dc2819f19b03a8a": {
+    "phase": "judge",
+    "item_id": "APP-14_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5db081f17976f7a1cb6e": {
+    "phase": "judge",
+    "item_id": "APP-14_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "05be71158a3f3535e79e": {
+    "phase": "judge",
+    "item_id": "APP-14_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a24ef825e2682bdf2e89": {
+    "phase": "judge",
+    "item_id": "APP-14_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "88d17d5e823bc5c8bd42": {
+    "phase": "judge",
+    "item_id": "APP-14_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "213d61a27a86122af3ac": {
+    "phase": "judge",
+    "item_id": "APP-15_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e2bdafb5aebab2c6bc2b": {
+    "phase": "judge",
+    "item_id": "APP-15_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "087db62a44825aaa476e": {
+    "phase": "judge",
+    "item_id": "APP-15_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b8246cf0c8a4b70b4700": {
+    "phase": "judge",
+    "item_id": "APP-15_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "48d6add1632f353ea527": {
+    "phase": "judge",
+    "item_id": "APP-15_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9ed31be983b0b10b62f9": {
+    "phase": "judge",
+    "item_id": "APP-15_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "81a632b9e898dc08fe75": {
+    "phase": "judge",
+    "item_id": "APP-15_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bffd5cb5dc467866a659": {
+    "phase": "judge",
+    "item_id": "APP-15_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "60d6e56b176fc31bb708": {
+    "phase": "judge",
+    "item_id": "APP-15_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a59ac1ed422a7a40d9df": {
+    "phase": "judge",
+    "item_id": "APP-15_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a58a3ceaffbdb1a23341": {
+    "phase": "judge",
+    "item_id": "APP-15_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "327451ebfc0b2ca516a0": {
+    "phase": "judge",
+    "item_id": "APP-15_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "aeaea080a3b7ac73f374": {
+    "phase": "judge",
+    "item_id": "APP-16_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1bf2ed8fb87dc42282a4": {
+    "phase": "judge",
+    "item_id": "APP-16_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "db13baa54d46ea1a19e5": {
+    "phase": "judge",
+    "item_id": "APP-16_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "37f7afe6117c16a7ea28": {
+    "phase": "judge",
+    "item_id": "APP-16_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "18651c3381ea74f8413f": {
+    "phase": "judge",
+    "item_id": "APP-16_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a1c6914f226d96819563": {
+    "phase": "judge",
+    "item_id": "APP-16_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "bebac90e1f9487fa571b": {
+    "phase": "judge",
+    "item_id": "APP-16_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "fd4330e2010cbf67eb67": {
+    "phase": "judge",
+    "item_id": "APP-16_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d24db3ad1fa005b93a56": {
+    "phase": "judge",
+    "item_id": "APP-16_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c6581cfdfdfa0aee088f": {
+    "phase": "judge",
+    "item_id": "APP-16_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b8e7c5d9c2ccc4792a81": {
+    "phase": "judge",
+    "item_id": "APP-16_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c47847005b41f10ab7e6": {
+    "phase": "judge",
+    "item_id": "APP-16_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d9e8627c2c79d3723558": {
+    "phase": "judge",
+    "item_id": "APP-17_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0c3bbb6f421c4f492f49": {
+    "phase": "judge",
+    "item_id": "APP-17_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7cd10056cbe4d00d345b": {
+    "phase": "judge",
+    "item_id": "APP-17_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d1987d5c84a5f8c36ef5": {
+    "phase": "judge",
+    "item_id": "APP-17_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "10291224a4d182cc22c7": {
+    "phase": "judge",
+    "item_id": "APP-17_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "40ffd69def10890b2165": {
+    "phase": "judge",
+    "item_id": "APP-17_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5b98e6035168560ad13f": {
+    "phase": "judge",
+    "item_id": "APP-17_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3f4ea3f2a1c127516e77": {
+    "phase": "judge",
+    "item_id": "APP-17_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c8a742d1dab5bbc73dee": {
+    "phase": "judge",
+    "item_id": "APP-17_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c932208f27f3b6779665": {
+    "phase": "judge",
+    "item_id": "APP-17_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4c530f9efbe1c832b06d": {
+    "phase": "judge",
+    "item_id": "APP-17_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f83e707cbfd42b142211": {
+    "phase": "judge",
+    "item_id": "APP-17_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "236143aae5e2fa23cce9": {
+    "phase": "judge",
+    "item_id": "APP-18_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d1b4895194b11cf1216e": {
+    "phase": "judge",
+    "item_id": "APP-18_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "41337eff059268c08fbc": {
+    "phase": "judge",
+    "item_id": "APP-18_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "24411d7de9bf2246858a": {
+    "phase": "judge",
+    "item_id": "APP-18_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7177f074850792dcfd5e": {
+    "phase": "judge",
+    "item_id": "APP-18_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2ac0166b268b37c55232": {
+    "phase": "judge",
+    "item_id": "APP-18_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5fcc795461531bac6783": {
+    "phase": "judge",
+    "item_id": "APP-18_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5c0527ae0268153cc3ed": {
+    "phase": "judge",
+    "item_id": "APP-18_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "ea6cd3f5903748154195": {
+    "phase": "judge",
+    "item_id": "APP-18_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6a4410a1110d365433c6": {
+    "phase": "judge",
+    "item_id": "APP-18_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "aff83e573d740a769cc8": {
+    "phase": "judge",
+    "item_id": "APP-18_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b45ff27c0b3a34eaaa38": {
+    "phase": "judge",
+    "item_id": "APP-18_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "adbf522fc7b0f598a894": {
+    "phase": "judge",
+    "item_id": "APP-19_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6b56016f20c670357f22": {
+    "phase": "judge",
+    "item_id": "APP-19_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "53805259a04137026450": {
+    "phase": "judge",
+    "item_id": "APP-19_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1571a6f11a2404217803": {
+    "phase": "judge",
+    "item_id": "APP-19_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a00f9a8950a568a25fc2": {
+    "phase": "judge",
+    "item_id": "APP-19_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4961d5358451d78469e7": {
+    "phase": "judge",
+    "item_id": "APP-19_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "6f67d5881d76beab4629": {
+    "phase": "judge",
+    "item_id": "APP-19_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1cd9e21b84f1527a8ac8": {
+    "phase": "judge",
+    "item_id": "APP-19_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4da724a07ad1b8520907": {
+    "phase": "judge",
+    "item_id": "APP-19_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "abc21d09a0825d1e529a": {
+    "phase": "judge",
+    "item_id": "APP-19_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a16aa00efc14d9ba22a0": {
+    "phase": "judge",
+    "item_id": "APP-19_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "55c6e8233977c3d99747": {
+    "phase": "judge",
+    "item_id": "APP-19_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e75df39fe35f44f9c959": {
+    "phase": "judge",
+    "item_id": "APP-20_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f718e4b0566a97cb1812": {
+    "phase": "judge",
+    "item_id": "APP-20_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3f223213cab3bee5200f": {
+    "phase": "judge",
+    "item_id": "APP-20_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a66188f3500ff9386863": {
+    "phase": "judge",
+    "item_id": "APP-20_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "879833aefc9d43469edb": {
+    "phase": "judge",
+    "item_id": "APP-20_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1eb204098e732ecf90a5": {
+    "phase": "judge",
+    "item_id": "APP-20_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "822a78db6566c8b9fb1a": {
+    "phase": "judge",
+    "item_id": "APP-20_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a0a447664136f4ed8036": {
+    "phase": "judge",
+    "item_id": "APP-20_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "32caaed6fe17389b0b02": {
+    "phase": "judge",
+    "item_id": "APP-20_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "cadea8d495ae8bb9b526": {
+    "phase": "judge",
+    "item_id": "APP-20_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "4db85b93a58460f562cf": {
+    "phase": "judge",
+    "item_id": "APP-20_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9cd263174a207c2b1475": {
+    "phase": "judge",
+    "item_id": "APP-20_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d849a675683342eb6abc": {
+    "phase": "judge",
+    "item_id": "APP-21_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "da65cf33e4d8fd0d6185": {
+    "phase": "judge",
+    "item_id": "APP-21_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "24cc14acd550343220ee": {
+    "phase": "judge",
+    "item_id": "APP-21_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ed835af80d2aed36eebb": {
+    "phase": "judge",
+    "item_id": "APP-21_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "90efb25556a5147f1f7e": {
+    "phase": "judge",
+    "item_id": "APP-21_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2d9eeb106835eb54eae6": {
+    "phase": "judge",
+    "item_id": "APP-21_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "7a2f80cb10fe05a720c2": {
+    "phase": "judge",
+    "item_id": "APP-21_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "2b9c4601adcf76eec6ab": {
+    "phase": "judge",
+    "item_id": "APP-21_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "25333c33fe5c7d46dd86": {
+    "phase": "judge",
+    "item_id": "APP-21_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8833e8d7e25a3fbd0c6b": {
+    "phase": "judge",
+    "item_id": "APP-21_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "0f26a007cfacc5557350": {
+    "phase": "judge",
+    "item_id": "APP-21_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "00b7cabe164f8c63357e": {
+    "phase": "judge",
+    "item_id": "APP-21_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "95080bf93699f0d53d41": {
+    "phase": "judge",
+    "item_id": "APP-22_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "7ff77b45f99ad547a035": {
+    "phase": "judge",
+    "item_id": "APP-22_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "1458f3df7cf3d2053e79": {
+    "phase": "judge",
+    "item_id": "APP-22_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "034ab786a20b2cd5fc7e": {
+    "phase": "judge",
+    "item_id": "APP-22_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "378cb5158a4c07642e80": {
+    "phase": "judge",
+    "item_id": "APP-22_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ccd8e61eabd17c804342": {
+    "phase": "judge",
+    "item_id": "APP-22_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "39a29054404c12ca87cb": {
+    "phase": "judge",
+    "item_id": "APP-22_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "0e2256dcc1ecaf64bc06": {
+    "phase": "judge",
+    "item_id": "APP-22_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b9fcc56a6d633aa7253c": {
+    "phase": "judge",
+    "item_id": "APP-22_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b37cb383753dded7ab61": {
+    "phase": "judge",
+    "item_id": "APP-22_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f775da65735b65347c90": {
+    "phase": "judge",
+    "item_id": "APP-22_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e63a69b269fc42bb5bd9": {
+    "phase": "judge",
+    "item_id": "APP-22_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b251f9c2604d2af42808": {
+    "phase": "judge",
+    "item_id": "APP-23_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8a53309967c4127a2d5d": {
+    "phase": "judge",
+    "item_id": "APP-23_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c762a0890cc941c488cd": {
+    "phase": "judge",
+    "item_id": "APP-23_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e9ce59fdb2919300ba0d": {
+    "phase": "judge",
+    "item_id": "APP-23_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "36e58a1a0e9ce8611ae1": {
+    "phase": "judge",
+    "item_id": "APP-23_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9411fca4b59b9b8f32d7": {
+    "phase": "judge",
+    "item_id": "APP-23_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3349562edfdf2bbfaf15": {
+    "phase": "judge",
+    "item_id": "APP-23_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1f2335eb7c1dc383a147": {
+    "phase": "judge",
+    "item_id": "APP-23_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f7e58fd3adb7836ca82c": {
+    "phase": "judge",
+    "item_id": "APP-23_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "093edac34d424f3b1cdb": {
+    "phase": "judge",
+    "item_id": "APP-23_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "2507b4c6becf7a35be05": {
+    "phase": "judge",
+    "item_id": "APP-23_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "eb420641211bc5c967c3": {
+    "phase": "judge",
+    "item_id": "APP-24_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4576f597324255644154": {
+    "phase": "judge",
+    "item_id": "APP-24_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e360a616488a6f8fa58b": {
+    "phase": "judge",
+    "item_id": "APP-24_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "372e8ef85e7541ba930f": {
+    "phase": "judge",
+    "item_id": "APP-24_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a7cb0a5b517b013a7d89": {
+    "phase": "judge",
+    "item_id": "APP-24_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "c333f5991aaeaf330eb4": {
+    "phase": "judge",
+    "item_id": "APP-24_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "a51b2c869381af4c7036": {
+    "phase": "judge",
+    "item_id": "APP-24_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "cd7f572b50b77ebca71a": {
+    "phase": "judge",
+    "item_id": "APP-24_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d7b6d963d72959cc530d": {
+    "phase": "judge",
+    "item_id": "APP-24_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e6ad77a99222c6a7c7c7": {
+    "phase": "judge",
+    "item_id": "APP-24_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8730fa180044ffd3d2c0": {
+    "phase": "judge",
+    "item_id": "APP-24_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "31e2c3ddbe8da3d9fd65": {
+    "phase": "judge",
+    "item_id": "APP-25_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f6e4e4cfdcc88190f857": {
+    "phase": "judge",
+    "item_id": "APP-25_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "53bc491e104d3ddab51b": {
+    "phase": "judge",
+    "item_id": "APP-25_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "953f5cdc505b1f062070": {
+    "phase": "judge",
+    "item_id": "APP-25_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e46cd17a7e82f2128539": {
+    "phase": "judge",
+    "item_id": "APP-25_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "6e686faf1a685d7dd52e": {
+    "phase": "judge",
+    "item_id": "APP-25_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "3ce07260f4020fe05e01": {
+    "phase": "judge",
+    "item_id": "APP-25_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5e8ff7de47d1f9a3dde3": {
+    "phase": "judge",
+    "item_id": "APP-25_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "5c1201859cbbf6d307ec": {
+    "phase": "judge",
+    "item_id": "APP-25_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "12c85c3a264c38bb2246": {
+    "phase": "judge",
+    "item_id": "APP-25_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "370555ecd5de6c368745": {
+    "phase": "judge",
+    "item_id": "APP-25_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "d9d914646d6f9ff164e1": {
+    "phase": "judge",
+    "item_id": "APP-25_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b0da3c9a8e4d5d380a87": {
+    "phase": "judge",
+    "item_id": "APP-B1_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4f3bb56cf3498656691e": {
+    "phase": "judge",
+    "item_id": "APP-B1_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "54d81d2e06beabaea8e9": {
+    "phase": "judge",
+    "item_id": "APP-B1_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "27df3e153324647e9977": {
+    "phase": "judge",
+    "item_id": "APP-B1_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d970df46705198e8c736": {
+    "phase": "judge",
+    "item_id": "APP-B1_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "ebc6f47576fbc238edbb": {
+    "phase": "judge",
+    "item_id": "APP-B1_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "67c8743d5d2be7522065": {
+    "phase": "judge",
+    "item_id": "APP-B1_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1452b82fb45ccb79a2de": {
+    "phase": "judge",
+    "item_id": "APP-B1_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "f1c5e86c188ed57c5597": {
+    "phase": "judge",
+    "item_id": "APP-B1_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8da6db622fb101453362": {
+    "phase": "judge",
+    "item_id": "APP-B1_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "b5858d9efeda513de707": {
+    "phase": "judge",
+    "item_id": "APP-B1_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "198cfef93e266de8a013": {
+    "phase": "judge",
+    "item_id": "APP-B1_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e3fa4f714f197df2d91a": {
+    "phase": "judge",
+    "item_id": "APP-B2_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "012ec0aca81de0dc7769": {
+    "phase": "judge",
+    "item_id": "APP-B2_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "2b5c4c914a11e38a8bb8": {
+    "phase": "judge",
+    "item_id": "APP-B2_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "8bf208a7708e7bc32e61": {
+    "phase": "judge",
+    "item_id": "APP-B2_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "d28d7b9ede7fd0c08fef": {
+    "phase": "judge",
+    "item_id": "APP-B2_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "f39bc4273ef7fc6a2dc7": {
+    "phase": "judge",
+    "item_id": "APP-B2_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e2782859fff591618eac": {
+    "phase": "judge",
+    "item_id": "APP-B2_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "973b534bbbc38d6feb84": {
+    "phase": "judge",
+    "item_id": "APP-B2_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "be1f73b0d2d19eb5c70b": {
+    "phase": "judge",
+    "item_id": "APP-B2_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "400c8fff87682dfdad24": {
+    "phase": "judge",
+    "item_id": "APP-B2_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "c4dabadb6f16a8000137": {
+    "phase": "judge",
+    "item_id": "APP-B2_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "1f0ff4cd4a825dd2df28": {
+    "phase": "judge",
+    "item_id": "APP-B2_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "06c036c50a82f2b67e86": {
+    "phase": "judge",
+    "item_id": "APP-B3_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e278c9fcb11c342e0178": {
+    "phase": "judge",
+    "item_id": "APP-B3_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "512a07a2efc5a8373c34": {
+    "phase": "judge",
+    "item_id": "APP-B3_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "53ffad196b00a9a80c65": {
+    "phase": "judge",
+    "item_id": "APP-B3_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "8804aa48edaa5f456f56": {
+    "phase": "judge",
+    "item_id": "APP-B3_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e82f8dcf4637881c0c8f": {
+    "phase": "judge",
+    "item_id": "APP-B3_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "73e96b05e2dbd04c1114": {
+    "phase": "judge",
+    "item_id": "APP-B3_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "3b71d998fe9bafe07d4b": {
+    "phase": "judge",
+    "item_id": "APP-B3_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "570d8acbe9503ddaee94": {
+    "phase": "judge",
+    "item_id": "APP-B3_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5e46bbf9b040d532d271": {
+    "phase": "judge",
+    "item_id": "APP-B3_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "aef7f73d7193fc98cc32": {
+    "phase": "judge",
+    "item_id": "APP-B3_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "684d0e987e7144ba102b": {
+    "phase": "judge",
+    "item_id": "APP-B3_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "eb37b712d7cdc7c35122": {
+    "phase": "judge",
+    "item_id": "APP-B4_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "e94a62bb921b088fe054": {
+    "phase": "judge",
+    "item_id": "APP-B4_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fbc868df11f882ee86aa": {
+    "phase": "judge",
+    "item_id": "APP-B4_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "63d97184e2c47462013e": {
+    "phase": "judge",
+    "item_id": "APP-B4_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "58b86728197cee7fd073": {
+    "phase": "judge",
+    "item_id": "APP-B4_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "b82dca606c0ee64c0bd0": {
+    "phase": "judge",
+    "item_id": "APP-B4_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "99bb8efce70ff5f867b6": {
+    "phase": "judge",
+    "item_id": "APP-B4_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "4ac776ac549f76e052d7": {
+    "phase": "judge",
+    "item_id": "APP-B4_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e08c55494383d35dbc87": {
+    "phase": "judge",
+    "item_id": "APP-B4_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "452a5861484c83d40a9d": {
+    "phase": "judge",
+    "item_id": "APP-B4_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "16c44b4069e376ba4bee": {
+    "phase": "judge",
+    "item_id": "APP-B4_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "047cc42bc8acec7873ae": {
+    "phase": "judge",
+    "item_id": "APP-B4_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "883ca3d9841dd3d23945": {
+    "phase": "judge",
+    "item_id": "APP-B5_deepseek_v4_pro_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "bedc072f20698b424470": {
+    "phase": "judge",
+    "item_id": "APP-B5_deepseek_v4_pro_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "fbcd3fc5c9c6d31fc4df": {
+    "phase": "judge",
+    "item_id": "APP-B5_deepseek_v4_pro_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "9a76244ea328bc02f373": {
+    "phase": "judge",
+    "item_id": "APP-B5_deepseek_v4_pro_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "79bd70296a0c4adcb4fd": {
+    "phase": "judge",
+    "item_id": "APP-B5_nemotron_ultra_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "5445139814e09dd7dd2c": {
+    "phase": "judge",
+    "item_id": "APP-B5_nemotron_ultra_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "1d4e18bde4dc289a626c": {
+    "phase": "judge",
+    "item_id": "APP-B5_nemotron_ultra_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "73f6c2cf9c90e5fa0a40": {
+    "phase": "judge",
+    "item_id": "APP-B5_nemotron_ultra_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "e3ba0d71369cdc05ab7d": {
+    "phase": "judge",
+    "item_id": "APP-B5_qwen_local_baseline_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "74af7b9e36b7ee1e5ec9": {
+    "phase": "judge",
+    "item_id": "APP-B5_qwen_local_baseline_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "658e6876ff442a3def1b": {
+    "phase": "judge",
+    "item_id": "APP-B5_qwen_local_guardrailed_pass_1",
+    "judge": "claude-sonnet-5"
+  },
+  "67247ff51dd940b3f0ab": {
+    "phase": "judge",
+    "item_id": "APP-B5_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  },
+  "a0384a78317f67e3423b": {
+    "phase": "judge",
+    "item_id": "APP-23_qwen_local_guardrailed_pass_2",
+    "judge": "claude-sonnet-5"
+  }
+}

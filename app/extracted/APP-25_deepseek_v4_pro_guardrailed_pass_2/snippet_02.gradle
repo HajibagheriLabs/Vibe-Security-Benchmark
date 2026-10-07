@@ -1,0 +1,4 @@
+storeFile=/absolute/path/to/your-release-key.jks
+storePassword=your-keystore-password
+keyAlias=your-key-alias
+keyPassword=your-key-password

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electron Window.open Handler</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+    button { padding: 10px 20px; margin: 5px; cursor: pointer; background: #007acc; color: white; border: none; border-radius: 4px; }
+    button:hover { background: #005a9e; }
+    .child-windows { margin-top: 20px; }
+    .child-window-item { padding: 10px; border: 1px solid #ddd; margin: 5px 0; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  <h1>Window.open Handler Demo</h1>
+  
+  <div>
+    <button id="open-basic">window.open('https://example.com')</button>
+    <button id="open-named">window.open('https://example.com', 'namedWindow')</button>
+    <button id="open-features">window.open('https://example.com', '', 'width=400,height=300,left=100,top=100')</button>
+    <button id="open-post">window.open with POST data</button>
+  </div>
+
+  <div class="child-windows">
+    <h2>Active Child Windows</h2>
+    <div id="child-windows-list"></div>
+  </div>
+
+  <script>
+    document.getElementById('open-basic').addEventListener('click', () => {
+      window.open('https://example.com');
+    });
+
+    document.getElementById('open-named').addEventListener('click', () => {
+      window.open('https://example.com', 'namedWindow');
+    });
+
+    document.getElementById('open-features').addEventListener('click', () => {
+      window.open('https://example.com', '', 'width=400,height=300,left=100,top=100');
+    });
+
+    document.getElementById('open-post').addEventListener('click', () => {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://httpbin.org/post';
+      form.target = '_blank';
+      const input = document.createElement('input');
+      input.name = 'testData';
+      input.value = 'Hello from Electron';
+      form.appendChild(input);
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+    });
+
+    async function refreshChildWindows() {
+      const windows = await window.electronAPI.getChildWindows();
+      const list = document.getElementById('child-windows-list');
+      list.innerHTML = '';
+      windows.forEach(win => {
+        const div = document.createElement('div');
+        div.className = 'child-window-item';
+        div.innerHTML = `
+          <span>ID: ${win.id} | Name: ${win.frameName || '(none)'} | URL: ${win.url}</span>
+          <button onclick="window.electronAPI.closeChildWindow(${win.id})">Close</button>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    setInterval(refreshChildWindows, 2000);
+    refreshChildWindows();
+  </script>
+</head>
+</html>

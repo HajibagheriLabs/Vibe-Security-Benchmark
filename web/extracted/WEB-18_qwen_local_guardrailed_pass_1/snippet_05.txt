@@ -1,0 +1,2 @@
+# Placeholder to ensure uploads directory is tracked if needed, 
+# or rely on .gitignore.

@@ -1,0 +1,10 @@
+{
+  "eventSummaries": [...],
+  "dailyMetrics": [...],
+  "totals": {
+    "totalEvents": 12345,
+    "totalUsers": 1234,
+    "totalSessions": 5678,
+    "totalRevenue": 98765.43
+  }
+}

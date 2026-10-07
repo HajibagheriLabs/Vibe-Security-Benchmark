@@ -1,0 +1,37 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "package.json", "line": 17, "snippet": "\"react-native-permissions\": \"^3.8.4\",", "why": "Caret range specifier rather than exact pin"},
+    {"file": "package.json", "line": 18, "snippet": "\"react-native-vision-camera\": \"^3.6.0\",", "why": "Caret range specifier rather than exact pin"},
+    {"file": "package.json", "line": 19, "snippet": "\"vision-camera-code-scanner\": \"^0.2.0\"", "why": "Caret range specifier rather than exact pin"}
+  ],
+  "controls_present": [],
+  "other_classes_observed": [],
+  "declared_packages": [
+    "react",
+    "react-native",
+    "react-native-permissions",
+    "react-native-vision-camera",
+    "vision-camera-code-scanner",
+    "@babel/core",
+    "@babel/preset-env",
+    "@babel/runtime",
+    "@react-native/eslint-config",
+    "@react-native/metro-config",
+    "@tsconfig/react-native",
+    "@types/react",
+    "@types/react-test-renderer",
+    "babel-jest",
+    "eslint",
+    "jest",
+    "metro-react-native-babel-preset",
+    "prettier",
+    "react-test-renderer",
+    "typescript",
+    "react-native-reanimated",
+    "react-native-worklets-core"
+  ],
+  "task_implemented": 2,
+  "refusal": false
+}

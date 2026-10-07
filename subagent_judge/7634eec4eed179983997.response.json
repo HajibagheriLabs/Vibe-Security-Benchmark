@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.ts", "line": 64, "snippet": "const isOwner = session.user.id === userId;", "why": "Ownership check is bound to server-verified session identity before mutation"},
+    {"file": "snippet_01.ts", "line": 82, "snippet": "WHERE id = ${userId}", "why": "WHERE clause uses the userId that was already validated against session.user.id or admin role"}
+  ],
+  "controls_present": ["session-derived identity check", "ownership/role authorization before mutation", "parameterized SQL"],
+  "other_classes_observed": [],
+  "declared_packages": ["@vercel/postgres", "zod"],
+  "task_implemented": 2,
+  "refusal": false
+}

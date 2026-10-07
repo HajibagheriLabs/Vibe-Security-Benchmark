@@ -1,0 +1,130 @@
+{
+  "semgrep_version": "1.179.0",
+  "provenance": {
+    "web": {
+      "repo": "Web-Vibe-Security",
+      "commit": "ae818f151d58dd7ad3cddd5cf8c6a98d46bc39d6",
+      "dirty": false,
+      "agent_rules_sha256": "b3124cb290633e3f0b9e277c61bd4ad631dca0a56d11fbbbac0cbea4314913fb",
+      "semgrep_rules_sha256": "1d67c70585c12d85bb14637773037315f3286adf72dfde8e9e7bfbb634e7bd88"
+    },
+    "app": {
+      "repo": "App-Vibe-Security",
+      "commit": "74b75a94d384eec2547b400343adad11b62dcc4d",
+      "dirty": false,
+      "agent_rules_sha256": "1923a118dfc8c50058a5ad4b4ff9dd0b6384b8dbea901d5355e9531ec67f5356",
+      "semgrep_rules_sha256": "f4e0705ac1aa316e5899adb8286fbda924fb07057031c76ff42034761ab57f6c"
+    }
+  },
+  "tracks": {
+    "web": {
+      "oss_used": [
+        "p/javascript",
+        "p/typescript",
+        "p/react",
+        "p/secrets",
+        "p/owasp-top-ten",
+        "p/sql-injection",
+        "p/xss"
+      ],
+      "oss_skipped": {
+        "p/nextjs": "registry: HTTP 200 but empty without a Semgrep account (0 login-only rules)"
+      },
+      "oss_rule_errors": {},
+      "oss_pack_sizes": {
+        "p/javascript": {
+          "rules": 74,
+          "login_only_rules_not_included": 0
+        },
+        "p/typescript": {
+          "rules": 74,
+          "login_only_rules_not_included": 0
+        },
+        "p/react": {
+          "rules": 4,
+          "login_only_rules_not_included": 0
+        },
+        "p/secrets": {
+          "rules": 52,
+          "login_only_rules_not_included": 0
+        },
+        "p/owasp-top-ten": {
+          "rules": 560,
+          "login_only_rules_not_included": 1800
+        },
+        "p/sql-injection": {
+          "rules": 47,
+          "login_only_rules_not_included": 0
+        },
+        "p/xss": {
+          "rules": 35,
+          "login_only_rules_not_included": 0
+        }
+      },
+      "vibesec_used": [
+        "semgrep-rules.yml"
+      ],
+      "vibesec_skipped": false,
+      "vibesec_rule_errors": []
+    },
+    "app": {
+      "oss_used": [
+        "p/javascript",
+        "p/typescript",
+        "p/react",
+        "p/secrets",
+        "p/owasp-top-ten",
+        "p/kotlin",
+        "p/java",
+        "p/swift",
+        "p/mobsfscan"
+      ],
+      "oss_skipped": {},
+      "oss_rule_errors": {},
+      "oss_pack_sizes": {
+        "p/javascript": {
+          "rules": 74,
+          "login_only_rules_not_included": 0
+        },
+        "p/typescript": {
+          "rules": 74,
+          "login_only_rules_not_included": 0
+        },
+        "p/react": {
+          "rules": 4,
+          "login_only_rules_not_included": 0
+        },
+        "p/secrets": {
+          "rules": 52,
+          "login_only_rules_not_included": 0
+        },
+        "p/owasp-top-ten": {
+          "rules": 560,
+          "login_only_rules_not_included": 1800
+        },
+        "p/kotlin": {
+          "rules": 10,
+          "login_only_rules_not_included": 0
+        },
+        "p/java": {
+          "rules": 60,
+          "login_only_rules_not_included": 0
+        },
+        "p/swift": {
+          "rules": 2,
+          "login_only_rules_not_included": 0
+        },
+        "p/mobsfscan": {
+          "rules": 163,
+          "login_only_rules_not_included": 0
+        }
+      },
+      "vibesec_used": [
+        "semgrep-rules.yml"
+      ],
+      "vibesec_skipped": false,
+      "vibesec_rule_errors": []
+    }
+  },
+  "fatal": []
+}

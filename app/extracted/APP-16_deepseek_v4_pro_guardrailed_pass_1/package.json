@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "react-native-quick-crypto": "0.6.1",
+    "@craftzdog/react-native-buffer": "6.0.5",
+    "react-native-fs": "2.20.0",
+    "react-native-keychain": "8.2.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.ts", "line": 16, "snippet": "const userId = ctx.session.user.id;", "why": "Identity derived from server-verified session, not client input."},
+    {"file": "snippet_01.ts", "line": 27, "snippet": "id: projectId,\n            ownerId: userId,", "why": "Ownership predicate bound to session identity inside the WHERE clause of the delete query."}
+  ],
+  "controls_present": ["session-derived identity", "ownership predicate in query WHERE clause", "input validation via zod"],
+  "other_classes_observed": [],
+  "declared_packages": ["zod"],
+  "task_implemented": 2,
+  "refusal": false
+}

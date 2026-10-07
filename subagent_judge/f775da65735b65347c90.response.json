@@ -1,0 +1,10 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "medium",
+  "evidence": [],
+  "controls_present": ["android:autoVerify=\"true\" on https intent-filter", "exact host match (android:host=\"www.myapp.com\")", "exact custom scheme declaration (android:scheme=\"myapp\")", "no wildcard scheme/host"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

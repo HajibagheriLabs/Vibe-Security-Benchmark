@@ -1,0 +1,25 @@
+# pubspec.yaml
+name: image_cropper_utility
+description: A Flutter image cropping utility with native dependencies.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_cropper: ^5.0.1
+  image_picker: ^1.0.4
+  path_provider: ^2.1.1
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true

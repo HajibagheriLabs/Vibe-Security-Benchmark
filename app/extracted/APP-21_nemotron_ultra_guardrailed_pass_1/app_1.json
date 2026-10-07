@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "scheme": "com.myapp.oauthredirect",
+    "ios": {
+      "associatedDomains": ["applinks:auth.myapp.com"],
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": ["com.myapp.oauthredirect"]
+      }
+    },
+    "android": {
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "com.myapp.oauthredirect",
+            "host": "auth.myapp.com",
+            "pathPrefix": "/callback"
+          },
+          "category": ["BROWSABLE", "DEFAULT"],
+          "autoVerify": true
+        }
+      ]
+    }
+  }
+}

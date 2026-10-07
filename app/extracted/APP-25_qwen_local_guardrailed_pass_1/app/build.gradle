@@ -1,0 +1,17 @@
+    signingConfigs {
+        release {
+            // Rule 1: Device-only accessibility.
+            // Rule 3: Signing key is NOT in the repo (git-ignored *.jks / *.keystore).
+            // Rule 5: key.properties is git-ignored before creation.
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            
+            // Rule 1: V2 signature scheme enabled by default, V3/V4 for Android 9+ / 11+
+            v1SigningEnabled true
+            v2SigningEnabled true
+            v3SigningEnabled true
+            v4SigningEnabled true
+        }
+    }

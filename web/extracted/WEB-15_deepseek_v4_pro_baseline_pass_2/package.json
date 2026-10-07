@@ -1,0 +1,17 @@
+{
+  "name": "markdown-renderer-component",
+  "version": "1.0.0",
+  "description": "A secure React component for rendering user-submitted markdown",
+  "main": "MarkdownRenderer.jsx",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "marked": "^9.1.6",
+    "dompurify": "^3.0.6",
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

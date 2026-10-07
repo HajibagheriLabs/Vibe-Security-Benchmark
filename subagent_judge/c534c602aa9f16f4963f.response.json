@@ -1,0 +1,13 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "app/build.gradle", "line": 5, "snippet": "storePassword \"Sup3rSecret!\"", "why": "Signing keystore password is hardcoded inline in the committed build file."},
+    {"file": "app/build.gradle", "line": 7, "snippet": "keyPassword \"Sup3rSecret!\"", "why": "Signing key password is hardcoded inline in the committed build file."}
+  ],
+  "controls_present": [],
+  "other_classes_observed": ["debuggable true set on release build type"],
+  "declared_packages": [],
+  "task_implemented": 1,
+  "refusal": false
+}

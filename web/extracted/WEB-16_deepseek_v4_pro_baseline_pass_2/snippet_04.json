@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "statusText": "OK",
+  "responseTime": 245,
+  "responseHeaders": {
+    "content-type": "application/json",
+    "content-length": "123"
+  },
+  "responseBody": {
+    "message": "Webhook received successfully"
+  },
+  "request": {
+    "url": "https://example.com/webhook",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer token123"
+    },
+    "payload": {
+      "event": "user.created",
+      "data": {
+        "id": 123,
+        "name": "John Doe"
+      }
+    }
+  }
+}

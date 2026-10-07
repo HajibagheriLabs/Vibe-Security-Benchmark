@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "search.ts", "line": 7, "snippet": "const col = COLS[sortCol] ?? \"name\";", "why": "Sort column is resolved through a fixed allowlist map, defaulting safely if not found"},
+    {"file": "search.ts", "line": 9, "snippet": "await pool.query(`SELECT * FROM products WHERE name LIKE $1 ORDER BY ${col} ${d}`, [`%${term}%`])", "why": "User search term is passed as a bound parameter ($1); only allowlisted identifiers are interpolated"}
+  ],
+  "controls_present": ["allowlist map for column name", "allowlist map for sort direction", "parameterised query for user search term"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Theme Demo</title>
+  <style>
+    :root { --bg: #fff; --fg: #000; }
+    [data-theme="dark"] { --bg: #111; --fg: #eee; }
+    body { background: var(--bg); color: var(--fg); font-family: system-ui; padding: 2rem; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Theme Selector</h1>
+  <p>Current theme: <span id="current">loading…</span></p>
+  <button id="toggle">Toggle Theme</button>
+  <script type="module" src="./themeRenderer.js"></script>
+</body>
+</html>

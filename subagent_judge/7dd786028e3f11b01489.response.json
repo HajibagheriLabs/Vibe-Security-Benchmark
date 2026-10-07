@@ -1,0 +1,24 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "main.js", "line": 130, "snippet": "const allowedBaseDir = path.resolve(app.getPath('userData'), 'documents');", "why": "Path is resolved and confined to a fixed base directory before use"},
+    {"file": "main.js", "line": 18, "snippet": "contextIsolation: true,", "why": "Context isolation and sandbox enabled, nodeIntegration false"},
+    {"file": "preload.js", "line": 29, "snippet": "contextBridge.exposeInMainWorld('fileSystem', {", "why": "Only a single named function with fixed channel is exposed, not raw ipcRenderer or Node modules"}
+  ],
+  "controls_present": [
+    "contextIsolation true",
+    "sandbox true",
+    "nodeIntegration false",
+    "fixed-channel contextBridge exposure",
+    "path confinement to allowed base directory",
+    "sender frame verification",
+    "input schema validation",
+    "window-open and navigation denial by default",
+    "CSP header enforcement"
+  ],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

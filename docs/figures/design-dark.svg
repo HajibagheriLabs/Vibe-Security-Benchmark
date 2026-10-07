@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" width="1000" height="410" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<title id="t">Experiment design: the only difference between the two arms</title>
+<desc id="d">Two prompt stacks side by side. Both send the same neutral system frame and the same task; the guardrailed arm also appends the project&#x27;s AGENT_RULES.md to the system prompt.</desc>
+<rect x="0.5" y="0.5" width="999" height="409" rx="14" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<text x="40.0" y="50.0" font-size="22" fill="#f0f6fc" font-weight="700">The experiment in one picture: same model, same task, one extra file</text>
+<text x="40.0" y="77.0" font-size="14" fill="#b1bac4">Every task is generated twice per model and arm, with fixed seeds. Nothing else differs between the two arms.</text>
+<rect x="40.0" y="116.0" width="450.0" height="232.0" rx="12" fill="#1b222c"/>
+<rect x="40.0" y="116.0" width="6.0" height="232.0" rx="3" fill="#d95926"/>
+<text x="64.0" y="146.0" font-size="13" fill="#f0f6fc" font-weight="700" letter-spacing="1.4">BASELINE</text>
+<text x="64.0" y="166.0" font-size="12.5" fill="#8b949e">what a developer who adds nothing gets</text>
+<rect x="64.0" y="184.0" width="402.0" height="46.0" rx="8" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<text x="78.0" y="203.0" font-size="12.5" fill="#f0f6fc" font-weight="700">System prompt</text>
+<text x="78.0" y="220.0" font-size="12" fill="#b1bac4">Neutral engineering frame, identical in both arms</text>
+<rect x="64.0" y="238.0" width="402.0" height="46.0" rx="8" fill="#1b222c" stroke="#3d444d" stroke-width="1"/>
+<text x="78.0" y="257.0" font-size="12.5" fill="#8b949e" font-weight="700" font-style="italic">No rules file</text>
+<text x="78.0" y="274.0" font-size="12" fill="#8b949e" font-style="italic">no security instruction of any kind</text>
+<rect x="64.0" y="292.0" width="402.0" height="46.0" rx="8" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<text x="78.0" y="311.0" font-size="12.5" fill="#f0f6fc" font-weight="700">User prompt</text>
+<text x="78.0" y="328.0" font-size="12" fill="#b1bac4">The task, e.g. “Create a Next.js route handler GET /api/invoices/[id]…”</text>
+<rect x="510.0" y="116.0" width="450.0" height="232.0" rx="12" fill="#1b222c"/>
+<rect x="510.0" y="116.0" width="6.0" height="232.0" rx="3" fill="#3987e5"/>
+<text x="534.0" y="146.0" font-size="13" fill="#f0f6fc" font-weight="700" letter-spacing="1.4">GUARDRAILED</text>
+<text x="534.0" y="166.0" font-size="12.5" fill="#8b949e">the same request with the project&#x27;s rules</text>
+<rect x="534.0" y="184.0" width="402.0" height="46.0" rx="8" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<text x="548.0" y="203.0" font-size="12.5" fill="#f0f6fc" font-weight="700">System prompt</text>
+<text x="548.0" y="220.0" font-size="12" fill="#b1bac4">Neutral engineering frame, identical in both arms</text>
+<rect x="534.0" y="238.0" width="402.0" height="46.0" rx="8" fill="#151b23" stroke="#3987e5" stroke-width="1.5"/>
+<text x="548.0" y="257.0" font-size="12.5" fill="#f0f6fc" font-weight="700">+ AGENT_RULES.md</text>
+<text x="548.0" y="274.0" font-size="12" fill="#b1bac4">about 2,127 tokens of security rules (web), 3,151 (mobile/desktop)</text>
+<rect x="534.0" y="292.0" width="402.0" height="46.0" rx="8" fill="#151b23" stroke="#3d444d" stroke-width="1"/>
+<text x="548.0" y="311.0" font-size="12.5" fill="#f0f6fc" font-weight="700">User prompt</text>
+<text x="548.0" y="328.0" font-size="12" fill="#b1bac4">The task, e.g. “Create a Next.js route handler GET /api/invoices/[id]…”</text>
+<text x="40.0" y="378.0" font-size="12.5" fill="#b1bac4">Held constant: temperature 0.7 · top-p 0.8 · top-k 20 · max 8,192 tokens · thinking off · identical frame and user prompt · randomised order, fixed seed.</text>
+</svg>

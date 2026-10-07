@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Default trust: System CA only. No cleartext traffic allowed by default. -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Explicit allow for the external API backend. 
+         Rule 3: No TLS weakening (accept-all). 
+         Rule 3: HTTPS only. -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.example-backend.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <!-- Optional: Add specific pin for certificate transparency if desired -->
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

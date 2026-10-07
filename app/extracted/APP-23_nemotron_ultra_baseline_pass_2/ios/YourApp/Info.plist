@@ -1,0 +1,4 @@
+<key>NSCameraUsageDescription</key>
+<string>This app needs camera access to scan QR codes and barcodes.</string>
+<key>io.reactnative.visioncamera.enable_frame_processors</key>
+<true/>

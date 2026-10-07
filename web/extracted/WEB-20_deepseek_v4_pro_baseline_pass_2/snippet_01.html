@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Notification Template Generator</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --success: #10b981;
+            --error: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.35rem;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.65rem 0.8rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 180px;
+            resize: vertical;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            font-family: inherit;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: var(--text);
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e1;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: #fff;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .preview-area {
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            min-height: 300px;
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .preview-area .email-body {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .preview-area .email-body h1,
+        .preview-area .email-body h2,
+        .preview-area .email-body h3 {
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        .preview-area .email-body p {
+            margin-bottom: 0.75rem;
+        }
+
+        .preview-area .email-body a {
+            color: var(--primary);
+        }
+
+        .preview-area .email-body .btn-email {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .variable-hint {
+            display: inline-block;
+            background: #ede9fe;
+            color: #6d28d9;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: monospace;
+            margin: 0.1rem 0.2rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .variable-hint:hover {
+            background: #ddd6fe;
+        }
+
+        .variables-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.success {
+            background: var(--success);
+        }
+
+        .toast.error {
+            background: var(--error);
+        }
+
+        .error-message {
+            color: var(--error);
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        .template-selector {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .template-chip {
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .template-chip:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .template-chip.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Email Notification Template Generator</h1>
+        <p class="subtitle">Interpolate user profile attributes into customizable HTML email templates.</p>
+
+        <div class="grid">
+            <!-- Left Column: Template Editor -->
+            <div class="card">
+                <h2>Template Editor</h2>
+
+                <div class="template-selector" id="templateSelector">
+                    <button class="template-chip active" data-template="welcome">Welcome</button>
+                    <button class="template-chip" data-template="password-reset">Password Reset</button>
+                    <button class="template-chip" data-template="order-confirmation">Order Confirmation</button>
+                    <button class="template-chip" data-template="newsletter">Newsletter</button>
+                    <button class="template-chip" data-template="custom">Custom</button>
+                </div>
+
+                <div class="form-group">
+                    <label>Available Variables (click to insert)</label>
+                    <div class="variables-list" id="variablesList"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="templateHtml">HTML Template</label>
+                    <textarea id="templateHtml" spellcheck="false"></textarea>
+                    <div class="error-message" id="templateError"></div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="generateBtn">Generate Preview</button>
+                    <button class="btn btn-secondary" id="resetBtn">Reset</button>
+                    <button class="btn btn-success" id="copyBtn">Copy HTML</button>
+                </div>
+            </div>
+
+            <!-- Right Column: Profile Data & Preview -->
+            <div class="card">
+                <h2>User Profile Attributes</h2>
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="John" value="John">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Doe" value="Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" value="john.doe@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" placeholder="Acme Inc." value="Acme Inc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role / Title</label>
+                    <input type="text" id="role" placeholder="Software Engineer" value="Software Engineer">
+                </div>
+
+                <div class="form-group">
+                    <label for="plan">Subscription Plan</label>
+                    <select id="plan">
+                        <option value="Free">Free</option>
+                        <option value="Pro" selected>Pro</option>
+                        <option value="Enterprise">Enterprise</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="accountCreated">Account Created Date</label>
+                    <input type="date" id="accountCreated" value="2024-01-15">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastLogin">Last Login</label>
+                    <input type="datetime-local" id="lastLogin" value="2024-06-20T09:30">
+                </div>
+
+                <div class="form-group">
+                    <label for="unreadCount">Unread Notifications</label>
+                    <input type="number" id="unreadCount" value="3" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="dashboardUrl">Dashboard URL</label>
+                    <input type="url" id="dashboardUrl" value="https://app.example.com/dashboard">
+                </div>
+
+                <hr style="border: none; border-top: 1px solid var(--border); margin: 1.25rem 0;">
+
+                <h2 style="margin-bottom: 0.75rem;">Live Preview</h2>
+                <div class="preview-area" id="previewArea">
+                    <div class="email-body" id="emailPreview">
+                        <p style="color: var(--text-secondary); font-style: italic;">Generate a preview to see the interpolated email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        (function() {
+            // ============================================================
+            // Template Definitions
+            // ============================================================
+            const TEMPLATES = {
+                welcome: {
+                    name: 'Welcome',
+                    html: `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; }
+        .header { background: #4f46e5; color: #fff; padding: 30px 40px; text-align: center; }
+        .header h1 { margin: 0; font-size: 24px; }
+        .content { padding: 40px; }
+        .content p { font-size: 16px; line-height: 1.6; color: #333; }
+        .btn { display: inline-block; background: #4f46e5; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .footer { padding: 20px 40px; text-align: center; font-size: 12px; color: #999; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome, {{firstName}}! 🎉</h1>
+        </div>
+        <div class="content">
+            <p>Hi <strong>{{firstName}} {{lastName}}</strong>,</p>
+            <p>We're thrilled to have you on board at <strong>{{company}}</strong>. Your account has been successfully created as a <strong>{{role}}</strong>.</p>
+            <p>Your subscription plan is <strong>{{plan}}</strong>. You can get started by visiting your dashboard:</p>
+            <a href="{{dashboardUrl}}" class="btn">Go to Dashboard</a>
+            <p style="margin-top: 20px;">If you have any questions, feel free to reach out to us at any time.</p>
+        </div>
+        <div class="footer">
+            <p>© 2024 {{company}}. All rights reserved.</p>
+            <p>You are receiving this email because you registered at {{dashboardUrl}}.</p>
+        </div>
+    </div>
+</body>
+</html>`
+                },
+                'password-reset': {
+                    name: 'Password Reset',
+                    html: `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f9fafb; margin: 0; padding: 0; }
+        .container { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .header { background: #ef4444; color: #fff; padding: 28px 36px; }
+        .header h1 { margin: 0; font-size: 22px; }
+        .content { padding: 36px; }
+        .content p { font-size: 15px; line-height: 1.7; color: #374151; }
+        .code-box { background: #f3f4f6; border: 1px dashed #d1d5db; border-radius: 8px; padding: 16px; text-align: center; font-size: 24px; font-weight: bold; letter-spacing: 4px; color: #1f2937; margin: 20px 0; }
+        .btn { display: inline-block; background: #ef4444; color: #fff; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        .footer { padding: 20px 36px; text-align: center; font-size: 12px; color: #9ca3af; border-top: 1px solid #f3f4f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Password Reset Request</h1>
+        </div>
+        <div class="content">
+            <p>Hi <strong>{{firstName}}</strong>,</p>
+            <p>We received a request to reset the password for your account associated with <strong>{{email}}</strong>.</p>
+            <p>Your reset code is:</p>
+            <div class="code-box">482913</div>
+            <p>This code will expire in 30 minutes. If you did not request a password reset, please ignore this email or contact support immediately.</p>
+            <a href="{{dashboardUrl}}/reset-password" class="btn">Reset Password</a>
+        </div>
+        <div class="footer">
+            <p>© 2024 {{company}}. This is an automated message, please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>`
+                },
+                'order-confirmation': {
+                    name: 'Order Confirmation',
+                    html: `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f0fdf4; margin: 0; padding: 0; }
+        .container { max-width: 580px; margin: 0 auto; background: #fff; border-radius: 10px; overflow: hidden; }
+        .header { background: #10b981; color: #fff; padding: 26px 32px; }
+        .header h1 { margin: 0; font-size: 22px; }
+        .content { padding: 32px; }
+        .content p { font-size: 15px; line-height: 1.7; color: #1f2937; }
+        .order-details { background: #f9fafb; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+        .order-details table { width: 100%; border-collapse: collapse; }
+        .order-details td { padding: 6px 0; font-size: 14px; }
+        .btn { display: inline-block; background: #10b981; color: #fff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 12px; }
+        .footer { padding: 18px 32px; text-align: center; font-size: 12px; color: #9ca3af; border-top: 1px solid #f3f4f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Order Confirmed ✅</h1>
+        </div>
+        <div class="content">
+            <p>Hi <strong>{{firstName}} {{lastName}}</strong>,</p>
+            <p>Great news! Your order has been confirmed and is being processed.</p>
+            <div class="order-details">
+                <table>
+                    <tr><td><strong>Order Number:</strong></td><td>#ORD-2024-0842</td></tr>
+                    <tr><td><strong>Plan:</strong></td><td>{{plan}}</td></tr>
+                    <tr><td><strong>Company:</strong></td><td>{{company}}</td></tr>
+                    <tr><td><strong>Account:</strong></td><td>{{email}}</td></tr>
+                </table>
+            </div>
+            <p>You can track your order status from your dashboard:</p>
+            <a href="{{dashboardUrl}}/orders" class="btn">View Order Status</a>
+        </div>
+        <div class="footer">
+            <p>© 2024 {{company}}. Questions? Contact support@{{company}}.com</p>
+        </div>
+    </div>
+</body>
+</html>`
+                },
+                newsletter: {
+                    name: 'Newsletter',
+                    html: `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Georgia, 'Times New Roman', serif; background: #fafaf9; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 0 auto; background: #fff; }
+        .header { background: #1e293b; color: #fbbf24; padding: 28px 36px; text-align: center; }
+        .header h1 { margin: 0; font-size: 26px; font-weight: 700; }
+        .content { padding: 36px; }
+        .content h2 { color: #1e293b; font-size: 20px; margin-top: 0; }
+        .content p { font-size: 15px; line-height: 1.8; color: #44403c; }
+        .highlight { background: #fef3c7; border-left: 4px solid #fbbf24; padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+        .btn { display: inline-block; background: #1e293b; color: #fbbf24; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        .footer { padding: 20px 36px; text-align: center; font-size: 12px; color: #a8a29e; border-top: 1px solid #f5f5f4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>The {{company}} Monthly</h1>
+        </div>
+        <div class="content">
+            <h2>Hello {{firstName}},</h2>
+            <p>Welcome to this month's edition of our newsletter! We've got some exciting updates to share with you.</p>
+            <div class="highlight">
+                <strong>📊 Your Stats:</strong> You have <strong>{{unreadCount}}</strong> unread notifications waiting for you.
+            </div>
+            <p>As a <strong>{{plan}}</strong> subscriber, you get exclusive access to our latest features. Your role as <strong>{{role}}</strong> gives you special insights.</p>
+            <p>Check out what's new:</p>
+            <a href="{{dashboardUrl}}/news" class="btn">Read Full Newsletter</a>
+        </div>
+        <div class="footer">
+            <p>© 2024 {{company}}. You're receiving this as {{email}}.</p>
+            <p><a href="{{dashboardUrl}}/unsubscribe" style="color: #a8a29e;">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+</html>`
+                },
+                custom: {
+                    name: 'Custom',
+                    html: `<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f9fafb; margin: 0; padding: 0; }
+        .container { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 8px; }
+        .content { padding: 32px; }
+        .content p { font-size: 15px; line-height: 1.7; color: #374151; }
+        .btn { display: inline-block; background: #4f46e5; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <p>Hello <strong>{{firstName}} {{lastName}}</strong>,</p>
+            <p>This is a custom notification for your account at <strong>{{company}}</strong>.</p>
+            <p>Your current plan: <strong>{{plan}}</strong></p>
+            <p>Role: <strong>{{role}}</strong></p>
+            <p>Unread notifications: <strong>{{unreadCount}}</strong></p>
+            <a href="{{dashboardUrl}}" class="btn">Visit Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>`
+                }
+            };
+
+            // ============================================================
+            // Available Variables
+            // ============================================================
+            const VARIABLES = [
+                { key: '{{firstName}}', label: 'First Name', description: "User's first name" },
+                { key: '{{lastName}}', label: 'Last Name', description: "User's last name" },
+                { key: '{{email}}', label: 'Email', description: "User's email address" },
+                { key: '{{company}}', label: 'Company', description: "User's company name" },
+                { key: '{{role}}', label: 'Role', description: "User's job title/role" },
+                { key: '{{plan}}', label: 'Plan', description: 'Subscription plan' },
+                { key: '{{accountCreated}}', label: 'Account Created', description: 'Account creation date' },
+                { key: '{{lastLogin}}', label: 'Last Login', description: 'Last login timestamp' },
+                { key: '{{unreadCount}}', label: 'Unread Count', description: 'Number of unread notifications' },
+                { key: '{{dashboardUrl}}', label: 'Dashboard URL', description: 'Link to user dashboard' }
+            ];
+
+            // ============================================================
+            // DOM References
+            // ============================================================
+            const templateHtmlEl = document.getElementById('templateHtml');
+            const templateSelectorEl = document.getElementById('templateSelector');
+            const variablesListEl = document.getElementById('variablesList');
+            const previewAreaEl = document.getElementById('emailPreview');
+            const generateBtn = document.getElementById('generateBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const copyBtn = document.getElementById('copyBtn');
+            const toastEl = document.getElementById('toast');
+            const templateErrorEl = document.getElementById('templateError');
+
+            // Profile input elements
+            const profileInputs = {
+                firstName: document.getElementById('firstName'),
+                lastName: document.getElementById('lastName'),
+                email: document.getElementById('email'),
+                company: document.getElementById('company'),
+                role: document.getElementById('role'),
+                plan: document.getElementById('plan'),
+                accountCreated: document.getElementById('accountCreated'),
+                lastLogin: document.getElementById('lastLogin'),
+                unreadCount: document.getElementById('unreadCount'),
+                dashboardUrl: document.getElementById('dashboardUrl')
+            };
+
+            // ============================================================
+            // State
+            // ============================================================
+            let currentTemplateName = 'welcome';
+            let lastGeneratedHtml = '';
+
+            // ============================================================
+            // Utility Functions
+            // ============================================================
+            function getProfileData() {
+                const data = {};
+                for (const [key, el] of Object.entries(profileInputs)) {
+                    data[key] = el.value.trim();
+                }
+                // Format date nicely if present
+                if (data.accountCreated) {
+                    try {
+                        const d = new Date(data.accountCreated + 'T00:00:00');
+                        data.accountCreated = d.toLocaleDateString('en-US', { 
+                            year: 'numeric', month: 'long', day: 'numeric' 
+                        });
+                    } catch (e) {
+                        // keep raw value
+                    }
+                }
+                if (data.lastLogin) {
+                    try {
+                        const d = new Date(data.lastLogin);
+                        data.lastLogin = d.toLocaleString('en-US', {
+                            year: 'numeric', month: 'short', day: 'numeric',
+                            hour: '2-digit', minute: '2-digit'
+                        });
+                    } catch (e) {
+                        // keep raw value
+                    }
+                }
+                return data;
+            }
+
+            function interpolate(template, data) {
+                let result = template;
+                for (const [key, value] of Object.entries(data)) {
+                    const placeholder = '{{' + key + '}}';
+                    // Escape special regex characters in placeholder
+                    const escapedPlaceholder = placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = new RegExp(escapedPlaceholder, 'g');
+                    result = result.replace(regex, value || '');
+                }
+                return result;
+            }
+
+            function showToast(message, type = 'success') {
+                toastEl.textContent = message;
+                toastEl.className = 'toast ' + type + ' show';
+                clearTimeout(toastEl._timeout);
+                toastEl._timeout = setTimeout(() => {
+                    toastEl.classList.remove('show');
+                }, 2500);
+            }
+
+            function showTemplateError(message) {
+                templateErrorEl.textContent = message;
+                templateErrorEl.classList.add('visible');
+            }
+
+            function clearTemplateError() {
+                templateErrorEl.textContent = '';
+                templateErrorEl.classList.remove('visible');
+            }
+
+            function renderVariablesList() {
+                variablesListEl.innerHTML = '';
+                VARIABLES.forEach(v => {
+                    const span = document.createElement('span');
+                    span.className = 'variable-hint';
+                    span.textContent = v.key;
+                    span.title = v.description;
+                    span.addEventListener('click', () => {
+                        insertVariableAtCursor(v.key);
+                    });
+                    variablesListEl.appendChild(span);
+                });
+            }
+
+            function insertVariableAtCursor(variableKey) {
+                const textarea = templateHtmlEl;
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+                const newText = text.substring(0, start) + variableKey + text.substring(end);
+                textarea.value = newText;
+                // Place cursor after inserted variable
+                const newCursorPos = start + variableKey.length;
+                textarea.setSelectionRange(newCursorPos, newCursorPos);
+                textarea.focus();
+                // Trigger input event for any listeners
+                textarea.dispatchEvent(new Event('input'));
+            }
+
+            function loadTemplate(templateName) {
+                const template = TEMPLATES[templateName];
+                if (template) {
+                    templateHtmlEl.value = template.html;
+                    currentTemplateName = templateName;
+                    clearTemplateError();
+                    // Update active chip
+                    document.querySelectorAll('.template-chip').forEach(chip => {
+                        chip.classList.toggle('active', chip.dataset.template === templateName);
+                    });
+                }
+            }
+
+            function generatePreview() {
+                const templateHtml = templateHtmlEl.value;
+                if (!templateHtml.trim()) {
+                    showTemplateError('Template cannot be empty.');
+                    showToast('Template is empty', 'error');
+                    return;
+                }
+
+                // Check for unmatched variables
+                const profileData = getProfileData();
+                const knownKeys = Object.keys(profileData);
+                const placeholderRegex = /\{\{(\w+)\}\}/g;
+                let match;
+                const foundPlaceholders = new Set();
+                while ((match = placeholderRegex.exec(templateHtml)) !== null) {
+                    foundPlaceholders.add(match[1]);
+                }
+                const unknownPlaceholders = [];
+                foundPlaceholders.forEach(key => {
+                    if (!knownKeys.includes(key)) {
+                        unknownPlaceholders.push('{{' + key + '}}');
+                    }
+                });
+
+                if (unknownPlaceholders.length > 0) {
+                    showTemplateError('Unknown variables: ' + unknownPlaceholders.join(', '));
+                    showToast('Unknown variables in template', 'error');
+                    return;
+                }
+
+                clearTemplateError();
+
+                const interpolatedHtml = interpolate(templateHtml, profileData);
+                lastGeneratedHtml = interpolatedHtml;
+
+                // Render preview
+                previewAreaEl.innerHTML = interpolatedHtml;
+                showToast('Preview generated successfully!');
+            }
+
+            function resetToTemplate() {
+                loadTemplate(currentTemplateName);
+                clearTemplateError();
+                // Reset profile to defaults
+                profileInputs.firstName.value = 'John';
+                profileInputs.lastName.value = 'Doe';
+                profileInputs.email.value = 'john.doe@example.com';
+                profileInputs.company.value = 'Acme Inc.';
+                profileInputs.role.value = 'Software Engineer';
+                profileInputs.plan.value = 'Pro';
+                profileInputs.accountCreated.value = '2024-01-15';
+                profileInputs.lastLogin.value = '2024-06-20T09:30';
+                profileInputs.unreadCount.value = '3';
+                profileInputs.dashboardUrl.value = 'https://app.example.com/dashboard';
+                previewAreaEl.innerHTML = '<p style="color: var(--text-secondary); font-style: italic;">Generate a preview to see the interpolated email.</p>';
+                lastGeneratedHtml = '';
+                showToast('Reset to defaults');
+            }
+
+            function copyHtml() {
+                if (!lastGeneratedHtml) {
+                    // Try to generate first
+                    generatePreview();
+                    if (!lastGeneratedHtml) return;
+                }
+                navigator.clipboard.writeText(lastGeneratedHtml).then(() => {
+                    showToast('HTML copied to clipboard!');
+                }).catch(() => {
+                    // Fallback
+                    const textarea = document.createElement('textarea');
+                    textarea.value = lastGeneratedHtml;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    showToast('HTML copied to clipboard!');
+                });
+            }
+
+            // ============================================================
+            // Event Listeners
+            // ============================================================
+            templateSelectorEl.addEventListener('click', (e) => {
+                const chip = e.target.closest('.template-chip');
+                if (chip) {
+                    loadTemplate(chip.dataset.template);
+                }
+            });
+
+            generateBtn.addEventListener('click', generatePreview);
+
+            resetBtn.addEventListener('click', resetToTemplate);
+
+            copyBtn.addEventListener('click', copyHtml);
+
+            // Live preview on profile input change (debounced)
+            let debounceTimer;
+            function handleProfileChange() {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    if (templateHtmlEl.value.trim()) {
+                        generatePreview();
+                    }
+                }, 400);
+            }
+
+            Object.values(profileInputs).forEach(el => {
+                el.addEventListener('input', handleProfileChange);
+                el.addEventListener('change', handleProfileChange);
+            });
+
+            // Also regenerate when template is edited (debounced)
+            templateHtmlEl.addEventListener('input', () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    if (templateHtmlEl.value.trim()) {
+                        generatePreview();
+                    }
+                }, 500);
+            });
+
+            // Keyboard shortcut: Ctrl+Enter to generate
+            templateHtmlEl.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                    e.preventDefault();
+                    generatePreview();
+                }
+            });
+
+            // ============================================================
+            // Initialization
+            // ============================================================
+            function init() {
+                renderVariablesList();
+                loadTemplate('welcome');
+                // Generate initial preview
+                generatePreview();
+            }
+
+            init();
+        })();
+    </script>
+</body>
+</html>

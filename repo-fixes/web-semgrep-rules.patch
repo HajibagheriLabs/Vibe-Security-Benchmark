@@ -1,0 +1,28 @@
+diff --git a/skills/semgrep-rules.yml b/skills/semgrep-rules.yml
+index d268cd7..cb2d76c 100644
+--- a/skills/semgrep-rules.yml
++++ b/skills/semgrep-rules.yml
+@@ -275,10 +275,10 @@ rules:
+       module: "03-injection-defense"
+       confidence: HIGH
+     patterns:
+-      - pattern: 'dangerouslySetInnerHTML={{ __html: $VAL }}'
+-      - pattern-not: 'dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(...) }}'
+-      - pattern-not: 'dangerouslySetInnerHTML={{ __html: sanitize(...) }}'
+-      - pattern-not: 'dangerouslySetInnerHTML={{ __html: sanitizeHtml(...) }}'
++      - pattern: '<$EL ... dangerouslySetInnerHTML={{ __html: $VAL }} ... />'
++      - pattern-not: '<$EL ... dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(...) }} ... />'
++      - pattern-not: '<$EL ... dangerouslySetInnerHTML={{ __html: sanitize(...) }} ... />'
++      - pattern-not: '<$EL ... dangerouslySetInnerHTML={{ __html: sanitizeHtml(...) }} ... />'
+ 
+   - id: wvs-vue-v-html
+     languages: [generic]
+@@ -602,7 +602,7 @@ rules:
+       "(preinstall|postinstall)"\s*:
+ 
+   - id: wvs-curl-pipe-shell
+-    languages: [generic, bash]
++    languages: [generic]
+     severity: ERROR
+     message: >-
+       Remote script piped directly into a shell. The content is executed unreviewed and

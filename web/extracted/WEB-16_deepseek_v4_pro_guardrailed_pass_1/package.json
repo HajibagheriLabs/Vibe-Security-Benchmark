@@ -1,0 +1,8 @@
+// package.json (dependencies to add)
+{
+  "dependencies": {
+    "next": "14.2.5",
+    "next-auth": "4.24.7",
+    "zod": "3.23.8"
+  }
+}

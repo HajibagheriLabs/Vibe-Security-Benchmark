@@ -1,0 +1,28 @@
+{
+  "name": "avatar-upload",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@supabase/ssr": "0.5.2",
+    "@supabase/supabase-js": "2.43.4",
+    "jsdom": "24.1.0",
+    "uuid": "10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/uuid": "10.0.0",
+    "typescript": "5.4.5"
+  },
+  "packageManager": "npm@10.8.1"
+}

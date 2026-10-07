@@ -1,0 +1,13 @@
+{
+  "verdict": "vulnerable",
+  "confidence": "medium",
+  "evidence": [
+    {"file": "tauri.conf.json", "line": 15, "snippet": "\"scope\": [\"$APPDATA/*\", \"$HOME/*\"]", "why": "Allowlist scope grants access to the entire home directory, a broad scope similar to the $HOME/** case the rubric flags as vulnerable."},
+    {"file": "src-tauri/src/main.rs", "line": 90, "snippet": "dirs::home_dir(),", "why": "The handler confines paths to the entire user home directory as an allowed root, effectively granting filesystem read access across the whole home tree rather than a fixed, narrow base directory."}
+  ],
+  "controls_present": ["path canonicalization", "root confinement check", "window label check", "CSP set", "client-side path validation"],
+  "other_classes_observed": ["symlink not resolved before trust decision (TOCTOU/symlink traversal could escape canonicalized root check)"],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

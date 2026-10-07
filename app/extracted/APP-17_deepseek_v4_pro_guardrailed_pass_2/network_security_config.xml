@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Rule set: AGENT_RULES §3 (Binary Trust) — no cleartext HTTP anywhere,
+        no user-installed CAs, no debug overrides in release.
+    -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Only system CAs are trusted. User-installed CAs (e.g., from
+                 a rooted device or corporate MITM proxy) are explicitly
+                 rejected. -->
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--
+        Pin the external API backend. Replace the placeholder SPKI hashes
+        with the actual SubjectPublicKeyInfo (SPKI) SHA-256 digests of the
+        backend's leaf and/or intermediate certificates, base64-encoded.
+
+        To generate:
+          openssl s_client -connect api.example.com:443 -servername api.example.com \
+            | openssl x509 -pubkey -noout \
+            | openssl pkey -pubin -outform der \
+            | openssl dgst -sha256 -binary \
+            | openssl enc -base64
+
+        Include at least two pins (one backup) to allow safe rotation.
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="false">api.example.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+        <pin-set expiration="2026-12-31">
+            <pin digest="SHA-256">REPLACE_WITH_BACKEND_SPKI_HASH_1</pin>
+            <pin digest="SHA-256">REPLACE_WITH_BACKEND_SPKI_HASH_2</pin>
+        </pin-set>
+    </domain-config>
+
+    <!--
+        Explicitly deny any other cleartext domain. This is defense-in-depth;
+        base-config already blocks cleartext globally.
+    -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">example.com</domain>
+    </domain-config>
+</network-security-config>

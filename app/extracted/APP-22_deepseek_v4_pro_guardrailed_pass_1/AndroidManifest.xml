@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        SECURITY NOTE: Deep links are unauthenticated RPC. The intent-filter below
+        only *routes* links to the single resolver activity. No authorization,
+        identity, or state mutation occurs as a direct effect of link handling.
+    -->
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:usesCleartextTraffic="false">
+
+        <!--
+            Single deep-link resolver activity.
+            - exported="true" is required for external link delivery, but the
+              activity performs no privileged work directly.
+            - taskAffinity="" prevents the deep-link activity from being merged
+              into an existing task, reducing task-hijacking surface.
+            - launchMode="singleTask" ensures one resolver instance; onNewIntent
+              handles subsequent links.
+        -->
+        <activity
+            android:name=".deeplink.DeepLinkResolverActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+
+            <!--
+                Custom scheme: myapp://
+                Only the scheme is declared here. Host/path validation happens
+                inside the resolver against an exact-hostname allowlist.
+            -->
+            <intent-filter android:priority="0">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="myapp" />
+            </intent-filter>
+
+            <!--
+                Optional: App Links (https) for verified domains.
+                android:autoVerify="true" triggers domain verification.
+                Only exact, allowlisted hosts are declared.
+            -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="links.example.com"
+                    android:pathPrefix="/app" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            All other activities remain exported="false" unless they are
+            legitimate entry points (e.g., launcher). No other activity
+            accepts VIEW intents.
+        -->
+    </application>
+</manifest>

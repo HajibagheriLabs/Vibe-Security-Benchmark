@@ -1,0 +1,1 @@
+npm install electron@>=18.0.0

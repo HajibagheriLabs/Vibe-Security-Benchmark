@@ -1,0 +1,18 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "src/navigation/deepLinkHandler.ts", "line": 20, "snippet": "const match = url.match(/^myapp:\\/\\/reset-password\\?token=([^&]+)/);", "why": "Anchored regex requires exact scheme and host 'reset-password', not substring/prefix matched"},
+    {"file": "src/navigation/deepLinkHandler.ts", "line": 30, "snippet": "return { name: 'ResetPassword', params: { token }, };", "why": "Route name is hardcoded literal, not derived dynamically from the link, so no open navigation dispatch"}
+  ],
+  "controls_present": [
+    "hardcoded single route mapping",
+    "anchored regex matching exact scheme and host",
+    "rejects malformed/unexpected input rather than repairing it",
+    "token is only a parameter passed to a screen, not used to grant session/entitlement without further server verification"
+  ],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

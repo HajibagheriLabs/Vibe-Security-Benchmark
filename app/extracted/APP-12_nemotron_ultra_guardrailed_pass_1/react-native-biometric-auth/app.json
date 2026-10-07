@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Biometric Auth Demo",
+    "slug": "react-native-biometric-auth",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.biometricauth",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app uses Face ID to secure access to sensitive screens",
+        "NSTouchIDUsageDescription": "This app uses Touch ID to secure access to sensitive screens"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.example.biometricauth",
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "plugins": [
+      "expo-local-authentication",
+      "expo-secure-store"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" width="1000" height="410" role="img" aria-labelledby="t d" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<title id="t">Side effects and measurement checks</title>
+<desc id="d">Six stat tiles: task completion, refusals, benign over-flagging, judge accuracy, judge agreement and pass-to-pass consistency.</desc>
+<rect x="0.5" y="0.5" width="999" height="409" rx="14" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+<text x="40.0" y="50.0" font-size="22" fill="#1f2328" font-weight="700">What the rules did not break, and how far to trust the measurement</text>
+<text x="40.0" y="96.0" font-size="12" fill="#6e7781" font-weight="700" letter-spacing="1.2">SIDE EFFECTS OF THE RULES</text>
+<rect x="40.0" y="108.0" width="296.0" height="112.0" rx="10" fill="#f6f8fa"/>
+<text x="58.0" y="136.0" font-size="13.5" fill="#59636e" font-weight="600">Tasks fully implemented</text>
+<text x="58.0" y="176.0" font-size="30" fill="#1f2328" font-weight="700">93.9% → 94.7%</text>
+<text x="58.0" y="202.0" font-size="12" fill="#6e7781">baseline → guardrailed (336/358 → 340/359)</text>
+<rect x="352.0" y="108.0" width="296.0" height="112.0" rx="10" fill="#f6f8fa"/>
+<text x="370.0" y="136.0" font-size="13.5" fill="#59636e" font-weight="600">Refusals</text>
+<text x="370.0" y="176.0" font-size="30" fill="#1f2328" font-weight="700">0 of 717</text>
+<text x="370.0" y="202.0" font-size="12" fill="#6e7781">no model declined a task, in either regime</text>
+<rect x="664.0" y="108.0" width="296.0" height="112.0" rx="10" fill="#f6f8fa"/>
+<text x="682.0" y="136.0" font-size="13.5" fill="#59636e" font-weight="600">Benign tasks flagged</text>
+<text x="682.0" y="176.0" font-size="30" fill="#1f2328" font-weight="700">1 of 120</text>
+<text x="682.0" y="202.0" font-size="12" fill="#6e7781">non-security control tasks judged vulnerable</text>
+<text x="40.0" y="246.0" font-size="12" fill="#6e7781" font-weight="700" letter-spacing="1.2">MEASUREMENT QUALITY</text>
+<rect x="40.0" y="258.0" width="296.0" height="112.0" rx="10" fill="#f6f8fa"/>
+<text x="58.0" y="286.0" font-size="13.5" fill="#59636e" font-weight="600">Judge accuracy, gold set</text>
+<text x="58.0" y="326.0" font-size="30" fill="#1f2328" font-weight="700">46 of 47</text>
+<text x="58.0" y="352.0" font-size="12" fill="#6e7781">sensitivity 95.5% · specificity 100.0%</text>
+<rect x="352.0" y="258.0" width="296.0" height="112.0" rx="10" fill="#f6f8fa"/>
+<text x="370.0" y="286.0" font-size="13.5" fill="#59636e" font-weight="600">Judge agreement, corpus</text>
+<text x="370.0" y="326.0" font-size="30" fill="#1f2328" font-weight="700">κ = 0.77</text>
+<text x="370.0" y="352.0" font-size="12" fill="#6e7781">89.0% of 717 verdicts unanimous</text>
+<rect x="664.0" y="258.0" width="296.0" height="112.0" rx="10" fill="#f6f8fa"/>
+<text x="682.0" y="286.0" font-size="13.5" fill="#59636e" font-weight="600">Pass-to-pass consistency</text>
+<text x="682.0" y="326.0" font-size="30" fill="#1f2328" font-weight="700">87.7%</text>
+<text x="682.0" y="352.0" font-size="12" fill="#6e7781">same verdict on both independent samples</text>
+</svg>

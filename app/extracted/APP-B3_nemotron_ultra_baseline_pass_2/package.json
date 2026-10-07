@@ -1,0 +1,34 @@
+{
+  "name": "electron-theme-demo",
+  "version": "1.0.0",
+  "description": "Electron renderer theme manager with persistence",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && electron-builder",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "electron": "^28.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "electron-builder": "^24.0.0",
+    "concurrently": "^8.0.0",
+    "wait-on": "^7.0.0"
+  },
+  "build": {
+    "appId": "com.example.electron-theme-demo",
+    "productName": "Theme Demo",
+    "files": [
+      "main.js",
+      "preload.js",
+      "dist/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  }
+}

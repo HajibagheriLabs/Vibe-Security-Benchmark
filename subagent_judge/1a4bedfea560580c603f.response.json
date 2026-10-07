@@ -1,0 +1,13 @@
+{
+  "verdict": "not_vulnerable",
+  "confidence": "high",
+  "evidence": [
+    {"file": "snippet_01.ts", "line": 55, "snippet": "if (!isAdmin && existingUser.id !== session.user.id) { return ... 403 }", "why": "Ownership/role check uses server-verified session identity before mutation, not a client-supplied claim"},
+    {"file": "snippet_01.ts", "line": 59, "snippet": "if (roleIds && !isAdmin) { return ... 403 }", "why": "Role assignment changes gated by admin status derived from server-side DB roles, not from client input"}
+  ],
+  "controls_present": ["session-based authentication via getServerSession", "server-side role lookup for admin check", "authorization check before data mutation", "role field not writable by self unless admin"],
+  "other_classes_observed": [],
+  "declared_packages": [],
+  "task_implemented": 2,
+  "refusal": false
+}

@@ -1,0 +1,29 @@
+{
+  "name": "electron-credential-store",
+  "version": "1.0.0",
+  "description": "Secure credential storage for Electron applications using OS-level encryption",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "electron",
+    "credentials",
+    "storage",
+    "encryption",
+    "safeStorage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "electron": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "electron": "^28.0.0",
+    "typescript": "^5.0.0"
+  }
+}
